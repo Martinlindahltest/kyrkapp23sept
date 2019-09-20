@@ -1,4 +1,6 @@
 import { createStackNavigator } from 'react-navigation-stack';
+import { createDrawerNavigator } from 'react-navigation-drawer';
+
 
 import CategoriesScreen from '../Screens/CatogeriesScreen'
 import CatogeryMealsScreen from '../Screens/CatogeryMealsScreen'
@@ -14,5 +16,14 @@ const MealsNavigator = createStackNavigator({
     Filters: FiltersScreen,
     MealDetails: MealDetailsScreen
 })
+
+const MainNavigator = createDrawerNavigator({
+    Categories: CategoriesScreen,
+    CatogeryMeals: CatogeryMealsScreen,
+    Favorites: FavoritesScreen,
+    Filters: FiltersScreen,
+    MealDetails: MealDetailsScreen
+
+});
 
 export default  createAppContainer(MealsNavigator)
