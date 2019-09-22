@@ -6,12 +6,18 @@ import { DrawerActions } from 'react-navigation-drawer';
 
 import HeaderButton from '../Components/HeaderButton'
 
+import { WebView } from 'react-native-webview';
+
+
 
 const FiltersScreen = () => {
     return (
+    /* 
         <View >
             <Text>FiltersScreen Martins projekt</Text>
         </View>
+        */
+       <WebView source={{ uri: 'https://expo.io' }} style={{ marginTop: 20 }} />
     )
 }
 
