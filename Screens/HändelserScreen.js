@@ -17,7 +17,7 @@ const HändelserScreen = () => {
             <Text>FiltersScreen Martins projekt</Text>
         </View>
         */
-       <WebView source={{ uri: 'https://expo.io' }} style={{ marginTop: 20 }} />
+       <WebView source={{ uri: 'https://tullinge.digitalindahl.com/blogsida' }} style={{ marginTop: 20 }} />
     )
 }
 

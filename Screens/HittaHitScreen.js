@@ -17,7 +17,7 @@ const HittaHitScreen = () => {
             <Text>FiltersScreen Martins projekt</Text>
         </View>
         */
-       <WebView source={{ uri: 'https://expo.io' }} style={{ marginTop: 20 }} />
+       <WebView source={{ uri: 'https://tullinge.digitalindahl.com/hitta-hit' }} style={{ marginTop: 20 }} />
     )
 }
 
