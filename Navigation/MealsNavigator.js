@@ -11,23 +11,32 @@ import KalenderScreen from '../Screens/KalenderScreen'
 import MealDetailsScreen from '../Screens/MealDetailsScreen'
 import { createAppContainer } from 'react-navigation';
 
+import VerksamheterScreen from '../Screens/VerksamheterScreen'
+
 
 const KalenderNavigator = createStackNavigator({
     Kalender: KalenderScreen,
-    Categories: CategoriesScreen,
-    CatogeryMeals: CatogeryMealsScreen,
-    Favorites: FavoritesScreen,
-    MealDetails: MealDetailsScreen
+})
+
+
+const VerksamheterNavigator = createStackNavigator({
+    Verksamheter: VerksamheterScreen,
+
 })
 
 
 
-
 const MainNavigator = createDrawerNavigator({
-    Home: {
+    Kalender: {
         screen: KalenderNavigator,
         navigationOptions: {
-            drawerLabel: 'Meals'
+            drawerLabel: 'Kalender'
+          }
+      },
+      Verksamheter: {
+        screen: VerksamheterNavigator,
+        navigationOptions: {
+            drawerLabel: 'Verksamheter'
           }
       }
 });

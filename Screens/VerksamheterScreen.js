@@ -10,7 +10,7 @@ import { WebView } from 'react-native-webview';
 
 
 
-const KalenderScreen = () => {
+const VerksamheterScreen = () => {
     return (
     /* 
         <View >
@@ -21,9 +21,9 @@ const KalenderScreen = () => {
     )
 }
 
-KalenderScreen.navigationOptions = navData => {
+VerksamheterScreen.navigationOptions = navData => {
     return {
-      headerTitle: 'Kalender',
+      headerTitle: 'Verksamheter',
       headerLeft: (
         <HeaderButtons HeaderButtonComponent={HeaderButton}>
           <Item
@@ -42,4 +42,4 @@ KalenderScreen.navigationOptions = navData => {
   };
 
 
-export default KalenderScreen
+export default VerksamheterScreen
