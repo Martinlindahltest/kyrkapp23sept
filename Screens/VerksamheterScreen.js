@@ -12,12 +12,11 @@ import { WebView } from 'react-native-webview';
 
 const VerksamheterScreen = () => {
     return (
-    /* 
+     
         <View >
-            <Text>FiltersScreen Martins projekt</Text>
+            <Text>VerksamheterScreen</Text>
         </View>
-        */
-       <WebView source={{ uri: 'https://expo.io' }} style={{ marginTop: 20 }} />
+        
     )
 }
 
