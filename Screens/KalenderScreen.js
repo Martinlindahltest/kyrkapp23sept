@@ -10,7 +10,7 @@ import { WebView } from 'react-native-webview';
 
 
 
-const FiltersScreen = () => {
+const KalenderScreen = () => {
     return (
     /* 
         <View >
@@ -21,7 +21,7 @@ const FiltersScreen = () => {
     )
 }
 
-FiltersScreen.navigationOptions = navData => {
+KalenderScreen.navigationOptions = navData => {
     return {
       headerTitle: 'Filter Meals',
       headerLeft: (
@@ -42,4 +42,4 @@ FiltersScreen.navigationOptions = navData => {
   };
 
 
-export default FiltersScreen
+export default KalenderScreen

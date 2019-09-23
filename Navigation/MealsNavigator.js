@@ -7,13 +7,13 @@ import { Ionicons } from '@expo/vector-icons';
 import CategoriesScreen from '../Screens/CatogeriesScreen'
 import CatogeryMealsScreen from '../Screens/CatogeryMealsScreen'
 import FavoritesScreen from '../Screens/FavoritesScreen'
-import FiltersScreen from '../Screens/FiltersScreen'
+import KalenderScreen from '../Screens/KalenderScreen'
 import MealDetailsScreen from '../Screens/MealDetailsScreen'
 import { createAppContainer } from 'react-navigation';
 
 
-const MealsNavigator = createStackNavigator({
-    Filters: FiltersScreen,
+const KalenderNavigator = createStackNavigator({
+    Kalender: KalenderScreen,
     Categories: CategoriesScreen,
     CatogeryMeals: CatogeryMealsScreen,
     Favorites: FavoritesScreen,
@@ -25,7 +25,7 @@ const MealsNavigator = createStackNavigator({
 
 const MainNavigator = createDrawerNavigator({
     Home: {
-        screen: MealsNavigator,
+        screen: KalenderNavigator,
         navigationOptions: {
             drawerLabel: 'Meals'
           }
