@@ -14,6 +14,8 @@ import { createAppContainer } from 'react-navigation';
 import VerksamheterScreen from '../Screens/VerksamheterScreen'
 import HändelserScreen from '../Screens/HändelserScreen'
 import PersonalScreen from '../Screens/PersonalScreen'
+import HittaHitScreen from '../Screens/HittaHitScreen'
+
 
 
 
@@ -32,6 +34,9 @@ const HändelserNavigator = createStackNavigator({
 })
 const PersonalNavigator = createStackNavigator({
     Personal: PersonalScreen,
+})
+const HittaHitNavigator = createStackNavigator({
+    HittaHit: HittaHitScreen,
 })
 
 
@@ -60,6 +65,12 @@ const MainNavigator = createDrawerNavigator({
         screen:PersonalNavigator,
         navigationOptions: {
             drawerLabel: 'Personal'
+          }
+      },
+      HittaHit: {
+        screen:HittaHitNavigator,
+        navigationOptions: {
+            drawerLabel: 'HittaHit'
           }
       }
 });
