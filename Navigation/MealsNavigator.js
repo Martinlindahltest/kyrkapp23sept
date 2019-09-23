@@ -12,6 +12,8 @@ import MealDetailsScreen from '../Screens/MealDetailsScreen'
 import { createAppContainer } from 'react-navigation';
 
 import VerksamheterScreen from '../Screens/VerksamheterScreen'
+import HändelserScreen from '../Screens/HändelserScreen'
+
 
 
 const KalenderNavigator = createStackNavigator({
@@ -21,8 +23,12 @@ const KalenderNavigator = createStackNavigator({
 
 const VerksamheterNavigator = createStackNavigator({
     Verksamheter: VerksamheterScreen,
-
 })
+
+const HändelserNavigator = createStackNavigator({
+    Händelser: HändelserScreen,
+})
+
 
 
 
@@ -37,6 +43,12 @@ const MainNavigator = createDrawerNavigator({
         screen: VerksamheterNavigator,
         navigationOptions: {
             drawerLabel: 'Verksamheter'
+          }
+      },
+      Händelser: {
+        screen:HändelserNavigator,
+        navigationOptions: {
+            drawerLabel: 'Händelser'
           }
       }
 });
