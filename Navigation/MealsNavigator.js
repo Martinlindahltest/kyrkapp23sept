@@ -13,6 +13,8 @@ import { createAppContainer } from 'react-navigation';
 
 import VerksamheterScreen from '../Screens/VerksamheterScreen'
 import HändelserScreen from '../Screens/HändelserScreen'
+import PersonalScreen from '../Screens/PersonalScreen'
+
 
 
 
@@ -27,6 +29,9 @@ const VerksamheterNavigator = createStackNavigator({
 
 const HändelserNavigator = createStackNavigator({
     Händelser: HändelserScreen,
+})
+const PersonalNavigator = createStackNavigator({
+    Personal: PersonalScreen,
 })
 
 
@@ -49,6 +54,12 @@ const MainNavigator = createDrawerNavigator({
         screen:HändelserNavigator,
         navigationOptions: {
             drawerLabel: 'Händelser'
+          }
+      },
+      Personal: {
+        screen:PersonalNavigator,
+        navigationOptions: {
+            drawerLabel: 'Personal'
           }
       }
 });
