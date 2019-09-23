@@ -3,7 +3,7 @@ import Display from './Display';
 import { View, Text } from 'react-native'
 
 
-class FetchApp extends Component {
+class FetchVerksamheter extends Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -14,7 +14,7 @@ class FetchApp extends Component {
 
     componentDidMount() {
 
-        const jsonURL = 'https://jsontestmartin.s3.eu-north-1.amazonaws.com/Tullinge+test20SeptNyttDatumformat.json'
+        const jsonURL = 'https://jsontestmartin.s3.eu-north-1.amazonaws.com/Verksamheter.xlsx+-+Blad+1+23+sept.json'
 
 
         fetch(jsonURL)
@@ -88,4 +88,4 @@ class FetchApp extends Component {
     }
 }
 
-export default FetchApp;
+export default FetchVerksamheter;
