@@ -44,8 +44,13 @@ export default function Display(props) {
 
     return (
 <View>
-    <Text>{p.Dag} {p.Datumsiffra} {p.Månad} kl {p.startSlut}</Text>
-    <Text>{p.Aktivitet}</Text>
+    <Text>HEj från display</Text>
+
+    
+   <Text>{p.Dag} {p.Datumsiffra} {p.Månad} kl {p.startSlut}</Text>
+   <Text>{p.Aktivitet}</Text>
+
+
 </View>
     )
 }

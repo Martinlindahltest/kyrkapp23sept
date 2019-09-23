@@ -1,5 +1,5 @@
 import React from 'react'
-import { View, Text } from 'react-native'
+import { View, Text, ScrollView } from 'react-native'
 import { HeaderButtons, Item } from 'react-navigation-header-buttons';
 import { DrawerActions } from 'react-navigation-drawer';
 import FetchApp from '../Components/FetchApp'
@@ -13,10 +13,10 @@ import { WebView } from 'react-native-webview';
 const KalenderScreen = () => {
     return (
     
-        <View >
+        <ScrollView >
             <Text>KalenderScreen</Text>
             <FetchApp />
-        </View>
+        </ScrollView>
         
     )
 }

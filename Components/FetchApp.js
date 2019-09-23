@@ -14,7 +14,7 @@ class FetchApp extends Component {
 
     componentDidMount() {
 
-        const jsonURL = 'https://jsontestmartin.s3.eu-north-1.amazonaws.com/Tullinge+test20SeptNyttDatumformat.json '
+        const jsonURL = 'https://jsontestmartin.s3.eu-north-1.amazonaws.com/Tullinge+test20SeptNyttDatumformat.json'
 
 
         fetch(jsonURL)
