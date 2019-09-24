@@ -17,14 +17,7 @@ const HittaHitScreen = () => {
             <Text>FiltersScreen Martins projekt</Text>
         </View>
         */
-        <View>
-            <Image style={{
-              width: 390, height: 390
-            }} 
-              source={require('../assets/KontaktKarta.png')} />
-              <Text>test</Text>
             <WebView source={{ uri: 'https://tullinge.digitalindahl.com/hitta-hit' }} />
-          </View>
 
     )
 }
