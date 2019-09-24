@@ -1,5 +1,5 @@
 import React from 'react'
-import { View, Text } from 'react-native'
+import { View, Text, StyleSheet } from 'react-native'
 
 
 export default function Display(props) {
@@ -38,11 +38,7 @@ export default function Display(props) {
 //let datum = new Date("2015-02-02").toISOString()
 //console.log(datum)
 
-
-
-
-
-    return (
+        /*
 <View>
     <Text>HEj från display</Text>
 
@@ -52,5 +48,35 @@ export default function Display(props) {
 
 
 </View>
+        */ 
+
+       const styles = StyleSheet.create({
+        datumRubrik: {
+          fontWeight: "bold",
+          backgroundColor: '#808080',
+          padding: 10,
+          borderTopColor: '#000000',
+          borderStyle: "solid",
+          borderWidth:1
+        },
+      });
+      
+
+
+
+
+
+    return (
+        
+<View >
+    <Text style={styles.datumRubrik}>måndag 8 september</Text>
+    <View style={styles.box}>
+
+    </View>
+</View>
+           
+
+        
+
     )
 }
