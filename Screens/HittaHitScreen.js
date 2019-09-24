@@ -1,5 +1,5 @@
 import React from 'react'
-import { View, Text } from 'react-native'
+import { ScrollView, Image, View, Text } from 'react-native'
 import { HeaderButtons, Item } from 'react-navigation-header-buttons';
 import { DrawerActions } from 'react-navigation-drawer';
 
@@ -17,7 +17,15 @@ const HittaHitScreen = () => {
             <Text>FiltersScreen Martins projekt</Text>
         </View>
         */
-       <WebView source={{ uri: 'https://tullinge.digitalindahl.com/hitta-hit' }} />
+        <View>
+            <Image style={{
+              width: 390, height: 390
+            }} 
+              source={require('../assets/KontaktKarta.png')} />
+              <Text>test</Text>
+            <WebView source={{ uri: 'https://tullinge.digitalindahl.com/hitta-hit' }} />
+          </View>
+
     )
 }
 
