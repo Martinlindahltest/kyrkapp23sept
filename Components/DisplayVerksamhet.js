@@ -19,15 +19,29 @@ export default function DisplayVerksamhet(props) {
  },
     */
 
+    let {
+        VeckodagNr,
+        Veckodag,
+        Tid,
+        Titel,
+        Personal,
+        Beskrivning,
+        Kategori
+    } = props.data
 
 
-
+//console.log('från props verksamheter', props.data)
 
 
 
     return (
 <View>
     <Text>Hej från display Verksamhet</Text>
+    <Text>{Titel}</Text>
+    <Text>{Tid}</Text>
+    <Text>{Beskrivning}</Text>
+    <Text>{Personal}</Text>
+
 
 
 </View>
