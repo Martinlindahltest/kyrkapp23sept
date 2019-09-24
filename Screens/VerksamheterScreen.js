@@ -1,5 +1,5 @@
 import React from 'react'
-import { View, Text } from 'react-native'
+import { ScrollView, View, Text } from 'react-native'
 import { HeaderButtons, Item } from 'react-navigation-header-buttons';
 import { DrawerActions } from 'react-navigation-drawer';
 import FetchVerksamheter from '../Components/FetchVerksamheter'
@@ -7,23 +7,22 @@ import FetchVerksamheter from '../Components/FetchVerksamheter'
 
 import HeaderButton from '../Components/HeaderButton'
 
-import { WebView } from 'react-native-webview';
 
 
 
 const VerksamheterScreen = () => {
     return (
      
-        <View >
+        <ScrollView >
             <Text>VerksamheterScreen</Text>
            
              <FetchVerksamheter />
            
 
-        </View>
+        </ScrollView>
         
     )
-}
+} 
 
 VerksamheterScreen.navigationOptions = navData => {
     return {

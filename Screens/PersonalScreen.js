@@ -17,7 +17,7 @@ const PersonalScreen = () => {
             <Text>FiltersScreen Martins projekt</Text>
         </View>
         */
-       <WebView source={{ uri: 'https://tullinge.digitalindahl.com/kontakt' }} style={{ marginTop: 20 }} />
+       <WebView source={{ uri: 'https://tullinge.digitalindahl.com/kontakt' }} />
     )
 }
 
