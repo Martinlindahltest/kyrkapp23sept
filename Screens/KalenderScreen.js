@@ -6,9 +6,6 @@ import FetchApp from '../Components/FetchApp'
 
 import HeaderButton from '../Components/HeaderButton'
 
-import { WebView } from 'react-native-webview';
-
-
 
 const KalenderScreen = () => {
     return (
