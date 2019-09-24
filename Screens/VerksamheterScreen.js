@@ -2,6 +2,7 @@ import React from 'react'
 import { View, Text } from 'react-native'
 import { HeaderButtons, Item } from 'react-navigation-header-buttons';
 import { DrawerActions } from 'react-navigation-drawer';
+import FetchVerksamheter from '../Components/FetchVerksamheter'
 
 
 import HeaderButton from '../Components/HeaderButton'
@@ -15,6 +16,10 @@ const VerksamheterScreen = () => {
      
         <View >
             <Text>VerksamheterScreen</Text>
+           
+             <FetchVerksamheter />
+           
+
         </View>
         
     )
