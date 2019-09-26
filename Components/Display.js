@@ -4,8 +4,8 @@ import { View, Text, StyleSheet } from 'react-native'
 
 export default function Display(props) {
 
-    /*
-{
+    
+const {
     Aktivitet,
     Ansvgrupp,
     Bokningstyp,
@@ -23,10 +23,8 @@ export default function Display(props) {
     förberedelse,
     medverkande,
     noteringar,
-    start-slut,
     År
 } = props.data
-*/
 
 
 
@@ -75,7 +73,7 @@ export default function Display(props) {
             padding: 5
         },
         rubrik:{
-            fontSize: 30
+            fontSize: 20
         },
         text:{
             fontSize: 15
@@ -90,14 +88,14 @@ export default function Display(props) {
     return (
         
 <View >
-    <Text style={styles.datumRubrik}>måndag 8 september</Text>
+    <Text style={styles.datumRubrik}>{Dag} {Datumsiffra} {Månad}</Text>
     <View style={styles.box}>
         <View style={styles.klockslagContainer}>
             <Text style={styles.klockslag}>11.00</Text>
         </View>
         <View style={styles.rubrikOchPlats}>
-            <Text style={styles.rubrik}>Rubrik</Text>
-            <Text style={styles.text}>Text</Text>
+            <Text style={styles.rubrik}>{Aktivitet}</Text>
+            <Text style={styles.text}>{Lokal}, {Verksamhetstyp}</Text>
         </View>
     </View>
 </View>
