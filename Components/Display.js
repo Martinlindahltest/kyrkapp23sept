@@ -98,8 +98,8 @@ const {
             <Text style={styles.rubrik}>{Aktivitet}</Text>
             <Text style={styles.text}>{Lokal}, {Verksamhetstyp}</Text>
         </View>
-
     </View>
+    <Button title="test" onPress={()=> console.log('props i display', props.navRef)} />
 </View>
            
 

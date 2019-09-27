@@ -10,6 +10,9 @@ class FetchApp extends Component {
 
         }
 
+        this.props.navigateReferens = this.props.navigateReferens.bind(this);
+
+
     }
 
     componentDidMount() {
@@ -67,10 +70,10 @@ class FetchApp extends Component {
                 //let objektetsÅr = Number(arrayMånadDagÅr[2])
 
                 if(objektetsMånad === dagensMånad && objektetsDag > dagensDatum){
-                    return <Display data={obj} />
+                    return <Display data={obj} navRef={this.props.navigateReferens}  />
                 }
                 if(objektetsMånad > dagensMånad){
-                    return <Display data={obj} />
+                    return <Display data={obj} navRef={this.props.navigateReferens} />
                 }
                 else{
                     return         //    <Text>Passerad</Text>
@@ -78,6 +81,8 @@ class FetchApp extends Component {
                 }
             })
         }
+
+        console.log('navigatereferens i fetch App', this.props)
 
         return (
             <View>
