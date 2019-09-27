@@ -1,5 +1,5 @@
 import React from 'react'
-import { View, Text, StyleSheet } from 'react-native'
+import { View, Text, StyleSheet, Button } from 'react-native'
 
 
 export default function Display(props) {
@@ -23,7 +23,8 @@ const {
     förberedelse,
     medverkande,
     noteringar,
-    År
+    År,
+    startSlut
 } = props.data
 
 
@@ -66,7 +67,7 @@ const {
         },
         klockslag:{
             padding:15,
-            fontSize:20
+            fontSize:10
         },
         rubrikOchPlats:{
             flex: 3,
@@ -91,12 +92,13 @@ const {
     <Text style={styles.datumRubrik}>{Dag} {Datumsiffra} {Månad}</Text>
     <View style={styles.box}>
         <View style={styles.klockslagContainer}>
-            <Text style={styles.klockslag}>11.00</Text>
+            <Text style={styles.klockslag}>{startSlut}</Text>
         </View>
         <View style={styles.rubrikOchPlats}>
             <Text style={styles.rubrik}>{Aktivitet}</Text>
             <Text style={styles.text}>{Lokal}, {Verksamhetstyp}</Text>
         </View>
+
     </View>
 </View>
            

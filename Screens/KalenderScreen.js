@@ -15,7 +15,7 @@ const KalenderScreen = (props) => {
 
 
             <Text>KalenderScreen</Text>
-            <FetchApp />
+            <FetchApp navigateReferens={props.navigation.navigate} />
         </ScrollView>
         
     )
