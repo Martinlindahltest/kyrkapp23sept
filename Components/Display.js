@@ -86,7 +86,6 @@ const {
 
     return (
 <View >
-<Button title="navRef" onPress={() => props.navRef.navigation.navigate('KalenderDetalj') } />
 
 
 
@@ -100,6 +99,8 @@ const {
             <Text style={styles.text}>{Lokal}, {Verksamhetstyp}</Text>
         </View>
     </View>
+    <Button title="Mer info" onPress={() => props.navRef.navigation.navigate('KalenderDetalj', {Aktivitet: Aktivitet}) } />
+
 </View>
            
 

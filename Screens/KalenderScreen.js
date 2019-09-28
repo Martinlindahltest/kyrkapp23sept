@@ -14,9 +14,6 @@ const KalenderScreen = (props) => {
     return (
     
         <ScrollView >
-              <Button title="gå vidare" onPress={() => props.navigation.navigate('KalenderDetalj') }/>
-
-
             <Text>KalenderScreen</Text>
             <FetchApp navigateReferens={props} />
         </ScrollView>

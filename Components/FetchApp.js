@@ -86,7 +86,6 @@ class FetchApp extends Component {
 
         return (
             <View>
-                <Button title="hej" onPress={() => this.props.navigateReferens()} />
                                 {jsxArray}
                                 <Text>Hej fran fetchapp</Text>
             </View>

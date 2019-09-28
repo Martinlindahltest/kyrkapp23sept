@@ -7,11 +7,14 @@ import FetchApp from '../Components/FetchApp'
 import HeaderButton from '../Components/HeaderButton'
 
 
-const KalenderDetaljScreen = () => {
+const KalenderDetaljScreen = (props) => {
+
     return (
     
         <ScrollView >
             <Text>KalenderDetaljScreen</Text>
+            <Text>Aktivitet: {props.navigation.state.params.Aktivitet}  </Text>
+
         </ScrollView>
         
     )
