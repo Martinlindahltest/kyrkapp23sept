@@ -86,9 +86,6 @@ const {
 
     return (
 <View >
-
-
-
     <Text style={styles.datumRubrik}>{Dag} {Datumsiffra} {Månad}</Text>
     <View style={styles.box}>
         <View style={styles.klockslagContainer}>

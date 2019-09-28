@@ -31,6 +31,8 @@ class FetchApp extends Component {
         });
     }
 
+
+
     
 
     render() {
@@ -47,12 +49,8 @@ class FetchApp extends Component {
 
 
 
-     //   console.log('datum', datum)
-     //   console.log('datumSplitArray', datumSplitArray)
-     //   console.log('år', dagensÅr, 'månad', dagensMånad, 'datum', dagensDatum )
 
-
-        let tullingeJson = []
+        //let tullingeJson = []
         let jsxArray = []
 
 
@@ -65,27 +63,24 @@ class FetchApp extends Component {
             jsxArray = tullingeJson.map( obj => {
 
                 let arrayMånadDagÅr = obj.Datum.split("/")
-                let objektetsMånad = Number(arrayMånadDagÅr[0])
-                let objektetsDag = Number(arrayMånadDagÅr[1])
-                //let objektetsÅr = Number(arrayMånadDagÅr[2])
+                let objektetsDag = Number(arrayMånadDagÅr[0])
+                console.log('objektetsDag', objektetsDag)
 
-                if(objektetsMånad === dagensMånad && objektetsDag > dagensDatum){
+                if(objektetsDag > dagensDatum){
                     return <Display key={obj._id} data={obj} navRef={this.props.navigateReferens}  />
-                }
-                if(objektetsMånad > dagensMånad){
-                    return <Display key={obj._id} data={obj} navRef={this.props.navigateReferens} />
-                }
-                else{
-                    return         //    <Text>Passerad</Text>
-
                 }
             })
         }
 
-        console.log('navigatereferens i fetch App', this.props)
-
         return (
             <View>
+                <Button title="visa alla" onPress={() => this.componentDidMount()} />
+                <Button title="Bara Gtj" onPress={()=> {
+                   let result = this.state.tullingeJson.filter(obj => obj.Verksamhetstyp === 'Gtj');
+                    this.setState({
+                        tullingeJson: result
+                    })
+                }}/>
                                 {jsxArray}
                                 <Text>Hej fran fetchapp</Text>
             </View>
