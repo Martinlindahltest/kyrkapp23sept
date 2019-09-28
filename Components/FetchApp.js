@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Display from './Display';
-import { View, Text } from 'react-native'
+import { View, Text, Button } from 'react-native'
 
 
 class FetchApp extends Component {
@@ -10,7 +10,7 @@ class FetchApp extends Component {
 
         }
 
-        this.props.navigateReferens = this.props.navigateReferens.bind(this);
+        //this.props.navigateReferens = this.props.navigateReferens.bind(this);
 
 
     }
@@ -86,6 +86,7 @@ class FetchApp extends Component {
 
         return (
             <View>
+                <Button title="hej" onPress={() => this.props.navigateReferens()} />
                                 {jsxArray}
                                 <Text>Hej fran fetchapp</Text>
             </View>

@@ -8,6 +8,9 @@ import HeaderButton from '../Components/HeaderButton'
 
 
 const KalenderScreen = (props) => {
+
+
+ 
     return (
     
         <ScrollView >
@@ -15,7 +18,7 @@ const KalenderScreen = (props) => {
 
 
             <Text>KalenderScreen</Text>
-            <FetchApp navigateReferens={()=> props.navigation.navigate('KalenderDetajScreen')} />
+            <FetchApp navigateReferens={props} />
         </ScrollView>
         
     )

@@ -82,14 +82,14 @@ const {
         }
       });
       
-
-
-
-
+      //console.log(props.navRef.navigation.navigate)
 
     return (
-        
 <View >
+<Button title="navRef" onPress={() => props.navRef.navigation.navigate('KalenderDetalj') } />
+
+
+
     <Text style={styles.datumRubrik}>{Dag} {Datumsiffra} {Månad}</Text>
     <View style={styles.box}>
         <View style={styles.klockslagContainer}>
@@ -100,7 +100,6 @@ const {
             <Text style={styles.text}>{Lokal}, {Verksamhetstyp}</Text>
         </View>
     </View>
-    <Button title="test" onPress={()=> console.log('props i display', props.navRef)} />
 </View>
            
 
