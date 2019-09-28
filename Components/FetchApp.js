@@ -17,7 +17,7 @@ class FetchApp extends Component {
 
     componentDidMount() {
 
-        const jsonURL = 'https://jsontestmartin.s3.eu-north-1.amazonaws.com/Tullinge+test20SeptNyttDatumformat.json'
+        const jsonURL = 'https://jsontestmartin.s3.eu-north-1.amazonaws.com/Tullinge28septMedId.json'
 
 
         fetch(jsonURL)
@@ -70,10 +70,10 @@ class FetchApp extends Component {
                 //let objektetsÅr = Number(arrayMånadDagÅr[2])
 
                 if(objektetsMånad === dagensMånad && objektetsDag > dagensDatum){
-                    return <Display data={obj} navRef={this.props.navigateReferens}  />
+                    return <Display key={obj._id} data={obj} navRef={this.props.navigateReferens}  />
                 }
                 if(objektetsMånad > dagensMånad){
-                    return <Display data={obj} navRef={this.props.navigateReferens} />
+                    return <Display key={obj._id} data={obj} navRef={this.props.navigateReferens} />
                 }
                 else{
                     return         //    <Text>Passerad</Text>

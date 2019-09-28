@@ -24,7 +24,8 @@ const {
     medverkande,
     noteringar,
     År,
-    startSlut
+    startSlut,
+    _id
 } = props.data
 
 
