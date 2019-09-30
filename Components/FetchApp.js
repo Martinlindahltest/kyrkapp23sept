@@ -66,7 +66,7 @@ class FetchApp extends Component {
                 let arrayMånadDagÅr = obj.Datum.split("/")
                 let objektetsMånad = Number(arrayMånadDagÅr[0])
                 let objektetsDag = Number(arrayMånadDagÅr[1])
-                console.log('objektetsMånad', objektetsMånad)
+              //  console.log('objektetsMånad', objektetsMånad)
 
 
                 if(objektetsMånad > dagensMånad){
