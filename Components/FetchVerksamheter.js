@@ -14,7 +14,7 @@ export default class FetchVerksamheter extends Component {
 
     componentDidMount() {
 
-        const jsonURL = 'https://jsontestmartin.s3.eu-north-1.amazonaws.com/Anton+verksamheter24sept.json'
+        const jsonURL = 'https://jsontestmartin.s3.eu-north-1.amazonaws.com/verksamheterMedId30sept.json'
         fetch(jsonURL)
         .then(response => {
           return response.json();

@@ -64,7 +64,6 @@ class FetchApp extends Component {
 
                 let arrayMånadDagÅr = obj.Datum.split("/")
                 let objektetsDag = Number(arrayMånadDagÅr[0])
-                console.log('objektetsDag', objektetsDag)
 
                 if(objektetsDag > dagensDatum){
                     return <Display key={obj._id} data={obj} navRef={this.props.navigateReferens}  />

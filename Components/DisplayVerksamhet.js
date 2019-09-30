@@ -7,43 +7,44 @@ export default function DisplayVerksamhet(props) {
     /*
     Datamodell:
 
-    {
-   "1": 2,
-   "VeckodagNr": 1,
+{
+   "_id": "ObjectId(\"5d91bc3e648baf04ce7c0861\")",
    "Veckodag": "Måndag",
    "Tid": "09.30-12.00",
    "Titel": "Tullinge Kammarkör",
-   "Personal": "Körledare: Camilla Helander",
+   "Personal": "Körledare, Camilla Helander",
    "Beskrivning": "Terminstart v.35. En blandad kör med blandad repertoar som medverkar vid gudstjänster och konserter. Provsjungning krävs.",
-   "Kategori": "Musik"
- },
-    */
+   "Kategori": "Musik",
+   "Plats": "",
+   "FIELD9": "",
+   "FIELD10": "",
+   "FIELD11": "",
+   "FIELD12": ""
+ },    */
 
     let {
-        VeckodagNr,
+        _id,
         Veckodag,
         Tid,
         Titel,
         Personal,
         Beskrivning,
-        Kategori
+        Kategori,
+        Plats
     } = props.data
 
 
-//console.log('från props verksamheter', props.data)
+console.log('från props verksamheter', props.data)
 
 
 
     return (
-<View>
+<View key={_id}>
     <Text>Hej från display Verksamhet</Text>
     <Text>{Titel}</Text>
     <Text>{Tid}</Text>
     <Text>{Beskrivning}</Text>
     <Text>{Personal}</Text>
-
-
-
 </View>
     )
 }
