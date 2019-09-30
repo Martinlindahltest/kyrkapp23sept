@@ -4,6 +4,9 @@ import { HeaderButtons, Item } from 'react-navigation-header-buttons';
 import { DrawerActions } from 'react-navigation-drawer';
 import FuncFetchVerksamheter from '../Components/FuncFetchVerksamheter'
 
+import { WebView } from 'react-native-webview';
+
+
 
 import HeaderButton from '../Components/HeaderButton'
 
@@ -12,14 +15,7 @@ import HeaderButton from '../Components/HeaderButton'
 
 const VerksamheterScreen = () => {
     return (
-     
-        <ScrollView >
-            <Text>VerksamheterScreen</Text>
-           
-             <FuncFetchVerksamheter />
-           
-
-        </ScrollView>
+            <WebView source={{ uri: 'https://tullinge.digitalindahl.com/verksamheter' }} />
         
     )
 } 
