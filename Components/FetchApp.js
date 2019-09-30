@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Display from './Display';
 import { View, Text, Button } from 'react-native'
+import { DrawerGestureContext } from 'react-navigation-drawer';
 
 
 class FetchApp extends Component {
@@ -17,7 +18,7 @@ class FetchApp extends Component {
 
     componentDidMount() {
 
-        const jsonURL = 'https://jsontestmartin.s3.eu-north-1.amazonaws.com/Tullinge28septMedId.json'
+        const jsonURL = 'https://jsontestmartin.s3.eu-north-1.amazonaws.com/tullinge30sept.json'
 
 
         fetch(jsonURL)
@@ -63,11 +64,19 @@ class FetchApp extends Component {
             jsxArray = tullingeJson.map( obj => {
 
                 let arrayMånadDagÅr = obj.Datum.split("/")
-                let objektetsDag = Number(arrayMånadDagÅr[0])
+                let objektetsMånad = Number(arrayMånadDagÅr[0])
+                let objektetsDag = Number(arrayMånadDagÅr[1])
+                console.log('objektetsMånad', objektetsMånad)
 
-                if(objektetsDag > dagensDatum){
+
+                if(objektetsMånad > dagensMånad){
                     return <Display key={obj._id} data={obj} navRef={this.props.navigateReferens}  />
                 }
+                if(objektetsMånad >= dagensMånad && objektetsDag >= dagensDatum){
+                    return <Display key={obj._id} data={obj} navRef={this.props.navigateReferens}  />
+                }
+
+
             })
         }
 

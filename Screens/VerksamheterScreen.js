@@ -2,7 +2,7 @@ import React from 'react'
 import { ScrollView, View, Text } from 'react-native'
 import { HeaderButtons, Item } from 'react-navigation-header-buttons';
 import { DrawerActions } from 'react-navigation-drawer';
-import FetchVerksamheter from '../Components/FetchVerksamheter'
+import FuncFetchVerksamheter from '../Components/FuncFetchVerksamheter'
 
 
 import HeaderButton from '../Components/HeaderButton'
@@ -16,7 +16,7 @@ const VerksamheterScreen = () => {
         <ScrollView >
             <Text>VerksamheterScreen</Text>
            
-             <FetchVerksamheter />
+             <FuncFetchVerksamheter />
            
 
         </ScrollView>
