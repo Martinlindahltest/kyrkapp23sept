@@ -11,10 +11,14 @@ import HeaderButton from '../Components/HeaderButton'
 const KalenderScreen = (props) => {
 
   const styles = StyleSheet.create({
-    stretch: {
+    img: {
+      flex:1,
       height: 200,
       width: '100%',
       resizeMode: "cover"
+    },
+    tabContainer: {
+      height: 60
     }
   });
 
@@ -33,11 +37,15 @@ const KalenderScreen = (props) => {
  
     return (
       <View>
+        <View style={styles.tabContainer}>
+        <Tabmeny5 />
+
+        </View>
 
               <ScrollView >
 
               <Image 
-      style={styles.stretch}
+      style={styles.img}
       source={require('../assets/Kalenderv2.jpg')}
       />
             <FetchApp navigateReferens={props} />
