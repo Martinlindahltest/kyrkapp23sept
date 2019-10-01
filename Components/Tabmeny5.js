@@ -18,8 +18,6 @@ export default function Tabmeny5(props) {
     }
   });
 
-  console.log('tab5', props.KalenderScreenProps.navigation.navigate)
-
     return (
 
 

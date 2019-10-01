@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import Display from './Display';
 import { View, Text, Button } from 'react-native'
-import { DrawerGestureContext } from 'react-navigation-drawer';
 
 
 class FetchApp extends Component {
@@ -17,6 +16,10 @@ class FetchApp extends Component {
 
     componentDidMount() {
 
+        console.log('FetchAppProps', this.props.KategoriFilter)
+
+
+
         const jsonURL = 'https://jsontestmartin.s3.eu-north-1.amazonaws.com/tullinge30sept.json'
 
 
@@ -25,6 +28,10 @@ class FetchApp extends Component {
           return response.json();
         })
         .then(tullingeJson => {
+            if(this.props.KategoriFilter === 'Gtj'){
+                 tullingeJson = tullingeJson.filter(obj => obj.Verksamhetstyp === 'Gtj');
+            }
+
           this.setState({
             tullingeJson: tullingeJson
           })
@@ -81,13 +88,6 @@ class FetchApp extends Component {
 
         return (
             <View>
-                <Button title="visa alla" onPress={() => this.componentDidMount()} />
-                <Button title="Bara Gtj" onPress={()=> {
-                   let result = this.state.tullingeJson.filter(obj => obj.Verksamhetstyp === 'Gtj');
-                    this.setState({
-                        tullingeJson: result
-                    })
-                }}/>
                                 {jsxArray}
                                 <Text>Hej fran fetchapp</Text>
             </View>
