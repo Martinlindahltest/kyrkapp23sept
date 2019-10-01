@@ -30,6 +30,12 @@ const KalenderScreen = (props) => {
     )
 }
 
+KalenderScreen.navigationOptions = navData => {
+  return {
+    headerTitle: 'Filter Gtj',
+
+  };
+};
 
 
 export default KalenderScreen
