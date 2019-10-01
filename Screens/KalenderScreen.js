@@ -18,7 +18,7 @@ const KalenderScreen = (props) => {
       resizeMode: "cover"
     },
     tabContainer: {
-      height: 60
+      height: 100
     }
   });
 
@@ -38,7 +38,7 @@ const KalenderScreen = (props) => {
     return (
       <View>
         <View style={styles.tabContainer}>
-        <Tabmeny5 />
+        <Tabmeny5 KalenderScreenProps={props} />
 
         </View>
 
@@ -66,9 +66,6 @@ KalenderScreen.navigationOptions = navData => {
             title="Menu"
             iconName="ios-menu"
             onPress={() => {
-              //
-              //console.log(navData.navigation.navigate)
-              //navData.navigation.navigate('DrawerToggle');'
               navData.navigation.dispatch(DrawerActions.toggleDrawer());
             }}
           />

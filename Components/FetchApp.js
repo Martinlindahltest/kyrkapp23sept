@@ -11,7 +11,6 @@ class FetchApp extends Component {
 
         }
 
-        //this.props.navigateReferens = this.props.navigateReferens.bind(this);
 
 
     }

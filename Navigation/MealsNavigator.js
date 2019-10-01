@@ -15,13 +15,16 @@ import HändelserScreen from '../Screens/HändelserScreen'
 import PersonalScreen from '../Screens/PersonalScreen'
 import HittaHitScreen from '../Screens/HittaHitScreen'
 
+import KalenderGtjScreen from '../Screens/KalenderGtjScreen'
+
 
 
 
 
 const KalenderNavigator = createStackNavigator({
     Kalender: KalenderScreen,
-    KalenderDetalj: KalenderDetaljScreen
+    KalenderDetalj: KalenderDetaljScreen,
+    KalenderGtj: KalenderGtjScreen
 })
 
 

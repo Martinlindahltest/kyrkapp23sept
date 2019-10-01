@@ -1,7 +1,7 @@
 import React from 'react'
-import { View, Text, Image, StyleSheet } from 'react-native'
+import { View, Text, Image, StyleSheet, Button } from 'react-native'
 
-export default function Tabmeny5() {
+export default function Tabmeny5(props) {
 
   const styles = StyleSheet.create({
     box:{
@@ -18,10 +18,12 @@ export default function Tabmeny5() {
     }
   });
 
+  console.log('tab5', props.KalenderScreenProps.navigation.navigate)
+
     return (
 
-      <View style={{flex: 1, flexDirection: 'row'}}>
 
+      <View style={{flex: 1, flexDirection: 'row'}}>
         <View style={styles.box}>
           <Image 
         style={styles.img}
@@ -30,6 +32,8 @@ export default function Tabmeny5() {
       </View>
 
       <View style={styles.box}>
+      <Button title="Gtj" onPress={() => props.KalenderScreenProps.navigation.navigate('KalenderGtj')} />
+
           <Image 
         style={styles.img}
         source={require('../assets/tab5/Gudstjanst.png')}
@@ -50,14 +54,6 @@ export default function Tabmeny5() {
         />        
       </View>
 
-      <View style={styles.box}>
-          <Image 
-        style={styles.img}
-        source={require('../assets/tab5/Alla.png')}
-        />        
-      </View>
-
     </View>
-
     )
 }
