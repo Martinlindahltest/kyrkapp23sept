@@ -18,6 +18,7 @@ import HittaHitScreen from '../Screens/HittaHitScreen'
 import KalenderGtjScreen from '../Screens/KalenderGtjScreen'
 import KalenderBarnScreen from '../Screens/KalenderBarnScreen'
 import KalenderVuxenScreen from '../Screens/KalenderVuxenScreen'
+import KalenderMusikScreen from '../Screens/KalenderMusikScreen'
 
 
 
@@ -29,7 +30,8 @@ const KalenderNavigator = createStackNavigator({
     KalenderDetalj: KalenderDetaljScreen,
     KalenderGtj: KalenderGtjScreen,
     KalenderBarn: KalenderBarnScreen,
-    KalenderVuxen: KalenderVuxenScreen
+    KalenderVuxen: KalenderVuxenScreen,
+    KalenderMusik: KalenderMusikScreen
 })
 
 

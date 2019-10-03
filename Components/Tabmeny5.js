@@ -48,12 +48,14 @@ export default function Tabmeny5(props) {
       </TouchableOpacity>
     </View>
 
-      <View style={styles.box}>
-          <Image 
+    <View style={styles.box}>
+      <TouchableOpacity onPress={()=> props.KalenderScreenProps.navigation.navigate('KalenderMusik')}>
+        <Image 
         style={styles.img}
         source={require('../assets/tab5/Musik.png')}
-        />        
-      </View>
+        /> 
+      </TouchableOpacity>
+    </View>
 
     </View>
     )
