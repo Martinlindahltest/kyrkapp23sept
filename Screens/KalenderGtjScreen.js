@@ -31,7 +31,7 @@ const KalenderGtjScreen = (props) => {
 
 KalenderGtjScreen.navigationOptions = navData => {
   return {
-    headerTitle: 'Gudtjänst',
+    headerTitle: 'Gudtjänstkalender',
 
   };
 };

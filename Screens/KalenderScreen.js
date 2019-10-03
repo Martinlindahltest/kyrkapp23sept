@@ -45,9 +45,9 @@ const KalenderScreen = (props) => {
               <ScrollView >
 
               <Image 
-      style={styles.img}
-      source={require('../assets/Kalender/Kalenderv2.jpg')}
-      />
+                style={styles.img}
+                source={require('../assets/Kalender/Kalenderv2.jpg')}
+                />
             <FetchApp navigateReferens={props} />
         </ScrollView>
         </View>

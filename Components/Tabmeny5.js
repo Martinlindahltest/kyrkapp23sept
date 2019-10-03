@@ -22,24 +22,23 @@ export default function Tabmeny5(props) {
 
       <View style={{flex: 1, flexDirection: 'row'}}>
 
-        <View style={styles.box}>
-          <Image 
+<View style={styles.box}>
+      <TouchableOpacity onPress={()=> props.KalenderScreenProps.navigation.navigate('KalenderBarn')}>
+        <Image 
         style={styles.img}
         source={require('../assets/tab5/Barn.png')}
-        />        
-      </View>
+        /> 
+      </TouchableOpacity>
+    </View>
 
-      <View style={styles.box}>
-
-
-              <TouchableOpacity onPress={()=> props.KalenderScreenProps.navigation.navigate('KalenderGtj')}>
-  <Image 
-          style={styles.img}
+    <View style={styles.box}>
+      <TouchableOpacity onPress={()=> props.KalenderScreenProps.navigation.navigate('KalenderGtj')}>
+        <Image 
+        style={styles.img}
         source={require('../assets/tab5/Gudstjanst.png')}
         /> 
-  </TouchableOpacity>
-       
-      </View>
+      </TouchableOpacity>
+    </View>
 
       <View style={styles.box}>
           <Image 
