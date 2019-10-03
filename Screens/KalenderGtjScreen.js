@@ -17,11 +17,10 @@ const KalenderScreen = (props) => {
  
     return (
       <View>
-        <Text>Gtj</Text>
               <ScrollView >
               <Image 
       style={styles.img}
-      source={require('../assets/Kalenderv2.jpg')}
+      source={require('../assets/Kalender/Gudstjanstkalender.jpg')}
       />
             <FetchApp navigateReferens={props} KategoriFilter={'Gtj'}  />
         </ScrollView>
