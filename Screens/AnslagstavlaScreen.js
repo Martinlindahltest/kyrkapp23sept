@@ -1,5 +1,5 @@
 import React from 'react'
-import { View, Text, StyleSheet } from 'react-native'
+import { View, Text, StyleSheet, ImageBackground } from 'react-native'
 import { HeaderButtons, Item } from 'react-navigation-header-buttons';
 import { DrawerActions } from 'react-navigation-drawer';
 
@@ -17,14 +17,17 @@ const styles = StyleSheet.create({
 const AnslagstavlaScreen = () => {
     return (
         <View style={{flex: 1, flexDirection: 'column'}}>
-      
-        <View style={{...styles.col, backgroundColor: 'powderblue'}} >            
+        <View style={{...styles.col}} >
+            <ImageBackground source={require('../assets/Anslagstavla/AnslagstavlaTopp.jpg')} style={{width: '100%', height: '100%'}}>
+            </ImageBackground>
         </View>
 
         <View style={{...styles.col, backgroundColor: 'skyblue'}} >
             <View style={{flex: 1, flexDirection: 'row'}}>
-                <View style={{flex: 1, flexDirection: 'column'}}><Text>1ttan</Text></View>
-                <View style={{flex: 1, flexDirection: 'column'}}><Text>1ttan</Text></View>
+                <View style={{flex: 1, flexDirection: 'column'}}><Text>1ttan</Text>
+                </View>
+                <View style={{flex: 1, flexDirection: 'column'}}><Text>1ttan</Text>
+                </View>
             </View>
         </View>
 
