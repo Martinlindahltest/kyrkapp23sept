@@ -4,7 +4,7 @@ import FetchApp from '../Components/FetchApp'
 
 
 
-const KalenderScreen = (props) => {
+const KalenderGtjScreen = (props) => {
 
   const styles = StyleSheet.create({
     img: {
@@ -29,12 +29,12 @@ const KalenderScreen = (props) => {
     )
 }
 
-KalenderScreen.navigationOptions = navData => {
+KalenderGtjScreen.navigationOptions = navData => {
   return {
-    headerTitle: 'Filter Gtj',
+    headerTitle: 'Gudtjänst',
 
   };
 };
 
 
-export default KalenderScreen
+export default KalenderGtjScreen
