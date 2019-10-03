@@ -1,17 +1,19 @@
 import React from 'react'
-import { View, Text, Image, StyleSheet, Button, TouchableOpacity, ImageBackground } from 'react-native'
+import { View, Text, Image, StyleSheet, Button, TouchableHighlight, ImageBackground } from 'react-native'
 
 export default function Tabmeny5(props) {
 
   const styles = StyleSheet.create({
     box:{
         flex: 1,
-        backgroundColor: 'black'
-
+        borderTopColor: '#000000',
+        borderStyle: "solid",
+        borderWidth:1
     },
     img: {
-      height:'100%',
-      width:'100%',
+      flex:1,
+      height: 200,
+      width: '100%',
       resizeMode: "contain"
     }
   });
@@ -32,12 +34,12 @@ export default function Tabmeny5(props) {
       <View style={styles.box}>
 
 
-              <TouchableOpacity onPress={()=> props.KalenderScreenProps.navigation.navigate('KalenderGtj')}>
+              <TouchableHighlight onPress={()=> console.log('tete')}>
   <Image 
           style={styles.img}
         source={require('../assets/tab5/Gudstjanst.png')}
         /> 
-  </TouchableOpacity>
+  </TouchableHighlight>
        
       </View>
 

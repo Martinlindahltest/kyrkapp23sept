@@ -18,7 +18,7 @@ const KalenderScreen = (props) => {
       resizeMode: "cover"
     },
     tabContainer: {
-      height: 100
+      height: 70 
     }
   });
 
