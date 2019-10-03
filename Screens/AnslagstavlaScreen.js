@@ -1,5 +1,5 @@
 import React from 'react'
-import { View, Text, StyleSheet, ImageBackground } from 'react-native'
+import { View, Text, StyleSheet, ImageBackground, TouchableOpacity } from 'react-native'
 import { HeaderButtons, Item } from 'react-navigation-header-buttons';
 import { DrawerActions } from 'react-navigation-drawer';
 
@@ -23,15 +23,30 @@ const AnslagstavlaScreen = () => {
         </View>
 
         <View style={{...styles.col, backgroundColor: 'skyblue'}} >
-            <View style={{flex: 1, flexDirection: 'row'}}>
-                <View style={{flex: 1, flexDirection: 'column'}}><Text>1ttan</Text>
+
+        <View style={{flex: 1, flexDirection: 'row'}}>
+
+                <View style={{flex: 1, flexDirection: 'column'}}>
+                <TouchableOpacity onPress={()=> console.log('klickad i anslagstavlan')}>
+
+                    <ImageBackground source={require('../assets/Anslagstavla/AnslagstavlaKalender.jpg')} style={{width: '100%', height: '100%'}}>
+                        <Text>jajajajaj</Text>
+                    </ImageBackground>
+                </TouchableOpacity>
+
                 </View>
-                <View style={{flex: 1, flexDirection: 'column'}}><Text>1ttan</Text>
+
+
+                <View style={{flex: 1, flexDirection: 'column'}}>
+                    <ImageBackground source={require('../assets/Anslagstavla/AnslagstavlaVerksamheter.jpg')} style={{width: '100%', height: '100%'}}>
+                    </ImageBackground>
                 </View>
             </View>
         </View>
 
-        <View style={{...styles.col , height: '34%', backgroundColor: 'steelblue'}} >            
+        <View style={{...styles.col , height: '34%', backgroundColor: 'steelblue'}} >
+            <ImageBackground source={require('../assets/Anslagstavla/AnslagstavlaVerksamheter.jpg')} style={{width: '100%', height: '100%'}}>
+            </ImageBackground>            
         </View>
       </View>
 
