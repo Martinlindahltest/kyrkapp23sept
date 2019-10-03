@@ -10,6 +10,7 @@ import KalenderDetaljScreen from '../Screens/KalenderDetaljScreen'
 
 import { createAppContainer } from 'react-navigation';
 
+import AnslagstavlaScreen from '../Screens/AnslagstavlaScreen'
 import VerksamheterScreen from '../Screens/VerksamheterScreen'
 import HändelserScreen from '../Screens/HändelserScreen'
 import PersonalScreen from '../Screens/PersonalScreen'
@@ -23,7 +24,9 @@ import KalenderMusikScreen from '../Screens/KalenderMusikScreen'
 
 
 
-
+const AnslagstavlaNavigator = createStackNavigator({
+    Anslagstavla: AnslagstavlaScreen,
+})
 
 const KalenderNavigator = createStackNavigator({
     Kalender: KalenderScreen,
@@ -53,6 +56,12 @@ const HittaHitNavigator = createStackNavigator({
 
 
 const MainNavigator = createDrawerNavigator({
+    Anslagstavla: {
+        screen: AnslagstavlaNavigator,
+        navigationOptions: {
+            drawerLabel: 'Anslagstavla'
+          }
+      },
     Kalender: {
         screen: KalenderNavigator,
         navigationOptions: {
