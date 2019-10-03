@@ -4,7 +4,7 @@ import FetchApp from '../Components/FetchApp'
 
 
 
-const KalenderBarnScreen = (props) => {
+const KalenderVuxenScreen = (props) => {
 
   const styles = StyleSheet.create({
     img: {
@@ -20,7 +20,7 @@ const KalenderBarnScreen = (props) => {
               <ScrollView >
               <Image 
       style={styles.img}
-      source={require('../assets/Kalender/Barnkalender.jpg')}
+      source={require('../assets/Kalender/Ungvuxenkalender.jpg')}
       />
             <FetchApp navigateReferens={props} KategoriFilter={'Gtj'}  />
         </ScrollView>
@@ -29,12 +29,12 @@ const KalenderBarnScreen = (props) => {
     )
 }
 
-KalenderBarnScreen.navigationOptions = navData => {
+KalenderVuxenScreen.navigationOptions = navData => {
   return {
-    headerTitle: 'Barnkalender',
+    headerTitle: 'Ung/Vuxenkalender',
 
   };
 };
 
 
-export default KalenderBarnScreen
+export default KalenderVuxenScreen

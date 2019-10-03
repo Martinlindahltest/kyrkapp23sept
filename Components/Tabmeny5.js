@@ -15,14 +15,13 @@ export default function Tabmeny5(props) {
       resizeMode: "contain"
     }
   });
-//       <Button title="Gtj" onPress={() => props.KalenderScreenProps.navigation.navigate('KalenderGtj')} />
 
     return (
 
 
       <View style={{flex: 1, flexDirection: 'row'}}>
 
-<View style={styles.box}>
+    <View style={styles.box}>
       <TouchableOpacity onPress={()=> props.KalenderScreenProps.navigation.navigate('KalenderBarn')}>
         <Image 
         style={styles.img}
@@ -40,12 +39,14 @@ export default function Tabmeny5(props) {
       </TouchableOpacity>
     </View>
 
-      <View style={styles.box}>
-          <Image 
+    <View style={styles.box}>
+      <TouchableOpacity onPress={()=> props.KalenderScreenProps.navigation.navigate('KalenderVuxen')}>
+        <Image 
         style={styles.img}
         source={require('../assets/tab5/Vuxen.png')}
-        />        
-      </View>
+        /> 
+      </TouchableOpacity>
+    </View>
 
       <View style={styles.box}>
           <Image 
