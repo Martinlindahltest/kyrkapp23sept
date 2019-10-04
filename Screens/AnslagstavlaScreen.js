@@ -14,7 +14,7 @@ const styles = StyleSheet.create({
   });
 
 
-const AnslagstavlaScreen = () => {
+const AnslagstavlaScreen = (props) => {
     return (
         <View style={{flex: 1, flexDirection: 'column'}}>
         <View style={{...styles.col}} >
@@ -27,11 +27,11 @@ const AnslagstavlaScreen = () => {
         <View style={{flex: 1, flexDirection: 'row'}}>
 
                 <View style={{flex: 1, flexDirection: 'column'}}>
-                <TouchableOpacity onPress={()=> console.log('klickad i anslagstavlan')}>
+                <TouchableOpacity onPress={()=> props.navigation.navigate('Kalender')}>
 
                     <ImageBackground source={require('../assets/Anslagstavla/AnslagstavlaKalender.jpg')} style={{width: '100%', height: '100%'}}>
-                        <Text>jajajajaj</Text>
                     </ImageBackground>
+
                 </TouchableOpacity>
 
                 </View>

@@ -53,7 +53,7 @@ const HittaHitNavigator = createStackNavigator({
 })
 
 
-
+//this.props.navigation.navigate('NestedNavigator1', {}, NavigationActions.navigate({ routeName: 'screenB' }))
 
 const MainNavigator = createDrawerNavigator({
     Anslagstavla: {
