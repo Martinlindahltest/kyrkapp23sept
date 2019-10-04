@@ -1,6 +1,7 @@
 import React from 'react'
 import { View, Text, ScrollView, Button, Image, StyleSheet } from 'react-native'
 import FetchApp from '../Components/FetchApp'
+import Tabmeny5 from '../Components/Tabmeny5'
 
 
 
@@ -13,10 +14,18 @@ const KalenderGtjScreen = (props) => {
       width: '100%',
       resizeMode: "cover"
     },
+    tabContainer: {
+      height: 70 
+    }
   });
  
     return (
       <View>
+
+<View style={styles.tabContainer}>
+        <Tabmeny5 KalenderScreenProps={props} />
+
+        </View>
               <ScrollView >
               <Image 
       style={styles.img}
