@@ -11,6 +11,11 @@ const styles = StyleSheet.create({
         flex: 1,
          height: '33%',
     },
+    centerContainer: {
+      flex: 1,
+      justifyContent: 'center',
+      alignItems: 'center'
+    },
   });
 
 
@@ -38,15 +43,25 @@ const AnslagstavlaScreen = (props) => {
 
 
                 <View style={{flex: 1, flexDirection: 'column'}}>
-                    <ImageBackground source={require('../assets/Anslagstavla/AnslagstavlaVerksamheter.jpg')} style={{width: '100%', height: '100%'}}>
-                    </ImageBackground>
+                  <TouchableOpacity onPress={()=> props.navigation.navigate('Verksamheter')}>
+
+                      <ImageBackground source={require('../assets/Anslagstavla/AnslagstavlaVerksamheter.jpg')} style={{width: '100%', height: '100%'}}>
+                      </ImageBackground>
+
+                    </TouchableOpacity>
                 </View>
             </View>
         </View>
 
         <View style={{...styles.col , height: '34%', backgroundColor: 'steelblue'}} >
+          <TouchableOpacity onPress={()=> props.navigation.navigate('Händelser')}>
+
             <ImageBackground source={require('../assets/Anslagstavla/AnslagstavlaVerksamheter.jpg')} style={{width: '100%', height: '100%'}}>
-            </ImageBackground>            
+              <View style={styles.centerContainer}>
+              </View>
+            </ImageBackground>
+          </TouchableOpacity>
+            
         </View>
       </View>
 
