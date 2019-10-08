@@ -19,7 +19,7 @@ export default class FetchSenasteHandelse extends Component {
           return response.json();
         })
         .then(WpJson => {
-            console.log('setstate')
+         //   console.log('setstate')
 
           this.setState({
             WpJson: WpJson
@@ -30,7 +30,9 @@ export default class FetchSenasteHandelse extends Component {
     render() {
         return (
             <View>
-                <Text>{console.log('wp title', this.state)}</Text>
+                <Text>{
+                  //  console.log('wp title', this.state)
+                    }</Text>
             </View>
         )
     }

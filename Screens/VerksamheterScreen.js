@@ -2,7 +2,6 @@ import React from 'react'
 import { ScrollView, View, Text } from 'react-native'
 import { HeaderButtons, Item } from 'react-navigation-header-buttons';
 import { DrawerActions } from 'react-navigation-drawer';
-import FuncFetchVerksamheter from '../Components/FuncFetchVerksamheter'
 
 import { WebView } from 'react-native-webview';
 

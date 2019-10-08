@@ -1,5 +1,6 @@
 import React from 'react'
-import { View, Text, StyleSheet, Button } from 'react-native'
+import { View, Text, StyleSheet, Image, TouchableOpacity } from 'react-native'
+
 
 
 export default function Display(props) {
@@ -85,21 +86,24 @@ const {
       //console.log(props.navRef.navigation.navigate)
 
     return (
-<View >
-    <Text style={styles.datumRubrik}>{Dag} {Datumsiffra} {Månad}</Text>
-    <View style={styles.box}>
-        <View style={styles.klockslagContainer}>
-            <Text style={styles.klockslag}>{startSlut}</Text>
-        </View>
-        <View style={styles.rubrikOchPlats}>
-            <Text style={styles.rubrik}>{Aktivitet}</Text>
-            <Text style={styles.text}>{Lokal}, {Verksamhetstyp}</Text>
-        </View>
-    </View>
-    <Button title="Mer info" onPress={() => props.navRef.navigation.navigate('KalenderDetalj', {Aktivitet: Aktivitet}) } />
 
-</View>
-           
+<TouchableOpacity onPress={() => props.navRef.navigation.navigate('KalenderDetalj', {Aktivitet: Aktivitet}) }>
+    <View >
+        <Text style={styles.datumRubrik}>{Dag} {Datumsiffra} {Månad}</Text>
+        <View style={styles.box}>
+            <View style={styles.klockslagContainer}>
+                <Text style={styles.klockslag}>{startSlut}</Text>
+            </View>
+            <View style={styles.rubrikOchPlats}>
+                <Text style={styles.rubrik}>{Aktivitet}</Text>
+                <Text style={styles.text}>{Lokal}, {Verksamhetstyp}  =></Text>
+
+             </View>
+        </View>
+
+
+    </View>
+</TouchableOpacity>
 
         
 

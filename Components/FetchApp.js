@@ -19,7 +19,6 @@ class FetchApp extends Component {
         console.log('FetchAppProps', this.props.KategoriFilter)
 
 
-
         const jsonURL = 'https://jsontestmartin.s3.eu-north-1.amazonaws.com/tullinge30sept.json'
 
 
@@ -50,12 +49,11 @@ class FetchApp extends Component {
 
         //let res2 = res[2][0] + res[2][1]
         //const dagensÅr = datumSplitArray[0]
-        const dagensMånad = 3
-        //datumSplitArray[1]
+        const dagensMånad = datumSplitArray[1]
         const dagensDatum = Number(datumSplitArray[2][0] + datumSplitArray[2][1])
 
 
-
+//console.log('dagensMånad', dagensMånad)
 
         //let tullingeJson = []
         let jsxArray = []
