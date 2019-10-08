@@ -4,6 +4,7 @@ import { HeaderButtons, Item } from 'react-navigation-header-buttons';
 import { DrawerActions } from 'react-navigation-drawer';
 
 import HeaderButton from '../Components/HeaderButton'
+import FetchSenasteHandelse from '../Components/FetchSenasteHandelse'
 
 
 const styles = StyleSheet.create({
@@ -58,6 +59,7 @@ const AnslagstavlaScreen = (props) => {
 
             <ImageBackground source={require('../assets/Anslagstavla/AnslagstavlaVerksamheter.jpg')} style={{width: '100%', height: '100%'}}>
               <View style={styles.centerContainer}>
+                <FetchSenasteHandelse />
               </View>
             </ImageBackground>
           </TouchableOpacity>
