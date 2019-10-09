@@ -3,42 +3,26 @@ import { Button, Text, View, StyleSheet } from 'react-native';
 import * as WebBrowser from 'expo-web-browser';
 import Constants from 'expo-constants';
 
-
-import { HeaderButtons, Item } from 'react-navigation-header-buttons';
-import { DrawerActions } from 'react-navigation-drawer';
-
-
-import HeaderButton from '../Components/HeaderButton'
-
-import { WebView } from 'react-native-webview';
-
-
 export default class HändelserScreen extends Component {
-  constructor(props){
-    super(props);
   state = {
-    result: 'ingenting',
+    result: null,
   };
-}
 
   render() {
+    this._handlePressButtonAsync()
     return (
       <View>
                <Button
           style={styles.paragraph}
-          title="Se senaste händelser"
+          title="Open WebBrowser"
           onPress={this._handlePressButtonAsync}
         />
 
-<Button
-        onPress={() => this.props.navigation.navigate('Anslagstavla')}
-        title="Tillbaka till Anslagstavlan"
-      />
+
+        <Text>{this.state.result && JSON.stringify(this.state.result)}</Text>
       </View>
     );
   }
-
-
 
   _handlePressButtonAsync = async () => {
     let result = await WebBrowser.openBrowserAsync('https://tullinge.digitalindahl.com/');
