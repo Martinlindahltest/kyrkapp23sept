@@ -28,8 +28,13 @@ const styles = StyleSheet.create({
       result: null,
     };
 
-    _handlePressButtonAsync = async () => {
+    startaHandelserAsync = async () => {
       let result = await WebBrowser.openBrowserAsync('https://tullinge.digitalindahl.com/');
+      this.setState({ result });
+    };
+
+    startaVerksamheterAsync = async () => {
+      let result = await WebBrowser.openBrowserAsync('https://tullinge.digitalindahl.com/verksamheter');
       this.setState({ result });
     };
 
@@ -57,7 +62,7 @@ const styles = StyleSheet.create({
 
 
                 <View style={{flex: 1, flexDirection: 'column'}}>
-                  <TouchableOpacity onPress={()=> this.props.navigation.navigate('Verksamheter')}>
+                <TouchableOpacity onPress={this.startaVerksamheterAsync}>
 
                       <ImageBackground source={require('../assets/Anslagstavla/AnslagstavlaVerksamheter.jpg')} style={{width: '100%', height: '100%'}}>
                       </ImageBackground>
@@ -68,7 +73,7 @@ const styles = StyleSheet.create({
         </View>
 
         <View style={{...styles.col , height: '34%', backgroundColor: 'steelblue'}} >
-          <TouchableOpacity onPress={this._handlePressButtonAsync}>
+          <TouchableOpacity onPress={this.startaHandelserAsync}>
 
             <ImageBackground source={require('../assets/Anslagstavla/AnslagstavlaVerksamheter.jpg')} style={{width: '100%', height: '100%'}}>
               <View style={styles.centerContainer}>
