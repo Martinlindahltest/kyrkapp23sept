@@ -1,13 +1,10 @@
-import React, { Component } from 'react'
+import React from 'react'
 import { View, Text, StyleSheet, ImageBackground, TouchableOpacity } from 'react-native'
 import { HeaderButtons, Item } from 'react-navigation-header-buttons';
 import { DrawerActions } from 'react-navigation-drawer';
 
 import HeaderButton from '../Components/HeaderButton'
 import FetchSenasteHandelse from '../Components/FetchSenasteHandelse'
-
-import * as WebBrowser from 'expo-web-browser';
-
 
 
 const styles = StyleSheet.create({
@@ -22,19 +19,9 @@ const styles = StyleSheet.create({
     },
   });
 
-  
-  export default class AnslagstavlaScreen extends Component {
-    state = {
-      result: null,
-    };
 
-    _handlePressButtonAsync = async () => {
-      let result = await WebBrowser.openBrowserAsync('https://tullinge.digitalindahl.com/');
-      this.setState({ result });
-    };
-
-    render(props) {
-      return (
+const AnslagstavlaScreen = (props) => {
+    return (
         <View style={{flex: 1, flexDirection: 'column'}}>
         <View style={{...styles.col}} >
             <ImageBackground source={require('../assets/Anslagstavla/AnslagstavlaTopp.jpg')} style={{width: '100%', height: '100%'}}>
@@ -46,7 +33,7 @@ const styles = StyleSheet.create({
         <View style={{flex: 1, flexDirection: 'row'}}>
 
                 <View style={{flex: 1, flexDirection: 'column'}}>
-                <TouchableOpacity onPress={()=> this.props.navigation.navigate('Kalender')}>
+                <TouchableOpacity onPress={()=> props.navigation.navigate('Kalender')}>
 
                     <ImageBackground source={require('../assets/Anslagstavla/AnslagstavlaKalender.jpg')} style={{width: '100%', height: '100%'}}>
                     </ImageBackground>
@@ -57,7 +44,7 @@ const styles = StyleSheet.create({
 
 
                 <View style={{flex: 1, flexDirection: 'column'}}>
-                  <TouchableOpacity onPress={()=> this.props.navigation.navigate('Verksamheter')}>
+                  <TouchableOpacity onPress={()=> props.navigation.navigate('Verksamheter')}>
 
                       <ImageBackground source={require('../assets/Anslagstavla/AnslagstavlaVerksamheter.jpg')} style={{width: '100%', height: '100%'}}>
                       </ImageBackground>
@@ -68,7 +55,7 @@ const styles = StyleSheet.create({
         </View>
 
         <View style={{...styles.col , height: '34%', backgroundColor: 'steelblue'}} >
-          <TouchableOpacity onPress={this._handlePressButtonAsync}>
+          <TouchableOpacity onPress={()=> props.navigation.navigate('Händelser')}>
 
             <ImageBackground source={require('../assets/Anslagstavla/AnslagstavlaVerksamheter.jpg')} style={{width: '100%', height: '100%'}}>
               <View style={styles.centerContainer}>
@@ -79,13 +66,9 @@ const styles = StyleSheet.create({
             
         </View>
       </View>
-      )
-    }
-  }
-  
 
-
-
+    ) 
+}
 
 AnslagstavlaScreen.navigationOptions = navData => {
     return {
@@ -107,3 +90,5 @@ AnslagstavlaScreen.navigationOptions = navData => {
     };
   };
 
+
+export default AnslagstavlaScreen
