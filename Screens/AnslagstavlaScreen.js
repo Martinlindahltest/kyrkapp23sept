@@ -17,9 +17,17 @@ const styles = StyleSheet.create({
     },
     centerContainer: {
       flex: 1,
-      justifyContent: 'center',
-      alignItems: 'center'
+      justifyContent: 'flex-end',
+      alignItems: 'center',
     },
+    anslagstavlaSizeColor: {
+      color: 'white',
+      fontSize: 30
+    },
+    rubrikSizeColor: {
+      color: 'white',
+      fontSize: 20
+    }
   });
 
   
@@ -43,6 +51,9 @@ const styles = StyleSheet.create({
         <View style={{flex: 1, flexDirection: 'column'}}>
         <View style={{...styles.col}} >
             <ImageBackground source={require('../assets/Anslagstavla/AnslagstavlaTopp.jpg')} style={{width: '100%', height: '100%'}}>
+              <View style={styles.centerContainer}>
+                <Text style={styles.anslagstavlaSizeColor}>Anslagstavla</Text>
+              </View>
             </ImageBackground>
         </View>
 
@@ -54,6 +65,9 @@ const styles = StyleSheet.create({
                 <TouchableOpacity onPress={()=> this.props.navigation.navigate('Kalender')}>
 
                     <ImageBackground source={require('../assets/Anslagstavla/AnslagstavlaKalender.jpg')} style={{width: '100%', height: '100%'}}>
+                      <View style={styles.centerContainer}>
+                        <Text style={styles.rubrikSizeColor}>Kalender</Text>
+                      </View>
                     </ImageBackground>
 
                 </TouchableOpacity>
@@ -65,6 +79,9 @@ const styles = StyleSheet.create({
                 <TouchableOpacity onPress={this.startaVerksamheterAsync}>
 
                       <ImageBackground source={require('../assets/Anslagstavla/AnslagstavlaVerksamheter.jpg')} style={{width: '100%', height: '100%'}}>
+                        <View style={styles.centerContainer}>
+                          <Text style={styles.rubrikSizeColor}>Verksamheter</Text>
+                        </View>
                       </ImageBackground>
 
                     </TouchableOpacity>

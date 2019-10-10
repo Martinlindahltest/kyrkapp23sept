@@ -20,7 +20,7 @@ export default class FetchVerksamheter extends Component {
           return response.json();
         })
         .then(tullingeJson => {
-            console.log('setstate')
+            console.log('setstate i fetchVerksamheter')
 
           this.setState({
             tullingeJson: tullingeJson
