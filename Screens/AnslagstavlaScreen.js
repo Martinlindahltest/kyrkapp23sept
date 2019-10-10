@@ -93,7 +93,7 @@ const styles = StyleSheet.create({
           <TouchableOpacity onPress={this.startaHandelserAsync}>
 
             <ImageBackground source={require('../assets/Anslagstavla/AnslagstavlaVerksamheter.jpg')} style={{width: '100%', height: '100%'}}>
-              <View style={styles.centerContainer}>
+              <View >
                 <FetchSenasteHandelse />
               </View>
             </ImageBackground>
