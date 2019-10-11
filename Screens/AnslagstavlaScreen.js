@@ -20,6 +20,11 @@ const styles = StyleSheet.create({
       justifyContent: 'flex-end',
       alignItems: 'center',
     },
+    centerContainerFlexCenter: {
+      flex: 1,
+      justifyContent: 'center',
+      alignItems: 'center',
+    },
     anslagstavlaSizeColor: {
       color: 'white',
       fontSize: 30
@@ -93,7 +98,7 @@ const styles = StyleSheet.create({
           <TouchableOpacity onPress={this.startaHandelserAsync}>
 
             <ImageBackground source={require('../assets/Anslagstavla/AnslagstavlaVerksamheter.jpg')} style={{width: '100%', height: '100%'}}>
-              <View >
+              <View style={styles.centerContainerFlexCenter} >
                 <FetchSenasteHandelse />
               </View>
             </ImageBackground>

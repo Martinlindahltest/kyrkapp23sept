@@ -1,6 +1,17 @@
 import React, { Component } from 'react'
 import { Text, View, StyleSheet } from 'react-native'
 
+const styles = StyleSheet.create({
+  rubrikSizeColor: {
+    color: 'white',
+    fontSize: 15
+  },
+  rubrikSizeColor20: {
+    color: 'white',
+    fontSize: 20
+  }
+});
+
 
 export default class FetchSenasteHandelse extends Component {
 
@@ -36,14 +47,20 @@ export default class FetchSenasteHandelse extends Component {
           //console.log('wp console.log', this.state.WpJson[0].title.rendered)
           return (
             <View>
-                <Text >{this.state.WpJson[0].title.rendered}</Text>
+              <Text style={styles.rubrikSizeColor20}>
+                Senaste Händelse:
+              </Text>
+                <Text style={styles.rubrikSizeColor} >
+                  {this.state.WpJson[0].title.rendered}
+                </Text>
             </View>)
       }
       else
       {
         return (
           <View>
-              <Text>
+              <Text style={styles.rubrikSizeColor20}>
+                Senaste Händelse:
               </Text>
           </View>
       )
