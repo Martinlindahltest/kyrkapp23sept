@@ -45,13 +45,11 @@ export default function DisplayVerksamhet(props) {
     <View >
         <Text style={styles.datumRubrik}>Dag Datumsiffra Månad</Text>
 
-        <View style={styles.box}>
-            <Text>jajaja</Text>
-        </View>
-        {/* 
+ 
+         
         <View style={styles.box}>
             <View style={styles.klockslagContainer}>
-                <Text style={styles.klockslag}>startSlut</Text>
+                <Text style={styles.klockslag}></Text>
             </View>
             <View style={styles.rubrikOchPlats}>
                 <Text style={styles.rubrik}>Aktivitet</Text>
@@ -59,7 +57,6 @@ export default function DisplayVerksamhet(props) {
 
              </View>
         </View>
-        */}
 
     </View>
 </TouchableOpacity>

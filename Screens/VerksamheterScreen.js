@@ -18,7 +18,9 @@ const VerksamheterScreen = () => {
                   <WebView source={{ uri: 'https://tullinge.digitalindahl.com/verksamheter' }} />
 
       */
-        <FetchVerksamheter />
+     <ScrollView>
+               <FetchVerksamheter />
+     </ScrollView>
     )
 } 
 
