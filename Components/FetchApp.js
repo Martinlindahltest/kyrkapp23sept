@@ -74,10 +74,10 @@ class FetchApp extends Component {
 
 
                 if(objektetsMånad > dagensMånad){
-                    return <Display key={obj._id} data={obj}   />
+                    return <Display key={obj._id} data={obj} navRef={this.props.navigateReferens}   />
                 }
                 if(objektetsMånad >= dagensMånad && objektetsDag >= dagensDatum){
-                    return <Display key={obj._id} data={obj}   />
+                    return <Display key={obj._id} data={obj} navRef={this.props.navigateReferens}   />
                 }
 
 
