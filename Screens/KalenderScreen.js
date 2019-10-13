@@ -13,7 +13,8 @@ const KalenderScreen = (props) => {
   const styles = StyleSheet.create({
     img: {
       flex:1,
-      height: 200,
+      maxHeight:180,
+      flexDirection: 'row',
       width: '100%',
       resizeMode: "cover"
     },

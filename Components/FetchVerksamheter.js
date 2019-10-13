@@ -14,7 +14,7 @@ export default class FetchVerksamheter extends Component {
 
     componentDidMount() {
 
-        const jsonURL = 'https://jsontestmartin.s3.eu-north-1.amazonaws.com/verksamheterMedId30sept.json'
+        const jsonURL = 'https://tullinge.digitalindahl.com/wp-json/wp/v2/apiverksamhet'
         fetch(jsonURL)
         .then(response => {
           return response.json();
@@ -38,7 +38,7 @@ export default class FetchVerksamheter extends Component {
             tullingeJson = this.state.tullingeJson
 
             verksamheterJsxArray = tullingeJson.map(obj => {
-                return <DisplayVerksamhet data={obj} />
+                return <DisplayVerksamhet key={obj.id} data={obj} />
             })
 
 

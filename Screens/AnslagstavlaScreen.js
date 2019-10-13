@@ -81,7 +81,7 @@ const styles = StyleSheet.create({
 
 
                 <View style={{flex: 1, flexDirection: 'column'}}>
-                <TouchableOpacity onPress={this.startaVerksamheterAsync}>
+                <TouchableOpacity onPress={()=> this.props.navigation.navigate('Verksamheter')}>
 
                       <ImageBackground source={require('../assets/Anslagstavla/AnslagstavlaVerksamheter.jpg')} style={{width: '100%', height: '100%'}}>
                         <View style={styles.centerContainer}>

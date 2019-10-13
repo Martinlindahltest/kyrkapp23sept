@@ -68,12 +68,12 @@ const MainNavigator = createDrawerNavigator({
             drawerLabel: 'Kalender'
           }
       },
-    //   Verksamheter: {
-    //     screen: VerksamheterNavigator,
-    //     navigationOptions: {
-    //         drawerLabel: 'Verksamheter'
-    //       }
-    //   },
+       Verksamheter: {
+         screen: VerksamheterNavigator,
+         navigationOptions: {
+             drawerLabel: 'Verksamheter'
+           }
+       },
     //   Händelser: {
     //     screen:HändelserNavigator,
     //     navigationOptions: {
