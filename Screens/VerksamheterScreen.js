@@ -12,14 +12,14 @@ import HeaderButton from '../Components/HeaderButton'
 
 
 
-const VerksamheterScreen = () => {
+const VerksamheterScreen = (props) => {
     return (
       /*
                   <WebView source={{ uri: 'https://tullinge.digitalindahl.com/verksamheter' }} />
 
       */
      <ScrollView>
-               <FetchVerksamheter />
+               <FetchVerksamheter navigateReferens={props} />
      </ScrollView>
     )
 } 

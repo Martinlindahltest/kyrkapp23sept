@@ -21,7 +21,7 @@ import KalenderBarnScreen from '../Screens/KalenderBarnScreen'
 import KalenderVuxenScreen from '../Screens/KalenderVuxenScreen'
 import KalenderMusikScreen from '../Screens/KalenderMusikScreen'
 
-
+import VerksamheterDetaljScreen from '../Screens/VerksamhetDetaljScreen'
 
 
 const AnslagstavlaNavigator = createStackNavigator({
@@ -40,6 +40,8 @@ const KalenderNavigator = createStackNavigator({
 
 const VerksamheterNavigator = createStackNavigator({
     Verksamheter: VerksamheterScreen,
+    VerksamheterDetalj: VerksamheterDetaljScreen,
+
 })
 
 const HändelserNavigator = createStackNavigator({

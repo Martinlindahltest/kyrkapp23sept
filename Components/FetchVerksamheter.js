@@ -38,7 +38,7 @@ export default class FetchVerksamheter extends Component {
             tullingeJson = this.state.tullingeJson
 
             verksamheterJsxArray = tullingeJson.map(obj => {
-                return <DisplayVerksamhet key={obj.id} data={obj} />
+                return <DisplayVerksamhet key={obj.id} data={obj} navRef={this.props.navigateReferens} />
             })
 
 

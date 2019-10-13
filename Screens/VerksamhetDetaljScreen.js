@@ -5,11 +5,24 @@ import { Text, ScrollView } from 'react-native'
 
 const VerksamhetDetaljScreen = (props) => {
 
+
+    const {
+        rubrik, 
+        typ, 
+        beskrivning,
+        url1,
+        url2,
+        dag,
+        tillpopular
+    } = props.navigation.state.params.Aktivitet
+
     return (
     
         <ScrollView >
             <Text>VerksamhetDetaljScreen</Text>
-            <Text>Aktivitet: {props.navigation.state.params.Aktivitet}  </Text>
+            <Text>{rubrik}  </Text>
+            <Text>{beskrivning}  </Text>
+
 
         </ScrollView>
         

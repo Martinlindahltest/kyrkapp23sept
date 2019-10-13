@@ -69,7 +69,7 @@ const {
 
     return (
 
-<TouchableOpacity onPress={() => props.navRef.navigation.navigate('KalenderDetalj', {Aktivitet: Aktivitet}) }>
+<TouchableOpacity onPress={() => props.navRef.navigation.navigate('VerksamheterDetalj', {Aktivitet: props.data.acf}) }>
     <View >
         <Text style={styles.datumRubrik}>{dag}</Text>
 
