@@ -37,13 +37,41 @@ export default function DisplayVerksamhet(props) {
         }
       });
       
-      //console.log(props.navRef.navigation.navigate)
+
+      /**
+            "acf": {
+            "rubrik": "Dop & Vigsel",
+            "typ": "gtj",
+            "beskrivning": "Plats: Tullinge Kyrka\r\nDag: Lördag\r\nTid 11.00 12.15 13.30 14.45\r\nPräst: Eva\r\nMusiker: Camilla\r\n\r\nVi har dop & vigslar i tullinge kyrka\r\n",
+            "url1": "https://www.svenskakyrkan.se/botkyrka/dop",
+            "url2": "https://www.svenskakyrkan.se/botkyrka/boka-och-planera-vigsel",
+            "dag": "måndag",
+            "tillpopular": true
+        },
+
+              const {
+
+    } = props.data.acf
+       */
+
+//console.log('DV', props.data.acf)
+
+
+const {
+    rubrik, 
+    typ, 
+    beskrivning,
+    url1,
+    url2,
+    dag,
+    tillpopular
+} = props.data.acf
 
     return (
 
 <TouchableOpacity onPress={() => props.navRef.navigation.navigate('KalenderDetalj', {Aktivitet: Aktivitet}) }>
     <View >
-        <Text style={styles.datumRubrik}>Dag Datumsiffra Månad</Text>
+        <Text style={styles.datumRubrik}>{dag}</Text>
 
  
          
@@ -52,8 +80,8 @@ export default function DisplayVerksamhet(props) {
                 <Text style={styles.klockslag}></Text>
             </View>
             <View style={styles.rubrikOchPlats}>
-                <Text style={styles.rubrik}>Aktivitet</Text>
-                <Text style={styles.text}>Lokal, Verksamhetstyp  =></Text>
+                <Text style={styles.rubrik}>{rubrik}</Text>
+                <Text style={styles.text}>  =></Text>
 
              </View>
         </View>
