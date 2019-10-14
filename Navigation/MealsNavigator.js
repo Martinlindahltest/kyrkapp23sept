@@ -55,11 +55,13 @@ const HittaHitNavigator = createStackNavigator({
     HittaHit: HittaHitScreen,
 })
 
-const MealsFavTabNavigator =  createBottomTabNavigator(
+const KalenderTabNavigator =  createBottomTabNavigator(
     {
-      Meals: {
-        screen: HittaHitNavigator
-      }
+      Alla: KalenderScreen,
+      Gudtjänst: KalenderGtjScreen,
+      Barn: KalenderBarnScreen,
+      UngVuxen: KalenderVuxenScreen,
+      Musik: KalenderMusikScreen
     });
 
 
@@ -73,7 +75,7 @@ const MainNavigator = createDrawerNavigator({
           }
       },
     Kalender: {
-        screen: KalenderNavigator,
+        screen: KalenderTabNavigator,
         navigationOptions: {
             drawerLabel: 'Kalender'
           }
@@ -97,8 +99,8 @@ const MainNavigator = createDrawerNavigator({
           }
       },
       HittaHit: {
-        screen:MealsFavTabNavigator,
-        navigationOptions: {
+        screen:HittaHitScreen,
+        navigationOptions: { 
             drawerLabel: 'HittaHit'
           }
       }
