@@ -38,16 +38,41 @@ const KalenderNavigator = createStackNavigator({
     KalenderMusik: KalenderMusikScreen
 })
 
+const KalenderNavigator2 = createStackNavigator({
+  Kalender: KalenderScreen,
+  KalenderDetalj: KalenderDetaljScreen,
+})
+
+const KalenderGtjNavigator = createStackNavigator({
+  KalenderGtj: KalenderGtjScreen,
+  KalenderDetalj: KalenderDetaljScreen,
+})
+
+const KalenderBarnNavigator = createStackNavigator({
+  KalenderBarn: KalenderBarnScreen,
+  KalenderDetalj: KalenderDetaljScreen,
+})
+
+const KalenderVuxenNavigator = createStackNavigator({
+  KalenderVuxen: KalenderVuxenScreen,
+  KalenderDetalj: KalenderDetaljScreen,
+})
+
+const KalenderMusikNavigator = createStackNavigator({
+  KalenderMusik: KalenderMusikScreen,
+  KalenderDetalj: KalenderDetaljScreen,
+})
 
 const VerksamheterNavigator = createStackNavigator({
     Verksamheter: VerksamheterScreen,
     VerksamheterDetalj: VerksamheterDetaljScreen,
 
 })
-
+/*
 const HändelserNavigator = createStackNavigator({
     Händelser: HändelserScreen,
 })
+*/
 const PersonalNavigator = createStackNavigator({
     Personal: PersonalScreen,
 })
@@ -57,11 +82,11 @@ const HittaHitNavigator = createStackNavigator({
 
 const KalenderTabNavigator =  createBottomTabNavigator(
     {
-      Alla: KalenderScreen,
-      Gudtjänst: KalenderGtjScreen,
-      Barn: KalenderBarnScreen,
-      UngVuxen: KalenderVuxenScreen,
-      Musik: KalenderMusikScreen
+      Alla: KalenderNavigator2,
+      Gudtjänst: KalenderGtjNavigator,
+      Barn: KalenderBarnNavigator,
+      UngVuxen: KalenderVuxenNavigator,
+      Musik: KalenderMusikNavigator
     });
 
 
@@ -99,7 +124,7 @@ const MainNavigator = createDrawerNavigator({
           }
       },
       HittaHit: {
-        screen:HittaHitScreen,
+        screen:HittaHitNavigator,
         navigationOptions: { 
             drawerLabel: 'HittaHit'
           }

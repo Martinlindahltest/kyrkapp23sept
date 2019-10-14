@@ -20,7 +20,6 @@ export default function Tabmeny5(props) {
 
 
       <View style={{flex: 1, flexDirection: 'row'}}>
-
 <View style={styles.box}>
       <TouchableOpacity onPress={()=> props.KalenderScreenProps.navigation.navigate('KalenderGtj')}>
         <Image 
