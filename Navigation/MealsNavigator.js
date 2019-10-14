@@ -1,5 +1,6 @@
 import { createStackNavigator } from 'react-navigation-stack';
 import { createDrawerNavigator } from 'react-navigation-drawer';
+import { createBottomTabNavigator } from 'react-navigation-tabs'
 
 import { Ionicons } from '@expo/vector-icons';
 
@@ -54,6 +55,13 @@ const HittaHitNavigator = createStackNavigator({
     HittaHit: HittaHitScreen,
 })
 
+const MealsFavTabNavigator =  createBottomTabNavigator(
+    {
+      Meals: {
+        screen: HittaHitNavigator
+      }
+    });
+
 
 //this.props.navigation.navigate('NestedNavigator1', {}, NavigationActions.navigate({ routeName: 'screenB' }))
 
@@ -89,7 +97,7 @@ const MainNavigator = createDrawerNavigator({
           }
       },
       HittaHit: {
-        screen:HittaHitNavigator,
+        screen:MealsFavTabNavigator,
         navigationOptions: {
             drawerLabel: 'HittaHit'
           }
