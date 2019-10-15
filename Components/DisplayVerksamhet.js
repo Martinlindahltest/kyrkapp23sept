@@ -40,13 +40,14 @@ export default function DisplayVerksamhet(props) {
 
       /**
             "acf": {
-            "rubrik": "Dop & Vigsel",
-            "typ": "gtj",
-            "beskrivning": "Plats: Tullinge Kyrka\r\nDag: Lördag\r\nTid 11.00 12.15 13.30 14.45\r\nPräst: Eva\r\nMusiker: Camilla\r\n\r\nVi har dop & vigslar i tullinge kyrka\r\n",
-            "url1": "https://www.svenskakyrkan.se/botkyrka/dop",
-            "url2": "https://www.svenskakyrkan.se/botkyrka/boka-och-planera-vigsel",
-            "dag": "måndag",
-            "tillpopular": true
+            "rubrik": "Barnkören",
+            "typ": "musik",
+            "beskrivning": "Plats: Tullinge gård\r\nTid: Torsdagar, 17.15-18.00\r\nKörledare: Camilla Helander\r\n\r\nSånglek för barn 4-5 år.\r\n\r\nFör mer info, kontakta Camilla Helander.",
+            "url1": "",
+            "url2": "",
+            "dag": "4",
+            "tillpopular": false,
+            "plats": "Tullinge gård"
         },
 
               const {
@@ -64,14 +65,14 @@ const {
     url1,
     url2,
     dag,
-    tillpopular
+    tillpopular,
+    plats
 } = props.data.acf
 
     return (
 
 <TouchableOpacity onPress={() => props.navRef.navigation.navigate('VerksamheterDetalj', {Aktivitet: props.data.acf}) }>
     <View >
-        <Text style={styles.datumRubrik}>{dag}</Text>
 
  
          
@@ -81,12 +82,19 @@ const {
             </View>
             <View style={styles.rubrikOchPlats}>
                 <Text style={styles.rubrik}>{rubrik}</Text>
-                <Text style={styles.text}>  =></Text>
+                <Text style={styles.text} >{plats}  =></Text>
+
 
              </View>
         </View>
 
     </View>
+    <View
+                    style={{
+                        borderBottomColor: 'black',
+                        borderBottomWidth: 1,
+                    }}
+                    />
 </TouchableOpacity>
 
         
