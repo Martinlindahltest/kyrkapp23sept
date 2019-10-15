@@ -10,6 +10,9 @@ export default class FetchVerksamheter extends Component {
 
         }
 
+
+        this.objectToJsx = this.objectToJsx.bind(this);
+
     }
 
     
@@ -29,6 +32,16 @@ export default class FetchVerksamheter extends Component {
           })
         });
     }
+
+    objectToJsx(inputObject){
+        jsxObject = inputObject.map(obj => {
+            return <DisplayVerksamhet key={obj.id} data={obj} navRef={this.props.navigateReferens} />
+        })  
+        return jsxObject  
+    
+    }
+
+
 
 
 
@@ -71,20 +84,17 @@ export default class FetchVerksamheter extends Component {
 
         if(this.state.tullingeJson){
             tullingeJson = this.state.tullingeJson
-
-            //console.log('fetchVerksamheter innan sort', tullingeJson)
-
-
-
+/*
             verksamheterJsxArray = tullingeJson.map(obj => {
                 return <DisplayVerksamhet key={obj.id} data={obj} navRef={this.props.navigateReferens} />
             })
+*/
 
-
+            verksamheterJsxArray = this.objectToJsx(tullingeJson)
 
         }
 
-        console.log(styles)
+
 
         return (
             <View>
