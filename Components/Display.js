@@ -65,11 +65,11 @@ const {
             flexDirection: 'row'
         },
         klockslagContainer:{
-            flex: 1
+            flex: 2
         },
         klockslag:{
             padding:15,
-            fontSize:10
+            fontSize:14
         },
         rubrikOchPlats:{
             flex: 3,
