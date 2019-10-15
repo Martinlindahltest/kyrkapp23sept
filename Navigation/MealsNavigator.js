@@ -24,6 +24,8 @@ import KalenderMusikScreen from '../Screens/KalenderMusikScreen'
 
 import VerksamheterDetaljScreen from '../Screens/VerksamhetDetaljScreen'
 
+import Tabmeny5 from '../Components/Tabmeny5'
+
 
 const AnslagstavlaNavigator = createStackNavigator({
     Anslagstavla: AnslagstavlaScreen,
@@ -82,13 +84,55 @@ const HittaHitNavigator = createStackNavigator({
 
 const KalenderTabNavigator =  createBottomTabNavigator(
     {
-      Alla: KalenderNavigator2,
-      Gudtjänst: KalenderGtjNavigator,
-      Barn: KalenderBarnNavigator,
-      UngVuxen: KalenderVuxenNavigator,
-      Musik: KalenderMusikNavigator
-    });
+      Alla: {
+        screen: KalenderNavigator2,
+        navigationOptions: {
+          tabBarLabel:"KalenderNavigator2",
+          tabBarVisible: false
+        }
+      },
+      Gudtjänst: {
+        screen: KalenderGtjNavigator,
+        navigationOptions: {
+          tabBarLabel:"KalenderGtjNavigator",
+          tabBarVisible: false
+        }
+      },
+      Barn: {
+        screen: KalenderBarnNavigator,
+        navigationOptions: {
+          tabBarLabel:"KalenderBarnNavigator",
+          tabBarVisible: false
+        }
+      },
+      UngVuxen: {
+        screen: KalenderVuxenNavigator,
+        navigationOptions: {
+          tabBarLabel:"KalenderVuxenNavigator",
+          tabBarVisible: false
+        }
+      },
+      Musik: {
+        screen: KalenderMusikNavigator,
+        navigationOptions: {
+          tabBarLabel:"KalenderMusikNavigator",
+          tabBarVisible: false
+        }
+      },
+    }
+  );
+/** 
+ HomeScreen:{
+    screen:HomeScreen,
+    navigationOptions: {
+      tabBarLabel:"Home",
+      tabBarIcon: ({ tintColor }) => (
+        <Icon name="ios-bookmarks" size={20}/>
+      )
+    },
+  },
 
+*/
 
 //this.props.navigation.navigate('NestedNavigator1', {}, NavigationActions.navigate({ routeName: 'screenB' }))
 
