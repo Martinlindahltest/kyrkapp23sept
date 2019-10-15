@@ -37,12 +37,4 @@ const KalenderMusikScreen = (props) => {
     )
 }
 
-KalenderMusikScreen.navigationOptions = navData => {
-  return {
-    headerTitle: 'Musik',
-
-  };
-};
-
-
 export default KalenderMusikScreen
