@@ -87,7 +87,7 @@ const {
 
     return (
 
-<TouchableOpacity onPress={() => props.navRef.navigation.navigate('KalenderDetalj', {Aktivitet: Aktivitet}) }>
+<TouchableOpacity onPress={() => props.navRef.navigation.navigate('KalenderDetalj', {propsData: props.data}) }>
     <View >
         <Text style={styles.datumRubrik}>{Dag} {props.objektetsDag} / {props.objektetsMånad} {Månad}</Text>
         <View style={styles.box}>
