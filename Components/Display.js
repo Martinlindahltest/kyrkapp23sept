@@ -34,7 +34,7 @@ const {
 
 
 
-        const p = props.data
+        //const p = props.data
 
 //let datum = new Date("2015-02-02").toISOString()
 //console.log(datum)
@@ -89,7 +89,7 @@ const {
 
 <TouchableOpacity onPress={() => props.navRef.navigation.navigate('KalenderDetalj', {Aktivitet: Aktivitet}) }>
     <View >
-        <Text style={styles.datumRubrik}>{Dag} {Datumsiffra} {Månad}</Text>
+        <Text style={styles.datumRubrik}>{Dag} {props.objektetsDag} / {props.objektetsMånad} {Månad}</Text>
         <View style={styles.box}>
             <View style={styles.klockslagContainer}>
                 <Text style={styles.klockslag}>{startSlut}</Text>

@@ -16,7 +16,7 @@ class FetchApp extends Component {
 
     componentDidMount() {
 
-        console.log('FetchAppProps', this.props.KategoriFilter)
+        //console.log('FetchAppProps', this.props.KategoriFilter)
 
 
         const jsonURL = 'https://jsontestmartin.s3.eu-north-1.amazonaws.com/tullinge30sept.json'
@@ -69,15 +69,16 @@ class FetchApp extends Component {
 
                 let arrayMånadDagÅr = obj.Datum.split("/")
                 let objektetsMånad = Number(arrayMånadDagÅr[0])
-                let objektetsDag = Number(arrayMånadDagÅr[1])
-              //  console.log('objektetsMånad', objektetsMånad)
+                let objektetsDag = arrayMånadDagÅr[1]
 
+
+                //console.log('objektetsMånad', objektetsMånad)
 
                 if(objektetsMånad > dagensMånad){
-                    return <Display key={obj._id} data={obj} navRef={this.props.navigateReferens}   />
+                    return <Display key={obj._id} data={obj} navRef={this.props.navigateReferens} objektetsMånad={objektetsMånad} objektetsDag={objektetsDag}   />
                 }
                 if(objektetsMånad >= dagensMånad && objektetsDag >= dagensDatum){
-                    return <Display key={obj._id} data={obj} navRef={this.props.navigateReferens}   />
+                    return <Display key={obj._id} data={obj} navRef={this.props.navigateReferens} objektetsMånad={objektetsMånad} objektetsDag={objektetsDag}   />
                 }
 
 
