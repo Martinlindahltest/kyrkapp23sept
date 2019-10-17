@@ -52,8 +52,8 @@ const styles = StyleSheet.create({
       this.setState({ result });
     };
 
-    startaVerksamheterAsync = async () => {
-      let result = await WebBrowser.openBrowserAsync('https://tullinge.digitalindahl.com/verksamheter');
+    startaNyBlogAsync = async () => {
+      let result = await WebBrowser.openBrowserAsync('https://tullingenyblog.digitalindahl.com/');
       this.setState({ result });
     };
 
@@ -104,7 +104,7 @@ const styles = StyleSheet.create({
 }
 
 <View style={{...styles.col , height: '34%', backgroundColor: 'steelblue'}} >
-          <TouchableOpacity onPress={this.startaHandelserAsync}>
+          <TouchableOpacity onPress={this.startaNyBlogAsync}>
 
             <ImageBackground source={require('../assets/Anslagstavla/kommande15okt.jpg')} style={{width: '100%', height: '100%'}}>
               <View style={styles.centerContainer} >
