@@ -67,5 +67,4 @@ const KalenderDetaljScreen = (props) => {
     )
 }
 
-
 export default KalenderDetaljScreen
