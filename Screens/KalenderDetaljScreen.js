@@ -1,5 +1,5 @@
 import React from 'react'
-import { Text, ScrollView } from 'react-native'
+import { Text, ScrollView, ImageBackground } from 'react-native'
 import HeaderImage from '../Components/HeaderImage'
 
 
@@ -48,7 +48,8 @@ const KalenderDetaljScreen = (props) => {
 
     return (
 
-    
+        <ImageBackground source={require('../assets/Kalender17okt/bakgrundSten17okt.jpg')} style={{width: '100%', height: '100%'}}>
+
         <ScrollView >
                         {headerImage}
 
@@ -63,7 +64,8 @@ const KalenderDetaljScreen = (props) => {
 
 
         </ScrollView>
-        
+        </ImageBackground>
+
     )
 }
 

@@ -1,5 +1,5 @@
 import React from 'react'
-import { Text, ScrollView, Button, Linking } from 'react-native'
+import { Text, ScrollView, Button, Linking, ImageBackground } from 'react-native'
 import HeaderImage from '../Components/HeaderImage'
 
 
@@ -51,15 +51,18 @@ if(typ == 'barn') {
 }
 
     return (
-    
-        <ScrollView >
-            {headerImage}
-            <Text>{beskrivning}  </Text>
-            {knapp1}
-            {knapp2}
+        <ImageBackground source={require('../assets/Kalender17okt/bakgrundSten17okt.jpg')} style={{width: '100%', height: '100%'}}>
+            <ScrollView >
+                {headerImage}
 
-        </ScrollView>
-        
+
+                <Text>{beskrivning}  </Text>
+                {knapp1}
+                {knapp2}
+
+            </ScrollView>
+        </ImageBackground>
+
     )
 }
 

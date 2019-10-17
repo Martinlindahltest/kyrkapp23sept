@@ -1,5 +1,5 @@
 import React from 'react'
-import { View, Text, StyleSheet, Image, TouchableOpacity } from 'react-native'
+import { View, Text, StyleSheet, Image, TouchableOpacity, ImageBackground } from 'react-native'
 
 
 
@@ -94,32 +94,31 @@ const {
 
     return (
 
-<TouchableOpacity key={props.data.id} onPress={() => props.navRef.navigation.navigate('VerksamheterDetalj', {Aktivitet: props.data.acf}) }>
-    <View >
+                <TouchableOpacity key={props.data.id} onPress={() => props.navRef.navigation.navigate('VerksamheterDetalj', {Aktivitet: props.data.acf}) }>
+                    <View >
 
- 
-         
-        <View style={styles.box}>
-            <View style={styles.klockslagContainer}>
-                <Text style={styles.klockslag}></Text>
-            </View>
-            <View style={styles.rubrikOchPlats}>
-                <Text style={styles.rubrik}>{rubrik}</Text>
-                <Text style={styles.text} >{plats}  =></Text>
+                
+                        
+                        <View style={styles.box}>
+                            <View style={styles.klockslagContainer}>
+                                <Text style={styles.klockslag}></Text>
+                            </View>
+                            <View style={styles.rubrikOchPlats}>
+                                <Text style={styles.rubrik}>{rubrik}</Text>
+                                <Text style={styles.text} >{plats}  =></Text>
 
 
-             </View>
-        </View>
+                            </View>
+                        </View>
 
-    </View>
-    <View
-                    style={{
-                        borderBottomColor: 'black',
-                        borderBottomWidth: 1,
-                    }}
-                    />
-</TouchableOpacity>
-
+                    </View>
+                    <View
+                                    style={{
+                                        borderBottomColor: 'black',
+                                        borderBottomWidth: 1,
+                                    }}
+                                    />
+                </TouchableOpacity>
         
 
     )
