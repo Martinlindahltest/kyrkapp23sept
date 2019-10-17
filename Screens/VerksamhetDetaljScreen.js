@@ -55,8 +55,6 @@ if(typ == 'barn') {
     
         <ScrollView >
             {headerImage}
-
-            <Text>{rubrik}  </Text>
             <Text>{beskrivning}  </Text>
             {knapp1}
             {knapp2}
