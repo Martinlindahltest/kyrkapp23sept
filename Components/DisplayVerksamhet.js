@@ -5,6 +5,21 @@ import { View, Text, StyleSheet, Image, TouchableOpacity } from 'react-native'
 
 export default function DisplayVerksamhet(props) {
 
+    let farg
+    //console.log('props i displayverksamhet', props.data.acf.typ)
+    if(props.data.acf.typ == 'gtj'){
+        farg = 'red'
+    }
+    if(props.data.acf.typ == 'musik'){
+        farg = 'green'
+    }
+    if(props.data.acf.typ == 'ungVux'){
+        farg = 'blue'
+    }
+    if(props.data.acf.typ == 'barn'){
+        farg = 'yellow'
+    }
+
        const styles = StyleSheet.create({
         datumRubrik: {
           fontWeight: "bold",
@@ -16,7 +31,8 @@ export default function DisplayVerksamhet(props) {
         },
         box:{
             flex: 1,
-            flexDirection: 'row'
+            flexDirection: 'row',
+            margin: 5
         },
         klockslagContainer:{
             flex: 1
@@ -27,14 +43,18 @@ export default function DisplayVerksamhet(props) {
         },
         rubrikOchPlats:{
             flex: 3,
-            padding: 5
+            padding: 5,
+            borderLeftWidth: 2,
+            borderLeftColor: farg
+
+
         },
         rubrik:{
             fontSize: 20
         },
         text:{
             fontSize: 15
-        }
+        },        
       });
       
 
