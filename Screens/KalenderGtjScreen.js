@@ -6,6 +6,7 @@ import Tabmeny5 from '../Components/Tabmeny5'
 import { HeaderButtons, Item } from 'react-navigation-header-buttons';
 import HeaderButton from '../Components/HeaderButton'
 import { DrawerActions } from 'react-navigation-drawer';
+import HeaderImage from '../Components/HeaderImage'
 
 
 
@@ -30,11 +31,9 @@ const KalenderGtjScreen = (props) => {
         <Tabmeny5 KalenderScreenProps={props} />
 
         </View>
-              <ScrollView >
-              <Image 
-      style={styles.img}
-      source={require('../assets/Kalender17okt/kal-verk-gtj.jpg')}
-      />
+        <ScrollView >
+        <HeaderImage screen={'Gudtjänst'} />
+
             <FetchApp navigateReferens={props} KategoriFilter={'Gtj'}  />
         </ScrollView>
         </View>

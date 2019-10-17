@@ -6,6 +6,7 @@ import Tabmeny5 from '../Components/Tabmeny5'
 import { HeaderButtons, Item } from 'react-navigation-header-buttons';
 import HeaderButton from '../Components/HeaderButton'
 import { DrawerActions } from 'react-navigation-drawer';
+import HeaderImage from '../Components/HeaderImage'
 
 
 
@@ -31,10 +32,8 @@ const KalenderBarnScreen = (props) => {
 
         </View>
               <ScrollView >
-              <Image 
-      style={styles.img}
-      source={require('../assets/Kalender/Barnkalender.jpg')}
-      />
+              <HeaderImage screen={'Barn'} />
+
             <FetchApp navigateReferens={props} KategoriFilter={'Gtj'}  />
         </ScrollView>
         </View>
