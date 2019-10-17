@@ -1,5 +1,6 @@
 import React from 'react'
 import { Text, ScrollView } from 'react-native'
+import HeaderImage from '../Components/HeaderImage'
 
 
 
@@ -30,10 +31,27 @@ const KalenderDetaljScreen = (props) => {
     _id
     } = props.navigation.state.params.propsData
 
+    let headerImage = <HeaderImage screen={'Ung/Vuxen'} />
+
+    if(Verksamhetstyp == 'ungVux') {
+         headerImage = <HeaderImage screen={'Ung/Vuxen'} />
+    }
+    if(Verksamhetstyp == 'Gtj') {
+        headerImage = <HeaderImage screen={'Gudtjänst'} />
+    }
+    if(Verksamhetstyp == 'Musik') {
+        headerImage = <HeaderImage screen={'Musik'} />
+    }
+    if(Verksamhetstyp == 'Barn') {
+        headerImage = <HeaderImage screen={'Barn'} />
+    }
+
     return (
 
     
         <ScrollView >
+                        {headerImage}
+
            <Text>Verksamhetstyp: {Verksamhetstyp}  </Text>
             <Text>Aktivitet: {Aktivitet}  </Text>
 

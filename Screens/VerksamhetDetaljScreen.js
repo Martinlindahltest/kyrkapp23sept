@@ -34,7 +34,6 @@ const VerksamhetDetaljScreen = (props) => {
         knapp2.push(<Button title={text_pa_knapp_2} onPress={ ()=>{ Linking.openURL(url2)}} key={2}/>)
     }
 
-console.log('typ', typ)
 
     let headerImage = <HeaderImage screen={'Ung/Vuxen'} />
 
