@@ -32,7 +32,12 @@ const styles = StyleSheet.create({
     rubrikSizeColor: {
       color: 'white',
       fontSize: 20
-    }
+    },
+    rubrikSizeColor15: {
+      color: 'white',
+      fontSize: 15
+    },
+    
   });
 
   
@@ -57,11 +62,12 @@ const styles = StyleSheet.create({
         <View style={{...styles.col}} >
             <ImageBackground source={require('../assets/Anslagstavla/AnslagstavlaTopp.jpg')} style={{width: '100%', height: '100%'}}>
               <View style={styles.centerContainer}>
-                <Text style={styles.anslagstavlaSizeColor}>Anslagstavla</Text>
+                <Text style={styles.anslagstavlaSizeColor}></Text>
               </View>
             </ImageBackground>
         </View>
 
+{/** 
         <View style={{...styles.col, backgroundColor: 'skyblue'}} >
 
         <View style={{flex: 1, flexDirection: 'row'}}>
@@ -93,7 +99,26 @@ const styles = StyleSheet.create({
                 </View>
             </View>
         </View>
+        */
+}
 
+<View style={{...styles.col , height: '34%', backgroundColor: 'steelblue'}} >
+          <TouchableOpacity onPress={this.startaHandelserAsync}>
+
+            <ImageBackground source={require('../assets/Anslagstavla/AnslagstavlaVerksamheter.jpg')} style={{width: '100%', height: '100%'}}>
+              <View style={styles.centerContainerFlexCenter} >
+                <Text style={styles.rubrikSizeColor}>Veckans händelser</Text>
+                <Text style={styles.rubrikSizeColor15}>Klicka här för mer info om vad som häder hos oss denna vecka</Text>
+
+              </View>
+            </ImageBackground>
+          </TouchableOpacity>
+            
+        </View>
+
+        {
+          //kopia ovan
+        }
         <View style={{...styles.col , height: '34%', backgroundColor: 'steelblue'}} >
           <TouchableOpacity onPress={this.startaHandelserAsync}>
 

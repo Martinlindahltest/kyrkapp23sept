@@ -48,7 +48,10 @@ export default class FetchSenasteHandelse extends Component {
           return (
             <View>
               <Text style={styles.rubrikSizeColor20}>
-                Senaste Händelse:
+                Blogg
+              </Text>
+              <Text style={styles.rubrikSizeColor}>
+                Senaste inlägg
               </Text>
                 <Text style={styles.rubrikSizeColor} >
                   {this.state.WpJson[0].title.rendered}
@@ -59,8 +62,9 @@ export default class FetchSenasteHandelse extends Component {
       {
         return (
           <View>
-              <Text style={styles.rubrikSizeColor20}>
-                Senaste Händelse:
+              <Text style={styles.rubrikSizeColor}>
+                Blogg
+                Laddar...
               </Text>
           </View>
       )
