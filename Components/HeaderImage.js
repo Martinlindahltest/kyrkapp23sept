@@ -18,30 +18,25 @@ export default function HeaderImage(props) {
 
       let component = 
         <ImageBackground source={require('../assets/Kalender17okt/kal-verk-front.jpg')} style={styles.img}>
-        <Text>{props.screen}</Text>
         </ImageBackground>
 
         if(props.screen == 'Gudtjänst'){
           component = 
           <ImageBackground source={require('../assets/Kalender17okt/kal-verk-gtj.jpg')} style={styles.img}>
-          <Text>{props.screen}</Text>
           </ImageBackground>        
           }
           if(props.screen == 'Musik'){
             component = 
             <ImageBackground source={require('../assets/Kalender17okt/kal-verk-musik.jpg')} style={styles.img}>
-            <Text>{props.screen}</Text>
             </ImageBackground>        
             }
             if(props.screen == 'Barn'){
               component = 
               <ImageBackground source={require('../assets/Kalender17okt/kal-verk-barn.jpg')} style={styles.img}>
-              <Text>{props.screen}</Text>
               </ImageBackground>        }
             if(props.screen == 'Ung/Vuxen'){
               component = 
               <ImageBackground source={require('../assets/Kalender17okt/kal-verk-ungVux.jpg')} style={styles.img}>
-              <Text>{props.screen}</Text>
               </ImageBackground>        }
 
 

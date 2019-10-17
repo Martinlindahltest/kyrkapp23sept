@@ -89,9 +89,12 @@ const {
     plats
 } = props.data.acf
 
+
+//console.log('props DV', props.data.id)
+
     return (
 
-<TouchableOpacity onPress={() => props.navRef.navigation.navigate('VerksamheterDetalj', {Aktivitet: props.data.acf}) }>
+<TouchableOpacity key={props.data.id} onPress={() => props.navRef.navigation.navigate('VerksamheterDetalj', {Aktivitet: props.data.acf}) }>
     <View >
 
  
