@@ -8,7 +8,7 @@ export default function HeaderImage(props) {
         
       });
 
-      console.log(props)
+      //console.log(props)
 
 
       let img =          <Image 

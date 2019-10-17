@@ -34,12 +34,27 @@ const VerksamhetDetaljScreen = (props) => {
         knapp2.push(<Button title={text_pa_knapp_2} onPress={ ()=>{ Linking.openURL(url2)}} key={2}/>)
     }
 
+console.log('typ', typ)
+
+    let headerImage = <HeaderImage screen={'Ung/Vuxen'} />
+
+if(typ == 'ungVux') {
+     headerImage = <HeaderImage screen={'Ung/Vuxen'} />
+}
+if(typ == 'gtj') {
+    headerImage = <HeaderImage screen={'Gudtjänst'} />
+}
+if(typ == 'musik') {
+    headerImage = <HeaderImage screen={'Musik'} />
+}
+if(typ == 'barn') {
+    headerImage = <HeaderImage screen={'Barn'} />
+}
 
     return (
     
         <ScrollView >
-            <Text>VerksamhetDetaljScreen</Text>
-            <HeaderImage screen={'Gudtjänst'} />
+            {headerImage}
 
             <Text>{rubrik}  </Text>
             <Text>{beskrivning}  </Text>
