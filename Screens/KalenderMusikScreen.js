@@ -34,7 +34,7 @@ const KalenderMusikScreen = (props) => {
               <ScrollView >
               <Image 
       style={styles.img}
-      source={require('../assets/Kalender/Musikkalender.jpg')}
+      source={require('../assets/Kalender17okt/kal-verk-musik.jpg')}
       />
             <FetchApp navigateReferens={props} KategoriFilter={'Gtj'}  />
         </ScrollView>

@@ -32,7 +32,7 @@ const KalenderVuxenScreen = (props) => {
               <ScrollView >
               <Image 
       style={styles.img}
-      source={require('../assets/Kalender/Ungvuxenkalender.jpg')}
+      source={require('../assets/Kalender17okt/kal-verk-ungVux.jpg')}
       />
             <FetchApp navigateReferens={props} KategoriFilter={'Gtj'}  />
         </ScrollView>
