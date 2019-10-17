@@ -66,5 +66,13 @@ if(typ == 'barn') {
     )
 }
 
+VerksamhetDetaljScreen.navigationOptions = navData => {
+    //console.log('navData i VDS', navData.navigation.state.params.Aktivitet.rubrik)
+
+    return {
+      headerTitle: navData.navigation.state.params.Aktivitet.rubrik,
+    };
+  };
+
 
 export default VerksamhetDetaljScreen
