@@ -1,39 +1,21 @@
 import React from 'react'
-import { View, Text, ScrollView, Button, Image, StyleSheet } from 'react-native'
+import { View, ScrollView, StyleSheet } from 'react-native'
 import { HeaderButtons, Item } from 'react-navigation-header-buttons';
 import { DrawerActions } from 'react-navigation-drawer';
 import FetchApp from '../Components/FetchApp'
 import Tabmeny5 from '../Components/Tabmeny5'
 
 import HeaderButton from '../Components/HeaderButton'
+import HeaderImage from '../Components/HeaderImage'
 
 
 const KalenderScreen = (props) => {
 
   const styles = StyleSheet.create({
-    img: {
-      flex:1,
-      maxHeight:180,
-      flexDirection: 'row',
-      width: '100%',
-      resizeMode: "cover"
-    },
     tabContainer: {
       height: 70 
     }
   });
-
-  /**
-   *     <Image 
-      style={styles.stretch}
-      source={require('../assets/KalenderLiten.jpg')}
-      />
-   * 
-   * 
-   * 
-   * 
-   */
-
 
  
     return (
@@ -45,10 +27,7 @@ const KalenderScreen = (props) => {
 
               <ScrollView >
 
-              <Image 
-                style={styles.img}
-                source={require('../assets/Kalender17okt/kal-verk-front.jpg')}
-                />
+            <HeaderImage screen={'Kalender'} />
             <FetchApp navigateReferens={props} />
         </ScrollView>
         </View>
@@ -56,7 +35,7 @@ const KalenderScreen = (props) => {
     )
 }
 
-
+//'../assets/Kalender17okt/kal-verk-front.jpg'
 
 KalenderScreen.navigationOptions = navData => {
     return {
