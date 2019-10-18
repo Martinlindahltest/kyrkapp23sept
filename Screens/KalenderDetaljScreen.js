@@ -1,5 +1,5 @@
 import React from 'react'
-import { Text, ScrollView, ImageBackground } from 'react-native'
+import { Text, ScrollView, ImageBackground, View } from 'react-native'
 import HeaderImage from '../Components/HeaderImage'
 
 
@@ -20,7 +20,7 @@ const KalenderDetaljScreen = (props) => {
     Musiker,
     Månad,
     Präst,
-    Vaktm,
+    Vaktmästare,
     Vecka,
     Verksamhetstyp,
     förberedelse,
@@ -28,6 +28,7 @@ const KalenderDetaljScreen = (props) => {
     noteringar,
     År,
     startSlut,
+    Personal,
     _id
     } = props.navigation.state.params.propsData
 
@@ -46,6 +47,27 @@ const KalenderDetaljScreen = (props) => {
         headerImage = <HeaderImage screen={'Barn'} />
     }
 
+    let prastPlaceholder =<Text>Ingen präst </Text>
+    if(Präst.length > 0){
+        prastPlaceholder = <Text>Präst: {Präst}  </Text>
+
+    }
+    let musikerPlaceholder =<Text>Ingen Musiker </Text>
+    if(Musiker.length > 0){
+        musikerPlaceholder = <Text>Musiker: {Musiker}  </Text>
+    
+    let vaktmastarePlaceholder =<Text>Ingen vaktmastare </Text>
+    if(Vaktmästare.length > 0){
+        prastPlaceholder = <Text>Vaktmästare: {Vaktmästare}  </Text>
+
+    }
+    
+    let personalPlaceholder =<Text>Ingen personal </Text>
+    if(Personal.length > 0){
+        musikerPlaceholder = <Text>Personal: {Personal}  </Text>
+
+    }
+
     return (
 
         <ImageBackground source={require('../assets/Kalender17okt/bakgrundSten17okt.jpg')} style={{width: '100%', height: '100%'}}>
@@ -53,14 +75,14 @@ const KalenderDetaljScreen = (props) => {
         <ScrollView >
                         {headerImage}
 
-           <Text>Verksamhetstyp: {Verksamhetstyp}  </Text>
-            <Text>Aktivitet: {Aktivitet}  </Text>
 
 
-            <Text>Lokal: {Lokal}  </Text>
+            <Text>Plats: {Lokal}  </Text>
             <Text>Tid: {startSlut}  </Text>
-            <Text>Präst: {Präst}  </Text>
-            <Text>Musiker: {Musiker}  </Text>
+            {prastPlaceholder}
+            {musikerPlaceholder}
+            {vaktmastarePlaceholder}
+            {personalPlaceholder}
 
 
         </ScrollView>
@@ -68,5 +90,5 @@ const KalenderDetaljScreen = (props) => {
 
     )
 }
-
+}
 export default KalenderDetaljScreen
