@@ -30,6 +30,17 @@ class FetchApp extends Component {
             if(this.props.KategoriFilter === 'Gtj'){
                  tullingeJson = tullingeJson.filter(obj => obj.Verksamhetstyp === 'Gtj');
             }
+            if(this.props.KategoriFilter === 'Barn'){
+                tullingeJson = tullingeJson.filter(obj => obj.Verksamhetstyp === 'Barn');
+           }
+           if(this.props.KategoriFilter === 'Vuxen'){
+            tullingeJson = tullingeJson.filter(obj => obj.Verksamhetstyp === 'Vuxen');
+           }
+            if(this.props.KategoriFilter === 'Musik'){
+                tullingeJson = tullingeJson.filter(obj => obj.Verksamhetstyp === 'Musik');
+    
+       }
+
 
           this.setState({
             tullingeJson: tullingeJson

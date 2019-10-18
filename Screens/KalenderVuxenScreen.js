@@ -33,7 +33,7 @@ const KalenderVuxenScreen = (props) => {
               <ScrollView >
               <HeaderImage screen={'Ung/Vuxen'} />
 
-            <FetchApp navigateReferens={props} KategoriFilter={'Gtj'}  />
+            <FetchApp navigateReferens={props} KategoriFilter={'Vuxen'}  />
         </ScrollView>
         </View>
         

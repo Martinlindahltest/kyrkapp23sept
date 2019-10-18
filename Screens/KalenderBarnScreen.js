@@ -34,7 +34,7 @@ const KalenderBarnScreen = (props) => {
               <ScrollView >
               <HeaderImage screen={'Barn'} />
 
-            <FetchApp navigateReferens={props} KategoriFilter={'Gtj'}  />
+            <FetchApp navigateReferens={props} KategoriFilter={'Barn'}  />
         </ScrollView>
         </View>
         
