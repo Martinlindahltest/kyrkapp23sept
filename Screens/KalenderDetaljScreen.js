@@ -40,26 +40,26 @@ const KalenderDetaljScreen = (props) => {
 
 
 
-    let prastPlaceholder =<Text>Ingen präst </Text>
+    let prastPlaceholder =<View></View>
     if(Präst.length > 0){
         prastPlaceholder = <Text>Präst: {Präst}  </Text>
 
     }
 
-    let musikerPlaceholder =<Text>Ingen Musiker </Text>
+    let musikerPlaceholder =<View></View>
     if(Musiker.length > 0){
         musikerPlaceholder = <Text>Musiker: {Musiker}  </Text>
     }
 
     
-    let vaktmastarePlaceholder =<Text>Ingen vaktmastare </Text>
+    let vaktmastarePlaceholder =<View></View>
     if(Vaktmästare.length > 0){
         vaktmastarePlaceholder = <Text>Vaktmästare: {Vaktmästare}  </Text>
 
     }
 
     
-    let personalPlaceholder =<Text>Ingen personal </Text>
+    let personalPlaceholder =<View></View>
     if(Personal.length > 0){
         personalPlaceholder = <Text>Personal: {Personal}  </Text>
 
