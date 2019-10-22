@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Display from './Display';
 import { View, Text, Button } from 'react-native'
+import dbURL from '../dbConfig/dbUrl'
 
 
 class FetchApp extends Component {
@@ -19,7 +20,7 @@ class FetchApp extends Component {
         //console.log('FetchAppProps', this.props.KategoriFilter)
 
 
-        const jsonURL = 'https://jsontestmartin.s3.eu-north-1.amazonaws.com/tullinge30sept.json'
+        const jsonURL = dbURL
 
 
         fetch(jsonURL)
