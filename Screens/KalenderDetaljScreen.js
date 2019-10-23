@@ -75,13 +75,16 @@ const KalenderDetaljScreen = (props) => {
                 {headerImage}
 
 
-
+        <Text>{Aktivitet}</Text>
     <Text>Plats: {Lokal}  </Text>
     <Text>Tid: {startSlut}  </Text>
     {prastPlaceholder}
     {musikerPlaceholder}
     {vaktmastarePlaceholder}
     {personalPlaceholder}
+    <Text></Text>
+
+    <Text>{InternNotering}</Text>
 
 
 
