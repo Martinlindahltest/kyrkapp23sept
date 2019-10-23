@@ -86,7 +86,8 @@ const {
     url2,
     dag,
     tillpopular,
-    plats
+    plats, 
+    tid
 } = props.data.acf
 
 
@@ -101,7 +102,7 @@ const {
                         
                         <View style={styles.box}>
                             <View style={styles.klockslagContainer}>
-                                <Text style={styles.klockslag}></Text>
+                                <Text style={styles.klockslag}>{tid}</Text>
                             </View>
                             <View style={styles.rubrikOchPlats}>
                                 <Text style={styles.rubrik}>{rubrik}</Text>
