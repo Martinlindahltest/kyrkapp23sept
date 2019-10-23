@@ -96,7 +96,7 @@ const {
             </View>
             <View style={styles.rubrikOchPlats}>
                 <Text style={styles.rubrik}>{Aktivitet}</Text>
-                <Text style={styles.text}>{Lokal}, {Verksamhetstyp}  =></Text>
+                <Text style={styles.text}>{Lokal}  =></Text>
 
              </View>
         </View>

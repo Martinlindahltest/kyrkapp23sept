@@ -101,6 +101,18 @@ class FetchApp extends Component {
             <View>
                                 {jsxArray}
                                 <Text>Hej fran fetchapp</Text>
+                                <Text>Hej fran fetchapp</Text>
+                                <Text>Hej fran fetchapp</Text>
+                                <Text>Hej fran fetchapp</Text>
+                                <Text>Hej fran fetchapp</Text>
+                                <Text>Hej fran fetchapp</Text>
+                                <Text>Hej fran fetchapp</Text>
+                                <Text>Hej fran fetchapp</Text>
+                                <Text>Hej fran fetchapp</Text>
+                                <Text>Hej fran fetchapp</Text>
+                                <Text>Hej fran fetchapp</Text>
+                                <Text>Hej fran fetchapp</Text>
+
             </View>
         );
     }
