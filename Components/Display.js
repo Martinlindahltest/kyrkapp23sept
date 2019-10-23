@@ -72,7 +72,7 @@ const {
             fontSize:14
         },
         rubrikOchPlats:{
-            flex: 3,
+            flex: 4,
             padding: 5
         },
         rubrik:{
