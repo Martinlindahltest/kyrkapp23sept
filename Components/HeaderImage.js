@@ -4,7 +4,7 @@ import { View,Image, StyleSheet, Text, ImageBackground } from 'react-native'
 export default function HeaderImage(props) {
 
     const styles = StyleSheet.create({
-        img: {width: '100%', height: 150, resizeMode: 'cover'},
+        img: {width: '100%', height: 165, resizeMode: 'cover'},
         
       });
 
