@@ -48,7 +48,7 @@ export default class FetchSenasteHandelse extends Component {
           return (
             <View>
               <Text style={styles.rubrikSizeColor20}>
-                Blogg
+                Blogg:
               </Text>
               <Text style={styles.rubrikSizeColor}>
                 Senaste inlägg
