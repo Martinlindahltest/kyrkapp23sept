@@ -170,7 +170,7 @@ const MainNavigator = createDrawerNavigator({
       HittaHit: {
         screen:HittaHitNavigator,
         navigationOptions: { 
-            drawerLabel: 'HittaHit'
+            drawerLabel: 'Hitta hit'
           }
       }
 });
