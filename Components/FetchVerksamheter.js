@@ -134,7 +134,7 @@ export default class FetchVerksamheter extends Component {
            // verksamheterJsxArray = this.objectToJsx(tullingeJson)
 
         }
-        let popularaVerksamheterJSX = this.objectToJsx(popularaVerksamheter)
+       // let popularaVerksamheterJSX = this.objectToJsx(popularaVerksamheter)
         let olikaDagarVerksamheterJSX = this.objectToJsx(olikaDagarVerksamheter)
         let mandagVerksamheterJSX = this.objectToJsx(mandagVerksamheter)
         let tisdagVerksamheterJSX = this.objectToJsx(tisdagVerksamheter)
@@ -144,30 +144,36 @@ export default class FetchVerksamheter extends Component {
         let lordagVerksamheterJSX = this.objectToJsx(lordagVerksamheter)
         let sondagVerksamheterJSX = this.objectToJsx(sondagVerksamheter)
 
+        /**
+         * 
+         *                 <Text style={styles.datumRubrik}>Populära verksamheter</Text>
+                {    popularaVerksamheterJSX}
+         */
+
 
 
         return (
             <View>
                                 <Text> hej från fetch verksamheter </Text>
 
-                <Text style={styles.datumRubrik}>Populära verksamheter</Text>
-                {popularaVerksamheterJSX}
-                <Text style={styles.datumRubrik}>Olika dagar</Text>
-                {olikaDagarVerksamheterJSX}
-                <Text style={styles.datumRubrik}>Måndagar</Text>
+
+
+                <Text style={styles.datumRubrik}>måndagar</Text>
                 {mandagVerksamheterJSX}
-                <Text style={styles.datumRubrik}>Tisdagar</Text>
+                <Text style={styles.datumRubrik}>tisdagar</Text>
                 {tisdagVerksamheterJSX}
-                <Text style={styles.datumRubrik}>Onsdagar</Text>
+                <Text style={styles.datumRubrik}>onsdagar</Text>
                 {onsdagVerksamheterJSX}
-                <Text style={styles.datumRubrik}>Torsdagar</Text>
+                <Text style={styles.datumRubrik}>torsdagar</Text>
                 {torsdagVerksamheterJSX}
-                <Text style={styles.datumRubrik}>Fredagar</Text>
+                <Text style={styles.datumRubrik}>fredagar</Text>
                 {fredagVerksamheterJSX}
-                <Text style={styles.datumRubrik}>Lördagar</Text>
+                <Text style={styles.datumRubrik}>lördagar</Text>
                 {lordagVerksamheterJSX}
-                <Text style={styles.datumRubrik}>Söndagar</Text>
+                <Text style={styles.datumRubrik}>söndagar</Text>
                 {sondagVerksamheterJSX}
+                <Text style={styles.datumRubrik}>olika dagar</Text>
+                {olikaDagarVerksamheterJSX}
 
 
 
