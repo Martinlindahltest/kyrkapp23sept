@@ -1,5 +1,5 @@
 import React from 'react'
-import { Text, ScrollView, ImageBackground, View } from 'react-native'
+import { Text, ScrollView, ImageBackground, View, StyleSheet } from 'react-native'
 import HeaderImage from '../Components/HeaderImage'
 
 
@@ -22,6 +22,24 @@ const KalenderDetaljScreen = (props) => {
         InternNotering
     } = props.navigation.state.params.propsData
 
+    const styles = StyleSheet.create({
+        rubrik:{
+            fontSize: 30,
+            padding:3,
+            paddingBottom:20,
+            paddingTop: 20
+
+        },
+        text:{
+            fontSize: 20,
+            padding:3
+
+        },
+        ViewRuntText:{
+            padding:30
+        }        
+      });
+
 
     let headerImage = <HeaderImage screen={'Ung/Vuxen'} />
 
@@ -42,31 +60,32 @@ const KalenderDetaljScreen = (props) => {
 
     let prastPlaceholder =<View></View>
     if(Präst.length > 0){
-        prastPlaceholder = <Text>Präst: {Präst}  </Text>
+        prastPlaceholder = <Text style={styles.text}>Präst: {Präst}  </Text>
 
     }
 
     let musikerPlaceholder =<View></View>
     if(Musiker.length > 0){
-        musikerPlaceholder = <Text>Musiker: {Musiker}  </Text>
+        musikerPlaceholder = <Text style={styles.text}>Musiker: {Musiker}  </Text>
     }
 
     
     let vaktmastarePlaceholder =<View></View>
     if(Vaktmästare.length > 0){
-        vaktmastarePlaceholder = <Text>Vaktmästare: {Vaktmästare}  </Text>
+        vaktmastarePlaceholder = <Text style={styles.text}>Vaktmästare: {Vaktmästare}  </Text>
 
     }
 
     
     let personalPlaceholder =<View></View>
     if(Personal.length > 0){
-        personalPlaceholder = <Text>Personal: {Personal}  </Text>
+        personalPlaceholder = <Text style={styles.text}>Personal: {Personal}  </Text>
 
     }
-                            /** 
 
-*/
+
+
+
     return (
 
 <ImageBackground source={require('../assets/Kalender17okt/bakgrundSten17okt.jpg')} style={{width: '100%', height: '100%'}}>
@@ -74,18 +93,18 @@ const KalenderDetaljScreen = (props) => {
 <ScrollView >
                 {headerImage}
 
+    <View style={styles.ViewRuntText}>
+        <Text style={styles.rubrik}>{Aktivitet}</Text>
+        <Text style={styles.text}>Plats: {Lokal}  </Text>
+        <Text style={styles.text}>Tid: {startSlut}  </Text>
+        {prastPlaceholder}
+        {musikerPlaceholder}
+        {vaktmastarePlaceholder}
+        {personalPlaceholder}
+        <Text></Text>
 
-        <Text>{Aktivitet}</Text>
-    <Text>Plats: {Lokal}  </Text>
-    <Text>Tid: {startSlut}  </Text>
-    {prastPlaceholder}
-    {musikerPlaceholder}
-    {vaktmastarePlaceholder}
-    {personalPlaceholder}
-    <Text></Text>
-
-    <Text>{InternNotering}</Text>
-
+        <Text style={styles.text}>{InternNotering}</Text>
+    </View>
 
 
 
