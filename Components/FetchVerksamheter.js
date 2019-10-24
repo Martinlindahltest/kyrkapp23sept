@@ -19,7 +19,7 @@ export default class FetchVerksamheter extends Component {
 
     componentDidMount() {
 
-        const jsonURL = 'https://tullinge.digitalindahl.com/wp-json/wp/v2/apiverksamhet'
+        const jsonURL = 'https://tullinge.digitalindahl.com/wp-json/wp/v2/apiverksamhet/?per_page=100'
         fetch(jsonURL)
         .then(response => {
           return response.json();
