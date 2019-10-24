@@ -1,5 +1,5 @@
 import React from 'react'
-import { Text, ScrollView, Button, Linking, ImageBackground } from 'react-native'
+import { Text, ScrollView, Button, Linking, ImageBackground, StyleSheet, View } from 'react-native'
 import HeaderImage from '../Components/HeaderImage'
 
 
@@ -18,6 +18,24 @@ const VerksamhetDetaljScreen = (props) => {
         dag,
         tillpopular
     } = props.navigation.state.params.Aktivitet
+
+    const styles = StyleSheet.create({
+        rubrik:{
+            fontSize: 30,
+            padding:3,
+            paddingBottom:20,
+            paddingTop: 20
+
+        },
+        text:{
+            fontSize: 20,
+            padding:3
+
+        },
+        ViewRuntText:{
+            padding:30
+        }        
+      });
 
     //console.log('props.navigation.state', props.navigation.state.key)
 
@@ -55,11 +73,11 @@ if(typ == 'barn') {
             <ScrollView >
                 {headerImage}
 
-
-                <Text>{beskrivning}  </Text>
+            <View style={styles.ViewRuntText}>
+                <Text style={styles.text}>{beskrivning}  </Text>
                 {knapp1}
                 {knapp2}
-
+            </View>
             </ScrollView>
         </ImageBackground>
 
