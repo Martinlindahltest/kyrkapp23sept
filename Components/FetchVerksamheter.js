@@ -55,7 +55,11 @@ export default class FetchVerksamheter extends Component {
               borderTopColor: '#000000',
               borderStyle: "solid",
               borderWidth:1
-            },
+              
+            }
+                        /**
+
+            ,
             box:{
                 flex: 1,
                 flexDirection: 'row'
@@ -77,7 +81,9 @@ export default class FetchVerksamheter extends Component {
             text:{
                 fontSize: 15
             }
+             */
           });
+          
 
         let verksamheterJsxArray = []
         let popularaVerksamheter = []

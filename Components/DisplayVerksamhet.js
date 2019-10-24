@@ -35,14 +35,18 @@ export default function DisplayVerksamhet(props) {
             margin: 5
         },
         klockslagContainer:{
-            flex: 1
+            flex: 3
         },
         klockslag:{
-            padding:15,
-            fontSize:10
+            //paddingTop:10,
+            fontSize:15,
+            //fontWeight: 'bold',
+            justifyContent: 'center',
+            alignItems: 'center',
+    
         },
         rubrikOchPlats:{
-            flex: 3,
+            flex: 5,
             padding: 5,
             borderLeftWidth: 2,
             borderLeftColor: farg
