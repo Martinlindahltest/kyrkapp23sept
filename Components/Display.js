@@ -34,22 +34,20 @@ const {
 
 
 
-        //const p = props.data
-
-//let datum = new Date("2015-02-02").toISOString()
-//console.log(datum)
-
-        /*
-<View>
-    <Text>HEj från display</Text>
-
-    
-   <Text>{p.Dag} {p.Datumsiffra} {p.Månad} kl {p.startSlut}</Text>
-   <Text>{p.Aktivitet}</Text>
-
-
-</View>
-        */ 
+let farg
+//console.log('props i displayverksamhet', props.data.acf.typ)
+if(Verksamhetstyp == 'Gtj'){
+    farg = 'red'
+}
+if(Verksamhetstyp == 'Musik'){
+    farg = 'green'
+}
+if(Verksamhetstyp == 'Vuxen'){
+    farg = 'blue'
+}
+if(Verksamhetstyp == 'Barn'){
+    farg = 'yellow'
+}
 
        const styles = StyleSheet.create({
         datumRubrik: {
@@ -62,25 +60,34 @@ const {
         },
         box:{
             flex: 1,
-            flexDirection: 'row'
+            flexDirection: 'row',
+            margin: 5
         },
         klockslagContainer:{
-            flex: 2
+            flex: 3
         },
         klockslag:{
-            padding:15,
-            fontSize:14
+            //paddingTop:10,
+            fontSize:15,
+            //fontWeight: 'bold',
+            justifyContent: 'center',
+            alignItems: 'center',
+    
         },
         rubrikOchPlats:{
-            flex: 4,
-            padding: 5
+            flex: 5,
+            padding: 5,
+            borderLeftWidth: 2,
+            borderLeftColor: farg
+
+
         },
         rubrik:{
             fontSize: 20
         },
         text:{
             fontSize: 15
-        }
+        },        
       });
       
       //console.log(props.navRef.navigation.navigate)
@@ -97,6 +104,7 @@ const {
             <View style={styles.rubrikOchPlats}>
                 <Text style={styles.rubrik}>{Aktivitet}</Text>
                 <Text style={styles.text}>{Lokal}  =></Text>
+
 
              </View>
         </View>
