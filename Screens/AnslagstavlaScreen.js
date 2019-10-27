@@ -8,6 +8,10 @@ import FetchSenasteHandelse from '../Components/FetchSenasteHandelse'
 
 import * as WebBrowser from 'expo-web-browser';
 
+import { Button } from 'react-native-elements';
+import Icon from 'react-native-vector-icons/FontAwesome';
+
+
 
 
 const styles = StyleSheet.create({
@@ -69,6 +73,9 @@ const styles = StyleSheet.create({
             </ImageBackground>
         </View>
 
+
+
+
 {/** 
         <View style={{...styles.col, backgroundColor: 'skyblue'}} >
 
@@ -108,9 +115,14 @@ const styles = StyleSheet.create({
           <TouchableOpacity onPress={this.startaNyBlogAsync}>
 
             <ImageBackground source={require('../assets/Anslagstavla/kommande15okt.jpg')} style={{width: '100%', height: '100%'}}>
+
               <View style={styles.centerContainer} >
                 <Text style={styles.rubrikSizeColor}>Veckans händelser</Text>
                 <Text style={styles.rubrikSizeColor15}>Klicka här för mer info om vad som häder hos oss denna vecka</Text>
+                <Button
+  title="Klicka här för mer info om vad som häder hos oss denna vecka"
+  type="clear"
+/>
 
               </View>
             </ImageBackground>
@@ -143,7 +155,7 @@ const styles = StyleSheet.create({
 
 AnslagstavlaScreen.navigationOptions = navData => {
     return {
-      headerTitle: 'Anslagstavla',
+      headerTitle: 'Förstasida',
       headerLeft: (
         <HeaderButtons HeaderButtonComponent={HeaderButton}>
           <Item
