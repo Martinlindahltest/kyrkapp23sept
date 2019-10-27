@@ -1,6 +1,6 @@
 import React from 'react'
 import { View, Text, StyleSheet, Image, TouchableOpacity } from 'react-native'
-
+import kalenderVerksamhetStyles from '../Styles/stylesKalenderVerksamhet'
 
 
 export default function Display(props) {
@@ -31,7 +31,7 @@ const {
 
 
 
-
+/*
 
 
 let farg
@@ -49,6 +49,10 @@ if(Verksamhetstyp == 'Barn'){
     farg = 'yellow'
 }
 
+*/
+const styles = kalenderVerksamhetStyles
+
+/*
        const styles = StyleSheet.create({
         datumRubrik: {
           fontWeight: "bold",
@@ -89,7 +93,7 @@ if(Verksamhetstyp == 'Barn'){
             fontSize: 15
         },        
       });
-      
+      */
       //console.log(props.navRef.navigation.navigate)
 
     return (

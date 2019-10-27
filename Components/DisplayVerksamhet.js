@@ -1,9 +1,12 @@
 import React from 'react'
 import { View, Text, StyleSheet, Image, TouchableOpacity, ImageBackground } from 'react-native'
+import kalenderVerksamhetStyles from '../Styles/stylesKalenderVerksamhet'
+
 
 
 
 export default function DisplayVerksamhet(props) {
+    /**
 
     let farg
     //console.log('props i displayverksamhet', props.data.acf.typ)
@@ -19,6 +22,8 @@ export default function DisplayVerksamhet(props) {
     if(props.data.acf.typ == 'barn'){
         farg = 'yellow'
     }
+     */
+    /** 
 
        const styles = StyleSheet.create({
         datumRubrik: {
@@ -60,7 +65,9 @@ export default function DisplayVerksamhet(props) {
             fontSize: 15
         },        
       });
+      */
       
+     const styles = kalenderVerksamhetStyles
 
       /**
             "acf": {
