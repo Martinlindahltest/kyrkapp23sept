@@ -6,7 +6,6 @@ import FetchVerksamheter from '../Components/FetchVerksamheter'
 import { WebView } from 'react-native-webview';
 
 
-
 import HeaderButton from '../Components/HeaderButton'
 
 

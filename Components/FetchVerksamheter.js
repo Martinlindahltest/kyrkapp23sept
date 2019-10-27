@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import DisplayVerksamhet from './DisplayVerksamhet'
 import { View, Text, StyleSheet } from 'react-native'
+import Spacer from '../Components/Spacer'
+
 
 
 export default class FetchVerksamheter extends Component {
@@ -186,6 +188,7 @@ export default class FetchVerksamheter extends Component {
                 {
                    // verksamheterJsxArray
                     }
+                    <Spacer hojd={200} />
             </View>
         )
     }

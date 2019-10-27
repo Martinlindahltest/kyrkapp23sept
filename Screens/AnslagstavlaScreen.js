@@ -60,6 +60,7 @@ const styles = StyleSheet.create({
     render(props) {
       return (
         <View style={{flex: 1, flexDirection: 'column'}}>
+
         <View style={{...styles.col}} >
             <ImageBackground source={require('../assets/Anslagstavla/AnslagstavlaTopp.jpg')} style={{width: '100%', height: '100%'}}>
               <View style={styles.centerContainer}>

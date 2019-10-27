@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import Display from './Display';
 import { View, Text, Button } from 'react-native'
 import dbURL from '../dbConfig/dbUrl'
+import Spacer from '../Components/Spacer'
+
 
 
 class FetchApp extends Component {
@@ -100,18 +102,8 @@ class FetchApp extends Component {
         return (
             <View>
                                 {jsxArray}
-                                <Text>Hej fran fetchapp</Text>
-                                <Text>Hej fran fetchapp</Text>
-                                <Text>Hej fran fetchapp</Text>
-                                <Text>Hej fran fetchapp</Text>
-                                <Text>Hej fran fetchapp</Text>
-                                <Text>Hej fran fetchapp</Text>
-                                <Text>Hej fran fetchapp</Text>
-                                <Text>Hej fran fetchapp</Text>
-                                <Text>Hej fran fetchapp</Text>
-                                <Text>Hej fran fetchapp</Text>
-                                <Text>Hej fran fetchapp</Text>
-                                <Text>Hej fran fetchapp</Text>
+                                <Spacer hojd={200} />
+
 
             </View>
         );
