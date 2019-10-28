@@ -166,29 +166,27 @@ export default class FetchVerksamheter extends Component {
 
 
 
-                <Text style={styles.datumRubrik}>måndagar</Text>
+                <Text style={styles.datumRubrik}>Gudstjänster</Text>
                 {mandagVerksamheterJSX}
-                <Text style={styles.datumRubrik}>tisdagar</Text>
+                <Text style={styles.datumRubrik}>Musik/Konserter</Text>
                 {tisdagVerksamheterJSX}
-                <Text style={styles.datumRubrik}>onsdagar</Text>
+                <Text style={styles.datumRubrik}>Körer för vuxna</Text>
                 {onsdagVerksamheterJSX}
-                <Text style={styles.datumRubrik}>torsdagar</Text>
+                <Text style={styles.datumRubrik}>Körer för barn</Text>
                 {torsdagVerksamheterJSX}
-                <Text style={styles.datumRubrik}>fredagar</Text>
+                <Text style={styles.datumRubrik}>Barnverksamheter</Text>
                 {fredagVerksamheterJSX}
-                <Text style={styles.datumRubrik}>lördagar</Text>
+                <Text style={styles.datumRubrik}>Ungdomsverksamheter</Text>
                 {lordagVerksamheterJSX}
-                <Text style={styles.datumRubrik}>söndagar</Text>
+                <Text style={styles.datumRubrik}>Vuxenverksamheter</Text>
                 {sondagVerksamheterJSX}
-                <Text style={styles.datumRubrik}>olika dagar</Text>
-                {olikaDagarVerksamheterJSX}
 
 
 
                 {
                    // verksamheterJsxArray
                     }
-                    <Spacer hojd={200} />
+                    <Spacer hojd={100} />
             </View>
         )
     }
