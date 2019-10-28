@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { Text, View, StyleSheet } from 'react-native'
+import knapp from '../Styles/knapp'
 
 const styles = StyleSheet.create({
   rubrikSizeColor: {
@@ -9,7 +10,8 @@ const styles = StyleSheet.create({
   rubrikSizeColor20: {
     color: 'white',
     fontSize: 20
-  }
+  },
+  helaKnappen: knapp.helaKnappen
 });
 
 
@@ -46,9 +48,9 @@ export default class FetchSenasteHandelse extends Component {
       if(this.state.isLoaded == true){
           //console.log('wp console.log', this.state.WpJson[0].title.rendered)
           return (
-            <View>
+            <View style={styles.helaKnappen}>
               <Text style={styles.rubrikSizeColor20}>
-                Blogg:
+                Detta har hänt:
               </Text>
               <Text style={styles.rubrikSizeColor}>
                 Senaste inlägg

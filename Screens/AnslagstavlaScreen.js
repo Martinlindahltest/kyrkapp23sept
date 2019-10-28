@@ -10,6 +10,7 @@ import * as WebBrowser from 'expo-web-browser';
 
 import { Button } from 'react-native-elements';
 import Icon from 'react-native-vector-icons/FontAwesome';
+import knapp from '../Styles/knapp'
 
 
 
@@ -75,55 +76,16 @@ const styles = StyleSheet.create({
 
 
 
-
-{/** 
-        <View style={{...styles.col, backgroundColor: 'skyblue'}} >
-
-        <View style={{flex: 1, flexDirection: 'row'}}>
-
-                <View style={{flex: 1, flexDirection: 'column'}}>
-                <TouchableOpacity onPress={()=> this.props.navigation.navigate('Kalender')}>
-
-                    <ImageBackground source={require('../assets/Anslagstavla/AnslagstavlaKalender.jpg')} style={{width: '100%', height: '100%'}}>
-                      <View style={styles.centerContainer}>
-                        <Text style={styles.rubrikSizeColor}>Kalender</Text>
-                      </View>
-                    </ImageBackground>
-
-                </TouchableOpacity>
-
-                </View>
-
-
-                <View style={{flex: 1, flexDirection: 'column'}}>
-                <TouchableOpacity onPress={()=> this.props.navigation.navigate('Verksamheter')}>
-
-                      <ImageBackground source={require('../assets/Anslagstavla/AnslagstavlaVerksamheter.jpg')} style={{width: '100%', height: '100%'}}>
-                        <View style={styles.centerContainer}>
-                          <Text style={styles.rubrikSizeColor}>Verksamheter</Text>
-                        </View>
-                      </ImageBackground>
-
-                    </TouchableOpacity>
-                </View>
-            </View>
-        </View>
-        */
-}
-
 <View style={{...styles.col , height: '34%', backgroundColor: 'steelblue'}} >
           <TouchableOpacity onPress={this.startaNyBlogAsync}>
 
             <ImageBackground source={require('../assets/Anslagstavla/kommande15okt.jpg')} style={{width: '100%', height: '100%'}}>
 
               <View style={styles.centerContainer} >
-                <Text style={styles.rubrikSizeColor}>Veckans händelser</Text>
-                <Text style={styles.rubrikSizeColor15}>Klicka här för mer info om vad som häder hos oss denna vecka</Text>
-                <Button
-  title="Klicka här för mer info om vad som häder hos oss denna vecka"
-  type="clear"
-/>
-
+                <View style={knapp.helaKnappen}>
+                  <Text style={styles.rubrikSizeColor}>Detta händer i veckan:</Text>
+                  <Text style={styles.rubrikSizeColor15}>Klicka här för mer info om vad som häder hos oss denna vecka</Text>
+                </View>
               </View>
             </ImageBackground>
           </TouchableOpacity>
