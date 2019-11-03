@@ -26,7 +26,8 @@ const {
     noteringar,
     År,
     startSlut,
-    _id
+    _id, 
+    starttid
 } = props.data
 
 
@@ -103,7 +104,7 @@ const styles = kalenderVerksamhetStyles
         <Text style={styles.datumRubrik}>{Dag} {props.objektetsDag} / {props.objektetsMånad} {Månad}</Text>
         <View style={styles.box}>
             <View style={styles.klockslagContainer}>
-                <Text style={styles.klockslag}>{startSlut}</Text>
+                <Text style={styles.klockslag}>{starttid}</Text>
             </View>
             <View style={styles.rubrikOchPlats}>
                 <Text style={styles.rubrik}>{Aktivitet}</Text>

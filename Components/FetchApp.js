@@ -99,6 +99,8 @@ class FetchApp extends Component {
             })
         }
 
+        //console.log('state i FA', this.state)
+
         return (
             <View>
                                 {jsxArray}
