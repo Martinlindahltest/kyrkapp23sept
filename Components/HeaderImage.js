@@ -8,9 +8,12 @@ export default function HeaderImage(props) {
         rubriktext: {
           fontSize: 30,
           color: 'white',
-          backgroundColor:'black',
+          //backgroundColor:'blue',
           padding: 10,
-          fontFamily: 'avenir-roman'
+          fontFamily: 'avenir-roman',
+          textShadowColor: 'rgba(0, 0, 0, 0.50)',
+          textShadowOffset: {width: 5, height: 5},
+          textShadowRadius: 10
 
         },
         rubriktextView: {
