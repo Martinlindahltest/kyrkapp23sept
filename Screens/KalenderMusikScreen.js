@@ -43,7 +43,7 @@ const KalenderMusikScreen = (props) => {
 
 KalenderMusikScreen.navigationOptions = navData => {
   return {
-    headerTitle: 'Musikkalender',
+    headerTitle: 'Kalender',
     headerLeft: (
       <HeaderButtons HeaderButtonComponent={HeaderButton}>
         <Item

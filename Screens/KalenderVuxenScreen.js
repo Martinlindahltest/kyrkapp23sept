@@ -42,7 +42,7 @@ const KalenderVuxenScreen = (props) => {
 
 KalenderVuxenScreen.navigationOptions = navData => {
   return {
-    headerTitle: 'Ung/Vuxenkalender',
+    headerTitle: 'Kalender',
     headerLeft: (
       <HeaderButtons HeaderButtonComponent={HeaderButton}>
         <Item

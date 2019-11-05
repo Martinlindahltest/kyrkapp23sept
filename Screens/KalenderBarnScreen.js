@@ -43,7 +43,7 @@ const KalenderBarnScreen = (props) => {
 
 KalenderBarnScreen.navigationOptions = navData => {
   return {
-    headerTitle: 'Barnkalender',
+    headerTitle: 'Kalender',
     headerLeft: (
       <HeaderButtons HeaderButtonComponent={HeaderButton}>
         <Item

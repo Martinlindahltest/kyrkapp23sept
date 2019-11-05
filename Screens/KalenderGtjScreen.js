@@ -43,7 +43,7 @@ const KalenderGtjScreen = (props) => {
 
 KalenderGtjScreen.navigationOptions = navData => {
   return {
-    headerTitle: 'Gudtjänstkalender',
+    headerTitle: 'Kalender',
     headerLeft: (
       <HeaderButtons HeaderButtonComponent={HeaderButton}>
         <Item
