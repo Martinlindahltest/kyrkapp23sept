@@ -88,7 +88,8 @@ VerksamhetDetaljScreen.navigationOptions = navData => {
     //console.log('navData i VDS', navData.navigation.state.params.Aktivitet.rubrik)
 
     return {
-      headerTitle: navData.navigation.state.params.Aktivitet.rubrik,
+      //headerTitle: navData.navigation.state.params.Aktivitet.rubrik,
+      headerTitle: 'Verksamheter'
     };
   };
 
