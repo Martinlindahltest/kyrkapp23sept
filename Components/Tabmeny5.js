@@ -13,7 +13,11 @@ export default function Tabmeny5(props) {
       height:'100%',
       width:'100%',
       resizeMode: "contain"
+    }, 
+    textUnderBild: {
+      color: 'red'
     }
+
   });
 
     return (
@@ -28,6 +32,7 @@ export default function Tabmeny5(props) {
         source={require('../assets/tab5/Alla.png')}
         /> 
       </TouchableOpacity>
+
     </View>
 
 <View style={styles.box}>

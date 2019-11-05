@@ -9,12 +9,14 @@ export default function HeaderImage(props) {
           fontSize: 30,
           color: 'white',
           backgroundColor:'black',
-          padding: 10
+          padding: 10,
+          fontFamily: 'avenir-roman'
+
         },
         rubriktextView: {
           flex: 1,
           justifyContent: 'center', 
-          alignItems: 'center' 
+          alignItems: 'center' ,
         }
         
       });
@@ -31,6 +33,7 @@ export default function HeaderImage(props) {
         <ImageBackground source={require('../assets/Kalender17okt/kal-verk-front.jpg')} style={styles.img}>
           <View style={styles.rubriktextView}>
             <Text style={styles.rubriktext}>Kalender</Text>
+
           </View>
         </ImageBackground>
 
