@@ -112,15 +112,16 @@ const {
                 
                         
                         <View style={styles.box}>
-                            <View style={styles.klockslagContainer}>
-                                <Text style={styles.klockslag}>{tid}</Text>
-                            </View>
-                            <View style={styles.rubrikOchPlats}>
+                        <View style={styles.rubrikOchPlats}>
                                 <Text style={styles.rubrik}>{rubrik}</Text>
-                                <Text style={styles.text} >{plats}  =></Text>
+                                <Text style={styles.text} >{plats}  </Text>
 
 
                             </View>
+                            <View style={styles.klockslagContainer}>
+                                <Text> => </Text>
+                            </View>
+
                         </View>
 
                     </View>
