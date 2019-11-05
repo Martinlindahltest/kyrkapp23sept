@@ -6,7 +6,11 @@ import { StyleSheet } from 'react-native'
             borderWidth: 4,
             borderColor: 'white',
             padding: 20,
-            backgroundColor: 'grey'
+            backgroundColor: 'grey',
+            fontFamily: 'avenir-roman',
+            textShadowColor: 'rgba(0, 0, 0, 0.50)',
+            textShadowOffset: {width: 5, height: 5},
+            textShadowRadius: 10
           }
       });
 

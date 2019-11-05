@@ -56,7 +56,9 @@ export default class FetchVerksamheter extends Component {
               padding: 10,
               borderTopColor: '#000000',
               borderStyle: "solid",
-              borderWidth:1
+              borderWidth:1,
+              fontFamily: 'avenir-roman',
+
               
             }
                         /**
