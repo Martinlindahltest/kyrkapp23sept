@@ -45,12 +45,7 @@ import { StyleSheet } from 'react-native'
 
       */
 
-      const avenirRomanMM = {
-        fontFamily: 'avenir-roman',
-        //textShadowColor: 'rgba(0, 0, 0, 0.50)',
-        //textShadowOffset: {width: 5, height: 5},
-        //textShadowRadius: 10
-      }
+
       
 
       const kalenderVerksamhetStyles = StyleSheet.create({
@@ -61,7 +56,7 @@ import { StyleSheet } from 'react-native'
           borderTopColor: '#000000',
           borderStyle: "solid",
           borderWidth:1,
-          ...avenirRomanMM
+          fontFamily: 'avenir-roman',
 
         },
         box:{
@@ -71,10 +66,14 @@ import { StyleSheet } from 'react-native'
         klockslagContainer:{
             flex: 2
         },
+        pilContainer:{
+            flex: 1,
+            padding:15,
+        },
         klockslag:{
             padding:15,
             fontSize:14,
-            ...avenirRomanMM
+            fontFamily: 'avenir-roman',
 
         },
         rubrikOchPlats:{
@@ -83,12 +82,12 @@ import { StyleSheet } from 'react-native'
         },
         rubrik:{
             fontSize: 20,
-            ...avenirRomanMM
+            fontFamily: 'avenir-roman',
 
         },
         text:{
             fontSize: 15,
-            ...avenirRomanMM
+            fontFamily: 'avenir-roman',
 
         }
       });

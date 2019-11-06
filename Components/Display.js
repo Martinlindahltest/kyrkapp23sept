@@ -108,10 +108,13 @@ const styles = kalenderVerksamhetStyles
             </View>
             <View style={styles.rubrikOchPlats}>
                 <Text style={styles.rubrik}>{Aktivitet}</Text>
-                <Text style={styles.text}>{Lokal}  =></Text>
+                <Text style={styles.text}>{Lokal}</Text>
 
 
              </View>
+             <View style={styles.pilContainer}>
+                <Image style={{width: 15, height: 15}} source={require('../assets/Kalender17okt/pil.png')} />
+            </View>
         </View>
 
 

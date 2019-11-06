@@ -118,8 +118,8 @@ const {
 
 
                             </View>
-                            <View style={styles.klockslagContainer}>
-                                <Text> => </Text>
+                            <View style={styles.pilContainer}>
+                                <Image style={{width: 15, height: 15}} source={require('../assets/Kalender17okt/pil.png')} />
                             </View>
 
                         </View>
