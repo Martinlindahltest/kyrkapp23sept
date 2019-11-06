@@ -64,9 +64,49 @@ const styles = StyleSheet.create({
 
     render(props) {
       return (
-        <View>
-          <Text>ny anslagstavla</Text>
+        <View style={{flex: 1, flexDirection: 'column'}}>
+
+        <View style={{...styles.col}} >
+            <ImageBackground source={require('../assets/Anslagstavla/AnslagstavlaTopp.jpg')} style={{width: '100%', height: '100%'}}>
+              <View style={styles.centerContainer}>
+                <Text style={styles.anslagstavlaSizeColor}></Text>
+              </View>
+            </ImageBackground>
         </View>
+
+
+
+<View style={{...styles.col , height: '34%', backgroundColor: 'steelblue'}} >
+          <TouchableOpacity onPress={this.startaNyBlogAsync}>
+
+            <ImageBackground source={require('../assets/Anslagstavla/kommande15okt.jpg')} style={{width: '100%', height: '100%'}}>
+
+              <View style={styles.centerContainer} >
+                <View style={knapp.helaKnappen}>
+                  <Text style={styles.rubrikSizeColor}>Detta händer i veckan:</Text>
+                  <Text style={styles.rubrikSizeColor15}>Klicka här för mer info om vad som häder hos oss denna vecka</Text>
+                </View>
+              </View>
+            </ImageBackground>
+          </TouchableOpacity>
+            
+        </View>
+
+        {
+          //kopia ovan
+        }
+        <View style={{...styles.col , height: '34%', backgroundColor: 'steelblue'}} >
+          <TouchableOpacity onPress={this.startaHandelserAsync}>
+
+            <ImageBackground source={require('../assets/Anslagstavla/handelser15okt.jpg')} style={{width: '100%', height: '100%'}}>
+              <View style={styles.centerContainer} >
+                <FetchSenasteHandelse />
+              </View>
+            </ImageBackground>
+          </TouchableOpacity>
+            
+        </View>
+      </View>
       )
     }
   }
