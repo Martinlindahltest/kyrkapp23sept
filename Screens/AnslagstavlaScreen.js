@@ -16,33 +16,6 @@ import knapp from '../Styles/knapp'
 
 
 const styles = StyleSheet.create({
-    col:{
-        flex: 1,
-         height: '33%',
-    },
-    centerContainer: {
-      flex: 1,
-      justifyContent: 'flex-end',
-      alignItems: 'center',
-      margin:20
-    },
-    centerContainerFlexCenter: {
-      flex: 1,
-      justifyContent: 'center',
-      alignItems: 'center',
-    },
-    anslagstavlaSizeColor: {
-      color: 'white',
-      fontSize: 30
-    },
-    rubrikSizeColor: {
-      color: 'white',
-      fontSize: 20
-    },
-    rubrikSizeColor15: {
-      color: 'white',
-      fontSize: 15
-    },
     
   });
 
@@ -62,7 +35,7 @@ const styles = StyleSheet.create({
       this.setState({ result });
     };
 
-    render(props) {
+    render() {
       return (
         <View>
           <Text>ny anslagstavla</Text>
@@ -77,7 +50,7 @@ const styles = StyleSheet.create({
 
 AnslagstavlaScreen.navigationOptions = navData => {
     return {
-      headerTitle: 'Förstasida',
+      headerTitle: 'Tullinge kyrka',
       headerLeft: (
         <HeaderButtons HeaderButtonComponent={HeaderButton}>
           <Item
