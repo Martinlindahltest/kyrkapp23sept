@@ -1,16 +1,13 @@
 import React, { Component } from 'react'
-import { View, Text, StyleSheet, ImageBackground, TouchableOpacity } from 'react-native'
+import { View, Text, StyleSheet, ImageBackground, TouchableOpacity, ScrollView } from 'react-native'
 import { HeaderButtons, Item } from 'react-navigation-header-buttons';
 import { DrawerActions } from 'react-navigation-drawer';
+import BildMedLank from '../Components/BildMedLank'
 
 import HeaderButton from '../Components/HeaderButton'
 import FetchSenasteHandelse from '../Components/FetchSenasteHandelse'
 
 import * as WebBrowser from 'expo-web-browser';
-
-import { Button } from 'react-native-elements';
-import Icon from 'react-native-vector-icons/FontAwesome';
-import knapp from '../Styles/knapp'
 
 
 
@@ -37,9 +34,10 @@ const styles = StyleSheet.create({
 
     render() {
       return (
-        <View>
+        <ScrollView>
           <Text>ny anslagstavla</Text>
-        </View>
+          <BildMedLank />
+        </ScrollView>
       )
     }
   }
