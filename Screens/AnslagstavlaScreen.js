@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { View, Text, StyleSheet, ImageBackground, TouchableOpacity, ScrollView } from 'react-native'
 import { HeaderButtons, Item } from 'react-navigation-header-buttons';
 import { DrawerActions } from 'react-navigation-drawer';
-import BildMedLank from '../Components/BildMedLank'
+import BildMedLank from '../Components/BildMedText'
 
 import HeaderButton from '../Components/HeaderButton'
 import FetchSenasteHandelse from '../Components/FetchSenasteHandelse'
@@ -36,7 +36,7 @@ const styles = StyleSheet.create({
       return (
         <ScrollView>
           <Text>ny anslagstavla</Text>
-          <BildMedLank />
+          <BildMedLank textfarg={'black'} rubrik={'Rubriken dynamiskt'} underrubrik={'under rubrik duynamisk'} />
         </ScrollView>
       )
     }
