@@ -18,11 +18,21 @@ const BildMedLank = (props) => {
           margin:20
         },
         rubrik: {
-          color: props.textfarg,
-          fontFamily: 'avenir-roman',
-          fontSize: 40
+                padding: 5,
+                fontFamily: 'avenir-roman',
+                textShadowColor: 'rgba(0, 0, 0, 0.50)',
+                textShadowOffset: {width: 5, height: 5},
+                textShadowRadius: 10,
+                color: props.textfarg,
+                fontFamily: 'avenir-roman',
+                fontSize: 40
         },
         underRubrik: {
+            padding: 10,
+            fontFamily: 'avenir-roman',
+            textShadowColor: 'rgba(0, 0, 0, 0.50)',
+            textShadowOffset: {width: 5, height: 5},
+            textShadowRadius: 10,
             color: props.textfarg,
             fontFamily: 'avenir-roman',
             fontSize: 14,
