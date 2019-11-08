@@ -35,7 +35,6 @@ const styles = StyleSheet.create({
     render() {
       return (
         <ScrollView>
-          <Text>ny anslagstavla</Text>
           <BildMedLank imgUrl={require('../assets/forstasida/AnslagstavlaTopp.jpg')} textfarg={null} rubrik={null} underrubrik={null} />
 
           <TouchableOpacity onPress={this.startaNyBlogAsync}>
