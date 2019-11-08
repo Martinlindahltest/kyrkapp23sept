@@ -2,6 +2,8 @@ import React from 'react'
 import { View, Text, ScrollView, Button, Image, StyleSheet } from 'react-native'
 import FetchApp from '../Components/FetchApp'
 import Tabmeny5 from '../Components/Tabmeny5'
+import TabmenyText from '../Components/TabmenyText'
+
 
 import { HeaderButtons, Item } from 'react-navigation-header-buttons';
 import HeaderButton from '../Components/HeaderButton'
@@ -21,14 +23,21 @@ const KalenderVuxenScreen = (props) => {
     },
     tabContainer: {
       height: 70 
+    },
+    textContainer: {
+      height: 30
     }
   });
  
     return (
       <View>
-                <View style={styles.tabContainer}>
-        <Tabmeny5 KalenderScreenProps={props} />
-
+        <View>
+          <View style={styles.tabContainer}>
+          <Tabmeny5 KalenderScreenProps={props} />
+          </View>
+          <View style={styles.textContainer}>
+          <TabmenyText />
+          </View>
         </View>
               <ScrollView >
               <HeaderImage screen={'Ung/Vuxen'} />

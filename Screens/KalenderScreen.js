@@ -27,14 +27,16 @@ const KalenderScreen = (props) => {
  
     return (
       <View>
-        <View style={styles.tabContainer}>
-        <Tabmeny5 KalenderScreenProps={props} />
-        </View>
-        <View styles={styles.textContainer}>
-        <TabmenyText />
+        <View>
+          <View style={styles.tabContainer}>
+          <Tabmeny5 KalenderScreenProps={props} />
+          </View>
+          <View style={styles.textContainer}>
+          <TabmenyText />
+          </View>
         </View>
 
-              <ScrollView >
+        <ScrollView >
 
             <HeaderImage screen={'Kalender'} />
             <FetchApp navigateReferens={props} />

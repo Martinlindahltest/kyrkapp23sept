@@ -2,7 +2,7 @@
 import React from 'react'
 import { View, Text, Image, StyleSheet, Button, TouchableOpacity, ImageBackground } from 'react-native'
 
-export default function TabmenyText(props) {
+export default function TabmenyText() {
 
   const styles = StyleSheet.create({
     box:{
@@ -11,40 +11,48 @@ export default function TabmenyText(props) {
 
     },
     textUnderBild: {
-      color: 'green',
+      color: 'white',
       textAlign: 'center',
-      fontFamily:'avenir-roman',
-      fontSize: 14
+      fontFamily: 'avenir-roman'
+
     }
 
   });
-
 
     return (
 
 
       <View style={{flex: 1, flexDirection: 'row'}}>
-        <Text>jfjfjfjf</Text>
 
-        <View style={styles.box}>
-            <Text style={styles.textUnderBild}>alla</Text>
-        </View>
+<View style={styles.box}>
+      <Text style={styles.textUnderBild}>Alla</Text>
+    </View>
 
-        <View style={styles.box}>
-            <Text style={styles.textUnderBild}>gudtjänst</Text>
-        </View>
+<View style={styles.box}>
+<Text style={styles.textUnderBild}>gudtjänst</Text>
 
-        <View style={styles.box}>
-            <Text style={styles.textUnderBild}>musik</Text>
-        </View>
+    </View>
 
-        <View style={styles.box}>
-            <Text style={styles.textUnderBild}>barn</Text>
-        </View>
+    <View style={styles.box}>
+    <Text style={styles.textUnderBild}>musik</Text>
 
-        <View style={styles.box}>
-            <Text style={styles.textUnderBild}>ung/vuxen</Text>
-        </View>
+    </View>
+
+    <View style={styles.box}>
+    <Text style={styles.textUnderBild}>barn</Text>
+
+    </View>
+
+
+
+    <View style={styles.box}>
+    <Text style={styles.textUnderBild}>ung/vuxen</Text>
+
+    </View>
+
+
+
+
 
     </View>
     )
