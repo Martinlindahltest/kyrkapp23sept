@@ -36,7 +36,20 @@ const styles = StyleSheet.create({
       return (
         <ScrollView>
           <Text>ny anslagstavla</Text>
-          <BildMedLank textfarg={'black'} rubrik={'Rubriken dynamiskt'} underrubrik={'under rubrik duynamisk'} />
+          <BildMedLank imgUrl={require('../assets/forstasida/AnslagstavlaTopp.jpg')} textfarg={null} rubrik={null} underrubrik={null} />
+
+          <TouchableOpacity onPress={this.startaNyBlogAsync}>
+            <BildMedLank imgUrl={require('../assets/forstasida/1Kalender.png')} textfarg={'black'} rubrik={'Kalender'} underrubrik={'Här kan du se vad som händer hos oss'} />
+          </TouchableOpacity>
+
+          <TouchableOpacity onPress={this.startaHandelserAsync}>
+            <BildMedLank imgUrl={require('../assets/forstasida/2Blogg.png')} textfarg={'white'} rubrik={'Blogg'} underrubrik={'Här lägger vi regelbundet upp veckans bibeltexter smat video & bild från mässor konserter m.m.'} />
+          </TouchableOpacity>
+
+          <BildMedLank imgUrl={require('../assets/forstasida/3HittaHit.png')} textfarg={'black'} rubrik={'Hitta hit'} underrubrik={'Här hittar du adresser och kartor till våra kyrkor och lokaler'} />
+
+          <BildMedLank imgUrl={require('../assets/forstasida/4Verksamheter.png')} textfarg={'white'} rubrik={'Verksamheter'} underrubrik={'Här hittar du adresser och kartor till våra kyrkor och Här hittar du info om alla våra verksamheter'} />
+
         </ScrollView>
       )
     }

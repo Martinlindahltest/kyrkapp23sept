@@ -25,22 +25,19 @@ const BildMedLank = (props) => {
         underRubrik: {
             color: props.textfarg,
             fontFamily: 'avenir-roman',
-            fontSize: 18
+            fontSize: 14,
+            textAlign: 'center'
           },
         
       });
 
-
-
-
     return (
 
         <View>
-            <Text> bild med länk</Text>
                 <View style={{height: 220}}>
 
                     <View style={{...styles.col}} >
-                        <ImageBackground source={require('../assets/forstasida/1Kalender.png')} style={{width: '100%', height: '100%'}}>
+                        <ImageBackground source={props.imgUrl} style={{width: '100%', height: '100%'}}>
                         <View style={styles.centerContainer}>
                             <Text style={styles.rubrik}>{props.rubrik}</Text>
                             <Text style={styles.underRubrik}>{props.underrubrik}</Text>
