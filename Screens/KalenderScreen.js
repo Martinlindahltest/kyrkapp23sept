@@ -1,9 +1,10 @@
 import React from 'react'
-import { View, ScrollView, StyleSheet } from 'react-native'
+import { View, ScrollView, StyleSheet, Text } from 'react-native'
 import { HeaderButtons, Item } from 'react-navigation-header-buttons';
 import { DrawerActions } from 'react-navigation-drawer';
 import FetchApp from '../Components/FetchApp'
 import Tabmeny5 from '../Components/Tabmeny5'
+import TabmenyText from '../Components/TabmenyText'
 
 import HeaderButton from '../Components/HeaderButton'
 import HeaderImage from '../Components/HeaderImage'
@@ -17,6 +18,9 @@ const KalenderScreen = (props) => {
   const styles = StyleSheet.create({
     tabContainer: {
       height: 70 
+    },
+    textContainer: {
+      height: 30
     }
   });
 
@@ -25,7 +29,9 @@ const KalenderScreen = (props) => {
       <View>
         <View style={styles.tabContainer}>
         <Tabmeny5 KalenderScreenProps={props} />
-
+        </View>
+        <View styles={styles.textContainer}>
+        <TabmenyText />
         </View>
 
               <ScrollView >

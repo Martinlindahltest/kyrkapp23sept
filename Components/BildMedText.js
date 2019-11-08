@@ -31,6 +31,7 @@ const BildMedLank = (props) => {
         
       });
 
+
     return (
 
         <View>

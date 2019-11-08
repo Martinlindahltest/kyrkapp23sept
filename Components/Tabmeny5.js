@@ -23,7 +23,7 @@ export default function Tabmeny5(props) {
     return (
 
 
-      <View style={{flex: 1, flexDirection: 'row'}}>
+      <View style={{flex: 1, flexDirection: 'row', height:70}}>
 
 <View style={styles.box}>
       <TouchableOpacity onPress={()=> props.KalenderScreenProps.navigation.navigate('Kalender')}>
@@ -32,7 +32,6 @@ export default function Tabmeny5(props) {
         source={require('../assets/tab5/Alla.png')}
         /> 
       </TouchableOpacity>
-
     </View>
 
 <View style={styles.box}>
