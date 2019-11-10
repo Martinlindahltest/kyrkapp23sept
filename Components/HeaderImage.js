@@ -11,9 +11,7 @@ export default function HeaderImage(props) {
           //backgroundColor:'blue',
           padding: 10,
           fontFamily: 'avenir-roman',
-          textShadowColor: 'rgba(0, 0, 0, 0.50)',
-          textShadowOffset: {width: 5, height: 5},
-          textShadowRadius: 10
+
 
         },
         rubriktextView: {
@@ -35,7 +33,13 @@ export default function HeaderImage(props) {
       let component = 
         <ImageBackground source={require('../assets/Kalender17okt/kal-verk-front.jpg')} style={styles.img}>
           <View style={styles.rubriktextView}>
-            <Text style={styles.rubriktext}>Kalender</Text>
+            <Text style={{
+                        fontSize: 40,
+                        color: 'white',
+                        //backgroundColor:'blue',
+                        padding: 10,
+                        fontFamily: 'avenir-roman',
+            }}>Kalender</Text>
 
           </View>
         </ImageBackground>
