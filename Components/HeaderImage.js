@@ -44,7 +44,7 @@ export default function HeaderImage(props) {
           </View>
         </ImageBackground>
 
-        if(props.screen == 'Gudtjänst'){
+        if(props.screen == 'Gudstjänstkalender'){
           component = 
           <ImageBackground source={require('../assets/Kalender17okt/kal-verk-gtj.jpg')} style={styles.img}>
                       <View style={styles.rubriktextView}>
@@ -52,7 +52,7 @@ export default function HeaderImage(props) {
                       </View>
           </ImageBackground>        
           }
-          if(props.screen == 'Musik'){
+          if(props.screen == 'Musikkalender'){
             component = 
             <ImageBackground source={require('../assets/Kalender17okt/kal-verk-musik.jpg')} style={styles.img}>
                       <View style={styles.rubriktextView}>
@@ -60,14 +60,14 @@ export default function HeaderImage(props) {
                       </View>
             </ImageBackground>        
             }
-            if(props.screen == 'Barn'){
+            if(props.screen == 'Barnkalender'){
               component = 
               <ImageBackground source={require('../assets/Kalender17okt/kal-verk-barn.jpg')} style={styles.img}>
                       <View style={styles.rubriktextView}>
                          <Text style={styles.rubriktext}>{props.screen}</Text>
                       </View>
               </ImageBackground>        }
-            if(props.screen == 'Ung/Vuxen'){
+            if(props.screen == 'Ung/Vuxenkalender'){
               component = 
               <ImageBackground source={require('../assets/Kalender17okt/kal-verk-ungVux.jpg')} style={styles.img}>
                       <View style={styles.rubriktextView}>

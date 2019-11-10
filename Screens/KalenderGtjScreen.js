@@ -41,7 +41,7 @@ const KalenderGtjScreen = (props) => {
         </View>
         
         <ScrollView >
-        <HeaderImage screen={'Gudtjänst'} />
+        <HeaderImage screen={'Gudstjänstkalender'} />
 
             <FetchApp navigateReferens={props} KategoriFilter={'Gtj'}  />
         </ScrollView>
