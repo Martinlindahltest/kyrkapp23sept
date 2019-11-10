@@ -54,38 +54,9 @@ export default class FetchVerksamheter extends Component {
               fontWeight: "bold",
               backgroundColor: '#808080',
               padding: 10,
-              borderTopColor: '#000000',
-              borderStyle: "solid",
-              borderWidth:1,
               fontFamily: 'avenir-roman',
-
-              
             }
-                        /**
 
-            ,
-            box:{
-                flex: 1,
-                flexDirection: 'row'
-            },
-            klockslagContainer:{
-                flex: 1
-            },
-            klockslag:{
-                padding:15,
-                fontSize:10
-            },
-            rubrikOchPlats:{
-                flex: 3,
-                padding: 5
-            },
-            rubrik:{
-                fontSize: 20
-            },
-            text:{
-                fontSize: 15
-            }
-             */
           });
           
 
@@ -164,7 +135,6 @@ export default class FetchVerksamheter extends Component {
 
         return (
             <View>
-                                <Text> hej från fetch verksamheter </Text>
 
 
 

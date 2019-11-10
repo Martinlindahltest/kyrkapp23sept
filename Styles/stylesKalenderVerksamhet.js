@@ -50,13 +50,12 @@ import { StyleSheet } from 'react-native'
 
       const kalenderVerksamhetStyles = StyleSheet.create({
         datumRubrik: {
-          fontWeight: "bold",
-          backgroundColor: '#808080',
-          padding: 10,
-          borderTopColor: '#000000',
-          borderStyle: "solid",
-          borderWidth:1,
-          fontFamily: 'avenir-roman',
+            fontWeight: "bold",
+            backgroundColor: '#808080',
+            padding: 10,
+            fontFamily: 'avenir-roman',
+
+
 
         },
         box:{
@@ -64,10 +63,10 @@ import { StyleSheet } from 'react-native'
             flexDirection: 'row'
         },
         klockslagContainer:{
-            flex: 2
+            flex: 1.6
         },
         pilContainer:{
-            flex: 1,
+            flex: 0.3,
             padding:15,
         },
         klockslag:{
@@ -77,8 +76,8 @@ import { StyleSheet } from 'react-native'
 
         },
         rubrikOchPlats:{
-            flex: 4,
-            padding: 5
+            flex: 4.5,
+            paddingVertical: 5
         },
         rubrik:{
             fontSize: 20,
