@@ -13,8 +13,9 @@ export default function TabmenyText() {
     textUnderBild: {
       color: 'white',
       textAlign: 'center',
-      fontFamily: 'avenir-roman'
-
+      fontFamily: 'avenir-roman',
+      fontSize: 12,
+      marginTop: -10
     }
 
   });
@@ -29,24 +30,24 @@ export default function TabmenyText() {
     </View>
 
 <View style={styles.box}>
-<Text style={styles.textUnderBild}>gudtjänst</Text>
+<Text style={styles.textUnderBild}>Gudstjänst</Text>
 
     </View>
 
     <View style={styles.box}>
-    <Text style={styles.textUnderBild}>musik</Text>
+    <Text style={styles.textUnderBild}>Musik</Text>
 
     </View>
 
     <View style={styles.box}>
-    <Text style={styles.textUnderBild}>barn</Text>
+    <Text style={styles.textUnderBild}>Barn</Text>
 
     </View>
 
 
 
     <View style={styles.box}>
-    <Text style={styles.textUnderBild}>ung/vuxen</Text>
+    <Text style={styles.textUnderBild}>Ung/Vuxen</Text>
 
     </View>
 

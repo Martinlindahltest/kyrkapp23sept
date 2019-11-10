@@ -24,7 +24,7 @@ const KalenderGtjScreen = (props) => {
       height: 70 
     },
     textContainer: {
-      height: 30
+      height: 15
     }
   });
  
