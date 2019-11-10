@@ -36,7 +36,10 @@ const KalenderDetaljScreen = (props) => {
 
         },
         ViewRuntText:{
-            padding:30
+            //padding:30
+            paddingLeft: 30,
+            paddingRight: 30,
+            paddingTop: 5
         }        
       });
 
