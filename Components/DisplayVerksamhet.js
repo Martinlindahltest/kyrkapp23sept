@@ -112,6 +112,9 @@ const {
                 
                         
                         <View style={styles.box}>
+                        <View style={{flex: 0.5}}>
+            </View>
+
                         <View style={styles.rubrikOchPlats}>
                                 <Text style={styles.rubrik}>{rubrik}</Text>
                                 <Text style={styles.text} >{plats}  </Text>
