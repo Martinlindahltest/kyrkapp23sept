@@ -1,6 +1,6 @@
 import React from 'react'
 import { Text, ScrollView, Button, Linking, ImageBackground, StyleSheet, View } from 'react-native'
-import HeaderImage from '../Components/HeaderImage'
+import HeaderImageUtanText from '../Components/HeaderImageUtanText'
 
 
 
@@ -53,19 +53,19 @@ const VerksamhetDetaljScreen = (props) => {
     }
 
 
-    let headerImage = <HeaderImage screen={'Ung/Vuxen'} />
+    let headerImage = <HeaderImageUtanText screen={'Ung/Vuxenkalender'} />
 
 if(typ == 'ungVux') {
-     headerImage = <HeaderImage screen={'Ung/Vuxen'} />
+     headerImage = <HeaderImageUtanText screen={'Ung/Vuxenkalender'} />
 }
 if(typ == 'gtj') {
-    headerImage = <HeaderImage screen={'Gudtjänst'} />
+    headerImage = <HeaderImageUtanText screen={'Gudstjänstkalender'} />
 }
 if(typ == 'musik') {
-    headerImage = <HeaderImage screen={'Musik'} />
+    headerImage = <HeaderImageUtanText screen={'Musikkalender'} />
 }
 if(typ == 'barn') {
-    headerImage = <HeaderImage screen={'Barn'} />
+    headerImage = <HeaderImageUtanText screen={'Barnkalender'} />
 }
 
     return (
