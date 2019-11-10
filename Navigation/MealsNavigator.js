@@ -140,7 +140,7 @@ const MainNavigator = createDrawerNavigator({
     Anslagstavla: {
         screen: AnslagstavlaNavigator,
         navigationOptions: {
-            drawerLabel: 'tullinge Kyrka'
+            drawerLabel: 'Förstasida'
         
           }
       },

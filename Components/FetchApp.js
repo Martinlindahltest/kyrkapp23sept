@@ -104,7 +104,7 @@ class FetchApp extends Component {
         return (
             <View>
                                 {jsxArray}
-                                <Spacer hojd={200} />
+                                <Spacer hojd={100} />
 
 
             </View>
