@@ -18,7 +18,7 @@ const BildMedLank = (props) => {
           margin:20
         },
         rubrik: {
-                padding: 5,
+     //           padding: 5,
      //           textShadowColor: 'rgba(0, 0, 0, 0.50)',
      //           textShadowOffset: {width: 5, height: 5},
      //           textShadowRadius: 10,
@@ -27,7 +27,7 @@ const BildMedLank = (props) => {
                 fontSize: 40
         },
         underRubrik: {
-            padding: 10,
+            padding: 5,
          //   textShadowColor: 'rgba(0, 0, 0, 0.50)',
         //    textShadowOffset: {width: 5, height: 5},
         //    textShadowRadius: 10,
@@ -43,7 +43,7 @@ const BildMedLank = (props) => {
     return (
 
         <View>
-                <View style={{height: 220}}>
+                <View style={{height: 200}}>
 
                     <View style={{...styles.col}} >
                         <ImageBackground source={props.imgUrl} style={{width: '100%', height: '100%'}}>

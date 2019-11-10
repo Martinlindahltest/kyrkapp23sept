@@ -35,19 +35,21 @@ const styles = StyleSheet.create({
     render() {
       return (
         <ScrollView>
-          <BildMedText imgUrl={require('../assets/forstasida/AnslagstavlaTopp.jpg')} textfarg={null} rubrik={null} underrubrik={null} />
+                        <TouchableOpacity onPress={this.startaNyBlogAsync}>
+                          <ImageBackground source={require('../assets/forstasida/0AnslagstavlaToppSvart.png')} style={{width: '100%', height: 220}}>
+                          </ImageBackground>
+                        </TouchableOpacity>
 
-          <TouchableOpacity onPress={this.startaNyBlogAsync}>
-            <BildMedText imgUrl={require('../assets/forstasida/1Kalender.png')} textfarg={'black'} rubrik={'Kalender'} underrubrik={'Här kan du se vad som händer hos oss'} />
-          </TouchableOpacity>
+
+            <BildMedText imgUrl={require('../assets/forstasida/1Kalender.png')} textfarg={'black'} rubrik={'Kalender'} underrubrik={'Här kan du se vad som händer hos oss.'} />
 
           <TouchableOpacity onPress={this.startaHandelserAsync}>
-            <BildMedText imgUrl={require('../assets/forstasida/2Blogg.png')} textfarg={'white'} rubrik={'Blogg'} underrubrik={'Här lägger vi regelbundet upp veckans bibeltexter smat video & bild från mässor konserter m.m.'} />
+            <BildMedText imgUrl={require('../assets/forstasida/2Blogg.png')} textfarg={'white'} rubrik={'Blogg'} underrubrik={'Här lägger vi regelbundet upp veckans bibeltexter samt video & bild från mässor konserter m.m.'} />
           </TouchableOpacity>
 
           <BildMedText imgUrl={require('../assets/forstasida/3HittaHit.png')} textfarg={'black'} rubrik={'Hitta hit'} underrubrik={'Här hittar du adresser och kartor till våra kyrkor och lokaler'} />
 
-          <BildMedText imgUrl={require('../assets/forstasida/4Verksamheter.png')} textfarg={'white'} rubrik={'Verksamheter'} underrubrik={'Här hittar du adresser och kartor till våra kyrkor och Här hittar du info om alla våra verksamheter'} />
+          <BildMedText imgUrl={require('../assets/forstasida/4Verksamheter.png')} textfarg={'white'} rubrik={'Verksamheter'} underrubrik={'Här hittar du info om alla våra verksamheter'} />
 
         </ScrollView>
       )
