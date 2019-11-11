@@ -172,7 +172,8 @@ const MainNavigator = createDrawerNavigator({
         navigationOptions: { 
             drawerLabel: 'Hitta hit'
           }
-      }
+      },
+
 });
 
 
