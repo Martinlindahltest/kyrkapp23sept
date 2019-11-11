@@ -46,8 +46,10 @@ export default class FetchVerksamheter extends Component {
 
 
 
-
     render() {
+
+        console.log('props i fetch versksamheter', this.props.vadskavisas)
+
 
         const styles = StyleSheet.create({
             datumRubrik: {
@@ -132,7 +134,7 @@ export default class FetchVerksamheter extends Component {
                 {    popularaVerksamheterJSX}
          */
 
-        console.log('props i FV', this.props)
+        //console.log('props i FV', this.props)
 
 
 
