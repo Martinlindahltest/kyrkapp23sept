@@ -24,6 +24,7 @@ import KalenderGtjScreen from '../Screens/KalenderGtjScreen'
 import KalenderBarnScreen from '../Screens/KalenderBarnScreen'
 import KalenderVuxenScreen from '../Screens/KalenderVuxenScreen'
 import KalenderMusikScreen from '../Screens/KalenderMusikScreen'
+import OmOssScreen from '../Screens/OmOssScreen'
 
 import VerksamheterDetaljScreen from '../Screens/VerksamhetDetaljScreen'
 
@@ -82,6 +83,10 @@ const PersonalNavigator = createStackNavigator({
 })
 const HittaHitNavigator = createStackNavigator({
     HittaHit: HittaHitScreen,
+})
+
+const OmOssNavigator = createStackNavigator({
+  OmOss: OmOssScreen
 })
 
 const KalenderTabNavigator =  createBottomTabNavigator(
@@ -214,6 +219,12 @@ const MainNavigator = createDrawerNavigator({
         navigationOptions: { 
             drawerLabel: 'Hitta hit',
           }
+      },
+      OmOss: {
+        screen:OmOssNavigator,
+        navigationOptions: {
+          drawerLabel: 'Om oss'
+        }
       }
 
 },
