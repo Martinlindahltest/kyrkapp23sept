@@ -1,6 +1,9 @@
 import { createStackNavigator } from 'react-navigation-stack';
-import { createDrawerNavigator } from 'react-navigation-drawer';
+import { createDrawerNavigator, DrawerNavigatorItems } from 'react-navigation-drawer';
 import { createBottomTabNavigator } from 'react-navigation-tabs'
+import { View, Text, StyleSheet, ImageBackground, TouchableOpacity, ScrollView, Button, Image, SafeAreaView } from 'react-native'
+import React from 'react'
+
 
 import { Ionicons } from '@expo/vector-icons';
 
@@ -135,18 +138,57 @@ const KalenderTabNavigator =  createBottomTabNavigator(
 
 //this.props.navigation.navigate('NestedNavigator1', {}, NavigationActions.navigate({ routeName: 'screenB' }))
 
+
+const styles = StyleSheet.create({
+  drawerimage: {
+    height: 100,
+    width: '70%',
+    resizeMode: 'contain'
+
+  },
+  texten: {
+    fontFamily: 'avenir-roman',
+    fontSize: 22,
+  },
+  aktivText: {
+    color: 'black'
+  },
+  runtBild: {
+    justifyContent: 'center',
+    alignItems: 'center',
+
+  }
+  
+  
+});
+
+
+const customDrawerContentComponent = (props) => (
+
+  <SafeAreaView>
+    <View style={styles.runtBild}>
+      <Image style={styles.drawerimage} source={require('../assets/MenySplash.png')} /> 
+    </View>
+
+    <DrawerNavigatorItems activeLabelStyle={styles.aktivText} labelStyle={styles.texten} {...props} />
+
+  </SafeAreaView>
+)
+
+
 const MainNavigator = createDrawerNavigator({
+
     Anslagstavla: {
         screen: AnslagstavlaNavigator,
         navigationOptions: {
-            drawerLabel: 'Förstasida'
+            drawerLabel: 'Förstasida',
         
           }
       },
     Kalender: {
         screen: KalenderTabNavigator,
         navigationOptions: {
-            drawerLabel: 'Kalender'
+            drawerLabel: 'Kalender',
           }
       },
        Verksamheter: {
@@ -170,11 +212,20 @@ const MainNavigator = createDrawerNavigator({
       HittaHit: {
         screen:HittaHitNavigator,
         navigationOptions: { 
-            drawerLabel: 'Hitta hit'
+            drawerLabel: 'Hitta hit',
           }
-      },
+      }
 
-});
+},
+{
+  drawerBackgroundColor: '#e6e6e6',
+  initialRouteName: 'Anslagstavla',
+  contentComponent: customDrawerContentComponent,
+  drawerOpenRoute: 'DrawerOpen' 
+
+}
+);
+
 
 
 export default  createAppContainer(MainNavigator)
