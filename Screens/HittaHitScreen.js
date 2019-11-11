@@ -24,7 +24,7 @@ const HittaHitScreen = () => {
 
 HittaHitScreen.navigationOptions = navData => {
     return {
-      headerTitle: 'HittaHit',
+      headerTitle: 'Hitta hit',
       headerLeft: (
         <HeaderButtons HeaderButtonComponent={HeaderButton}>
           <Item
