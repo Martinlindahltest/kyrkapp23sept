@@ -142,7 +142,7 @@ export default class FetchVerksamheter extends Component {
             <View>
 
 
-
+            <View></View>
                 <Text style={styles.datumRubrik}>Gudstjänster</Text>
                 {mandagVerksamheterJSX}
                 <Text style={styles.datumRubrik}>Musik/Konserter</Text>

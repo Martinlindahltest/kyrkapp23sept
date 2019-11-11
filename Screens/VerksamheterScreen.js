@@ -64,7 +64,7 @@ const VerksamheterScreen = (props) => {
     </View>
 
 <View style={styles.box}>
-      <TouchableOpacity onPress={()=> props.KalenderScreenProps.navigation.navigate('KalenderGtj')}>
+<TouchableOpacity onPress={()=> setVadskavisas('gudstjanst')}>
         <Image 
         style={styles.img}
         source={require('../assets/tab5/Gudstjanst.png')}
@@ -73,7 +73,7 @@ const VerksamheterScreen = (props) => {
     </View>
 
     <View style={styles.box}>
-      <TouchableOpacity onPress={()=> props.KalenderScreenProps.navigation.navigate('KalenderMusik')}>
+    <TouchableOpacity onPress={()=> setVadskavisas('musik')}>
         <Image 
         style={styles.img}
         source={require('../assets/tab5/Musik.png')}
@@ -82,7 +82,7 @@ const VerksamheterScreen = (props) => {
     </View>
 
     <View style={styles.box}>
-      <TouchableOpacity onPress={()=> props.KalenderScreenProps.navigation.navigate('KalenderBarn')}>
+    <TouchableOpacity onPress={()=> setVadskavisas('barn')}>
         <Image 
         style={styles.img}
         source={require('../assets/tab5/Barn.png')}
@@ -93,7 +93,7 @@ const VerksamheterScreen = (props) => {
 
 
     <View style={styles.box}>
-      <TouchableOpacity onPress={()=> props.KalenderScreenProps.navigation.navigate('KalenderVuxen')}>
+    <TouchableOpacity onPress={()=> setVadskavisas('ungvux')}>
         <Image 
         style={styles.img}
         source={require('../assets/tab5/Vuxen.png')}
