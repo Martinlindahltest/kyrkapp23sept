@@ -55,10 +55,13 @@ const styles = StyleSheet.create({
             <BildMedText imgUrl={require('../assets/forstasida/2Blogg.png')} textfarg={'white'} rubrik={'Blogg'} underrubrik={'Här lägger vi regelbundet upp veckans bibeltexter samt video & bild från mässor konserter m.m.'} />
           </TouchableOpacity>
 
+          <TouchableOpacity onPress={() => navigate('HittaHit')}>
           <BildMedText imgUrl={require('../assets/forstasida/3HittaHit.png')} textfarg={'black'} rubrik={'Hitta hit'} underrubrik={'Här hittar du adresser och kartor till våra kyrkor och lokaler'} />
+          </TouchableOpacity>
 
+          <TouchableOpacity onPress={() => navigate('Verksamheter')}>
           <BildMedText imgUrl={require('../assets/forstasida/4Verksamheter.png')} textfarg={'white'} rubrik={'Verksamheter'} underrubrik={'Här hittar du info om alla våra verksamheter'} />
-
+          </TouchableOpacity>
         </ScrollView>
       )
     }

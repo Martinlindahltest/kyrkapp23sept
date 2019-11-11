@@ -81,12 +81,6 @@ const HittaHitNavigator = createStackNavigator({
     HittaHit: HittaHitScreen,
 })
 
-const forstasidaNavigator = createStackNavigator({
-  Kalender: KalenderScreen,
-  HittaHit: HittaHitScreen,
-  Verksamheter: VerksamheterScreen
-})
-
 const KalenderTabNavigator =  createBottomTabNavigator(
     {
       Alla: {
