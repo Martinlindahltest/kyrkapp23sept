@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import DisplayVerksamhet from './DisplayVerksamhet'
 import { View, Text, StyleSheet } from 'react-native'
 import Spacer from '../Components/Spacer'
+import HeaderImageVerksamheter from '../Components/HeaderImageVerksamheter'
 
 
 
@@ -137,6 +138,7 @@ export default class FetchVerksamheter extends Component {
 
 
         let display =             <View>
+        <HeaderImageVerksamheter text={'Verksamheter'} />
         <Text style={styles.datumRubrik}>Gudstjänster</Text>
         {mandagVerksamheterJSX}
         <Text style={styles.datumRubrik}>Musik/Konserter</Text>
@@ -158,24 +160,32 @@ console.log('props i fetch versksamheter', this.props.vadskavisas)
 
     if(this.props.vadskavisas == 'gudstjanst'){
         display = <View>
+                    <HeaderImageVerksamheter text={'Gudstjänstverksamheter'} />
+
                     <Text style={styles.datumRubrik}>Gudstjänster</Text>
         {mandagVerksamheterJSX}
         </View>
     }
     if(this.props.vadskavisas == 'musik'){
         display = <View>
+            <HeaderImageVerksamheter text={'Musikverksamheter'} />
+
         <Text style={styles.datumRubrik}>Musik/Konserter</Text>
         {tisdagVerksamheterJSX}
 </View>
     }
     if(this.props.vadskavisas == 'barn'){
         display = <View>
+                    <HeaderImageVerksamheter text={'Barnverksamheter'} />
+
         <Text style={styles.datumRubrik}>Körer för barn</Text>
         {torsdagVerksamheterJSX}
 </View>
     }
     if(this.props.vadskavisas == 'ungvux'){
         display = <View>
+                        <HeaderImageVerksamheter text={'Ung/vuxenverksamheter'} />
+
         <Text style={styles.datumRubrik}>Ungdomsverksamheter</Text>
         {lordagVerksamheterJSX}
         <Text style={styles.datumRubrik}>Vuxenverksamheter</Text>
