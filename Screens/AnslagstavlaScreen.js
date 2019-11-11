@@ -36,8 +36,6 @@ const styles = StyleSheet.create({
     render() {
 
       const {navigate} = this.props.navigation;
-
-      console.log('navigate i anslagstavla', navigate)
   
       return (
         <ScrollView>

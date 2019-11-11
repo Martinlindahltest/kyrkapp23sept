@@ -132,6 +132,8 @@ export default class FetchVerksamheter extends Component {
                 {    popularaVerksamheterJSX}
          */
 
+        console.log('props i FV', this.props)
+
 
 
         return (
