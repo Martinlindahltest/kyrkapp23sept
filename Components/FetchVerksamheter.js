@@ -172,14 +172,18 @@ console.log('props i fetch versksamheter', this.props.vadskavisas)
 
         <Text style={styles.datumRubrik}>Musik/Konserter</Text>
         {tisdagVerksamheterJSX}
+        <Text style={styles.datumRubrik}>Körer för vuxna</Text>
+        {onsdagVerksamheterJSX}
+        <Text style={styles.datumRubrik}>Körer för barn</Text>
+        {torsdagVerksamheterJSX}
 </View>
     }
     if(this.props.vadskavisas == 'barn'){
         display = <View>
                     <HeaderImageVerksamheter text={'Barnverksamheter'} />
 
-        <Text style={styles.datumRubrik}>Körer för barn</Text>
-        {torsdagVerksamheterJSX}
+                    <Text style={styles.datumRubrik}>Barnverksamheter</Text>
+        {fredagVerksamheterJSX}
 </View>
     }
     if(this.props.vadskavisas == 'ungvux'){
