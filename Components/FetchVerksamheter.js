@@ -48,7 +48,6 @@ export default class FetchVerksamheter extends Component {
 
     render() {
 
-        console.log('props i fetch versksamheter', this.props.vadskavisas)
 
 
         const styles = StyleSheet.create({
@@ -137,26 +136,58 @@ export default class FetchVerksamheter extends Component {
         //console.log('props i FV', this.props)
 
 
+        let display =             <View>
+        <Text style={styles.datumRubrik}>Gudstjänster</Text>
+        {mandagVerksamheterJSX}
+        <Text style={styles.datumRubrik}>Musik/Konserter</Text>
+        {tisdagVerksamheterJSX}
+        <Text style={styles.datumRubrik}>Körer för vuxna</Text>
+        {onsdagVerksamheterJSX}
+        <Text style={styles.datumRubrik}>Körer för barn</Text>
+        {torsdagVerksamheterJSX}
+        <Text style={styles.datumRubrik}>Barnverksamheter</Text>
+        {fredagVerksamheterJSX}
+        <Text style={styles.datumRubrik}>Ungdomsverksamheter</Text>
+        {lordagVerksamheterJSX}
+        <Text style={styles.datumRubrik}>Vuxenverksamheter</Text>
+        {sondagVerksamheterJSX}
+    </View>
+
+console.log('props i fetch versksamheter', this.props.vadskavisas)
+
+
+    if(this.props.vadskavisas == 'gudstjanst'){
+        display = <View>
+                    <Text style={styles.datumRubrik}>Gudstjänster</Text>
+        {mandagVerksamheterJSX}
+        </View>
+    }
+    if(this.props.vadskavisas == 'musik'){
+        display = <View>
+        <Text style={styles.datumRubrik}>Musik/Konserter</Text>
+        {tisdagVerksamheterJSX}
+</View>
+    }
+    if(this.props.vadskavisas == 'barn'){
+        display = <View>
+        <Text style={styles.datumRubrik}>Körer för barn</Text>
+        {torsdagVerksamheterJSX}
+</View>
+    }
+    if(this.props.vadskavisas == 'ungvux'){
+        display = <View>
+        <Text style={styles.datumRubrik}>Ungdomsverksamheter</Text>
+        {lordagVerksamheterJSX}
+        <Text style={styles.datumRubrik}>Vuxenverksamheter</Text>
+        {sondagVerksamheterJSX}
+</View>
+
+    }
 
         return (
             <View>
 
-
-            <View></View>
-                <Text style={styles.datumRubrik}>Gudstjänster</Text>
-                {mandagVerksamheterJSX}
-                <Text style={styles.datumRubrik}>Musik/Konserter</Text>
-                {tisdagVerksamheterJSX}
-                <Text style={styles.datumRubrik}>Körer för vuxna</Text>
-                {onsdagVerksamheterJSX}
-                <Text style={styles.datumRubrik}>Körer för barn</Text>
-                {torsdagVerksamheterJSX}
-                <Text style={styles.datumRubrik}>Barnverksamheter</Text>
-                {fredagVerksamheterJSX}
-                <Text style={styles.datumRubrik}>Ungdomsverksamheter</Text>
-                {lordagVerksamheterJSX}
-                <Text style={styles.datumRubrik}>Vuxenverksamheter</Text>
-                {sondagVerksamheterJSX}
+            {display}
 
 
 
