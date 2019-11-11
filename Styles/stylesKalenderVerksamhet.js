@@ -54,7 +54,8 @@ import { StyleSheet } from 'react-native'
             backgroundColor: '#808080',
             padding: 10,
             fontFamily: 'avenir-roman',
-            fontSize:15
+            fontSize:15,
+            //fontWeight: '900'
 
 
 

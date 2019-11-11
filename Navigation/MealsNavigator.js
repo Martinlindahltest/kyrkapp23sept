@@ -24,7 +24,6 @@ import KalenderMusikScreen from '../Screens/KalenderMusikScreen'
 
 import VerksamheterDetaljScreen from '../Screens/VerksamhetDetaljScreen'
 
-import Tabmeny5 from '../Components/Tabmeny5'
 
 
 const AnslagstavlaNavigator = createStackNavigator({
@@ -80,6 +79,12 @@ const PersonalNavigator = createStackNavigator({
 })
 const HittaHitNavigator = createStackNavigator({
     HittaHit: HittaHitScreen,
+})
+
+const forstasidaNavigator = createStackNavigator({
+  Kalender: KalenderScreen,
+  HittaHit: HittaHitScreen,
+  Verksamheter: VerksamheterScreen
 })
 
 const KalenderTabNavigator =  createBottomTabNavigator(
