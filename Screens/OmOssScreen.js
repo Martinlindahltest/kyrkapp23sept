@@ -1,10 +1,26 @@
 import React from 'react'
-import { View, Text, SafeAreaView } from 'react-native'
+import { View, Text, StyleSheet, TouchableHighlight } from 'react-native'
 import { HeaderButtons, Item } from 'react-navigation-header-buttons';
 import { DrawerActions } from 'react-navigation-drawer';
+import { Icon } from 'react-native-elements'
+import { Linking } from 'expo';
+
+
 
 
 import HeaderButton from '../Components/HeaderButton'
+
+const styles = StyleSheet.create({
+  partOne: {
+    height: '30%'
+  },
+  partTwo: {
+    height: '60%'
+  },
+  partThree: {
+    height: '10%'
+  }
+});
 
 
 
@@ -12,19 +28,23 @@ import HeaderButton from '../Components/HeaderButton'
 const OmOssScreen = () => {
     return (
         <View >
-            <Text>FiltersScreen Martins projekt</Text>
-            <Text>FiltersScreen Martins projekt</Text>
-            <Text>FiltersScreen Martins projekt</Text>
-            <Text>FiltersScreen Martins projekt</Text>
-            <Text>FiltersScreen Martins projekt</Text>
-            <Text>FiltersScreen Martins projekt</Text>
-            <Text>FiltersScreen Martins projekt</Text>
-            <Text>FiltersScreen Martins projekt</Text>
-            <Text>FiltersScreen Martins projekt</Text>
-            <Text>FiltersScreen Martins projekt</Text>
-            <Text>FiltersScreen Martins projekt</Text>
-            <Text>FiltersScreen Martins projekt</Text>
-            <Text>FiltersScreen Martins projekt</Text>
+
+          <View style={styles.partOne}>
+            <Text>Design och Utveckling</Text>
+            <Text>Kyrkappen</Text>
+
+          </View>
+
+          <View style={styles.partTwo}>
+          <Text>För support och frågor kontakta</Text>
+          <TouchableHighlight onPress={() => Linking.openURL('mailto: support@expo.io')} >
+            <Text>jajaja</Text>
+    </TouchableHighlight>
+          </View>
+
+          <View style={styles.partThree}>
+            <Text>Version 1.0 November 2019</Text>
+          </View>
 
         </View>
     )
@@ -32,7 +52,7 @@ const OmOssScreen = () => {
 
 OmOssScreen.navigationOptions = navData => {
   return {
-    headerTitle: 'Personal',
+    headerTitle: 'Om oss',
     headerLeft: (
       <HeaderButtons HeaderButtonComponent={HeaderButton}>
         <Item
