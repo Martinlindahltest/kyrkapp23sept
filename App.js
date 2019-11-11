@@ -36,3 +36,5 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
 });
+
+//Innan jag grejar med app.json
