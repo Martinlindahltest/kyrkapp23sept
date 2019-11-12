@@ -42,7 +42,7 @@ const styles = StyleSheet.create({
         <ScrollView>
 
                         <TouchableOpacity onPress={this.startaNyBlogAsync}>
-                          <ImageBackground source={require('../assets/forstasida/0AnslagstavlaToppSvart.png')} style={{width: '100%', height: 220}}>
+                          <ImageBackground source={require('../assets/forstasida/0AnslagstavlaToppVit.jpg')} style={{width: '100%', height: 220}}>
                           </ImageBackground>
                         </TouchableOpacity>
 
