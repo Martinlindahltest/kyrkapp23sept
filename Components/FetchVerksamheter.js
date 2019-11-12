@@ -3,6 +3,7 @@ import DisplayVerksamhet from './DisplayVerksamhet'
 import { View, Text, StyleSheet } from 'react-native'
 import Spacer from '../Components/Spacer'
 import HeaderImageVerksamheter from '../Components/HeaderImageVerksamheter'
+import verksamhetUrl from '../dbConfig/verksamhetUrl'
 
 
 
@@ -22,7 +23,7 @@ export default class FetchVerksamheter extends Component {
 
     componentDidMount() {
 
-        const jsonURL = 'https://tullinge.digitalindahl.com/wp-json/wp/v2/apiverksamhet/?per_page=100'
+        const jsonURL = verksamhetUrl
         fetch(jsonURL)
         .then(response => {
           return response.json();

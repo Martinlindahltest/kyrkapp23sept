@@ -9,7 +9,8 @@ import FetchSenasteHandelse from '../Components/FetchSenasteHandelse'
 
 import * as WebBrowser from 'expo-web-browser';
 
-
+import audioGuideUrl from '../dbConfig/audioGuideUrl'
+import blogUrl from '../dbConfig/blogUrl'
 
 
 const styles = StyleSheet.create({
@@ -23,12 +24,12 @@ const styles = StyleSheet.create({
     };
 
     startaHandelserAsync = async () => {
-      let result = await WebBrowser.openBrowserAsync('https://tullinge.digitalindahl.com/');
+      let result = await WebBrowser.openBrowserAsync(blogUrl);
       this.setState({ result });
     };
 
     startaNyBlogAsync = async () => {
-      let result = await WebBrowser.openBrowserAsync('https://tullingenyblog.digitalindahl.com/');
+      let result = await WebBrowser.openBrowserAsync(audioGuideUrl);
       this.setState({ result });
     };
 
