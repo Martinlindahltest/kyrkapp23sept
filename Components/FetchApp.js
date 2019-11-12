@@ -58,6 +58,7 @@ class FetchApp extends Component {
     render() {
 
         let datum =new Date().toISOString()	 
+        console.log('bara datum', datum)
 
         let datumSplitArray = datum.split("-")
 
@@ -91,7 +92,7 @@ class FetchApp extends Component {
                 if(objektetsMånad > dagensMånad){
                     return <Display key={obj._id} data={obj} navRef={this.props.navigateReferens} objektetsMånad={objektetsMånad} objektetsDag={objektetsDag}   />
                 }
-                if(objektetsMånad >= dagensMånad && objektetsDag >= dagensDatum){
+                if(objektetsMånad == dagensMånad && objektetsDag >= dagensDatum){
                     return <Display key={obj._id} data={obj} navRef={this.props.navigateReferens} objektetsMånad={objektetsMånad} objektetsDag={objektetsDag}   />
                 }
 

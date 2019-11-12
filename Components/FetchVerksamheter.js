@@ -155,7 +155,6 @@ export default class FetchVerksamheter extends Component {
         {sondagVerksamheterJSX}
     </View>
 
-console.log('props i fetch versksamheter', this.props.vadskavisas)
 
 
     if(this.props.vadskavisas == 'gudstjanst'){
