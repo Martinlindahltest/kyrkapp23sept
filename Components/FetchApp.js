@@ -58,7 +58,6 @@ class FetchApp extends Component {
     render() {
 
         let datum =new Date().toISOString()	 
-        console.log('bara datum', datum)
 
         let datumSplitArray = datum.split("-")
 
