@@ -16,7 +16,6 @@ import { createAppContainer } from 'react-navigation';
 
 import AnslagstavlaScreen from '../Screens/AnslagstavlaScreen'
 import VerksamheterScreen from '../Screens/VerksamheterScreen'
-import HändelserScreen from '../Screens/HändelserScreen'
 import PersonalScreen from '../Screens/PersonalScreen'
 import HittaHitScreen from '../Screens/HittaHitScreen'
 
@@ -73,11 +72,6 @@ const VerksamheterNavigator = createStackNavigator({
     VerksamheterDetalj: VerksamheterDetaljScreen,
 
 })
-/*
-const HändelserNavigator = createStackNavigator({
-    Händelser: HändelserScreen,
-})
-*/
 const PersonalNavigator = createStackNavigator({
     Personal: PersonalScreen,
 })
