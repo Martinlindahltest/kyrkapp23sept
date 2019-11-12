@@ -1,5 +1,5 @@
 import React from 'react'
-import { View, Text, StyleSheet, TouchableHighlight } from 'react-native'
+import { View, Text, StyleSheet, TouchableHighlight, SafeAreaView } from 'react-native'
 import { HeaderButtons, Item } from 'react-navigation-header-buttons';
 import { DrawerActions } from 'react-navigation-drawer';
 import { Icon } from 'react-native-elements'
@@ -10,16 +10,46 @@ import { Linking } from 'expo';
 
 import HeaderButton from '../Components/HeaderButton'
 
+
 const styles = StyleSheet.create({
   partOne: {
-    height: '30%'
+    height: '30%',
+    textAlign: 'center'
   },
   partTwo: {
-    height: '60%'
+    height:'60%'
   },
-  partThree: {
-    height: '10%'
+  radEtt: {
+    fontFamily: 'avenir-roman',
+    textAlign: 'center',
+    fontSize:20,
+    padding:50,
+    paddingBottom:0
+  },
+  radTva: {
+    fontFamily: 'avenir-roman',
+    textAlign: 'center',
+    fontSize:45,
+  },
+  radTre: {
+    fontFamily: 'avenir-roman',
+    textAlign: 'center',
+    fontSize:20,
+  },
+  lank: {
+    fontFamily: 'avenir-roman',
+    textAlign: 'center',
+    fontSize:20,
+    textDecorationLine: 'underline'
+  },
+  namn: {
+    fontFamily: 'avenir-roman',
+    textAlign: 'center',
+    fontSize:15,
   }
+
+
+
 });
 
 
@@ -27,32 +57,35 @@ const styles = StyleSheet.create({
 
 const OmOssScreen = () => {
     return (
-        <View >
+        <SafeAreaView >
 
           <View style={styles.partOne}>
-            <Text>Design och Utveckling</Text>
-            <Text>Kyrkappen</Text>
+            <Text style={styles.radEtt}>Design och Utveckling</Text>
+            <Text style={styles.radTva}>Kyrkappen</Text>
 
           </View>
 
           <View style={styles.partTwo}>
-          <Text>För support och frågor kontakta</Text>
-          <TouchableHighlight onPress={() => Linking.openURL('mailto: support@expo.io')} >
-            <Text>jajaja</Text>
+          <Text style={styles.radTre}>För support och frågor kontakta</Text>
+          <TouchableHighlight onPress={() => Linking.openURL('mailto: kyrkappen@gmail.com')} >
+            <Text style={styles.lank}>kyrkappen@gmail.com</Text>
     </TouchableHighlight>
           </View>
 
-          <View style={styles.partThree}>
-            <Text>Version 1.0 November 2019</Text>
+          <View>
+            <Text style={styles.namn}>Version 1.0 November 2019</Text>
+            <Text style={styles.namn}>Martin Lindahl </Text>
+            <Text style={styles.namn}> Anton Högberg</Text>
+
           </View>
 
-        </View>
+        </SafeAreaView>
     )
 }
 
 OmOssScreen.navigationOptions = navData => {
   return {
-    headerTitle: 'Om oss',
+    headerTitle: 'Om appen',
     headerLeft: (
       <HeaderButtons HeaderButtonComponent={HeaderButton}>
         <Item

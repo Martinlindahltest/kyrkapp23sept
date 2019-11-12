@@ -223,7 +223,7 @@ const MainNavigator = createDrawerNavigator({
       OmOss: {
         screen:OmOssNavigator,
         navigationOptions: {
-          drawerLabel: 'Om oss'
+          drawerLabel: 'Om appen'
         }
       }
 
