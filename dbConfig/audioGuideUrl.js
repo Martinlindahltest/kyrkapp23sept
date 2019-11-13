@@ -1,4 +1,4 @@
 
-const audioGuideUrl = 'https://tullingenyblog.digitalindahl.com/'
+const audioGuideUrl = 'https://tullingeaudioguide.digitalindahl.com/'
 
 module.exports = audioGuideUrl;

@@ -1,4 +1,4 @@
 
-const blogUrl = 'https://tullinge.digitalindahl.com/'
+const blogUrl = 'https://tullingeblog.digitalindahl.com/'
 
 module.exports = blogUrl;
