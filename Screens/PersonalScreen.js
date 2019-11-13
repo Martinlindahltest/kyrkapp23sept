@@ -7,6 +7,7 @@ import { DrawerActions } from 'react-navigation-drawer';
 import HeaderButton from '../Components/HeaderButton'
 
 import { WebView } from 'react-native-webview';
+import blogUrl from '../dbConfig/blogUrl'
 
 
 
@@ -17,7 +18,7 @@ const PersonalScreen = () => {
             <Text>FiltersScreen Martins projekt</Text>
         </View>
         */
-       <WebView source={{ uri: 'https://tullinge.digitalindahl.com/personal' }} />
+       <WebView source={{ uri: `${blogUrl}/personal-3` }} />
     )
 }
 

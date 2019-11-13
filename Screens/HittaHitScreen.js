@@ -7,6 +7,8 @@ import { DrawerActions } from 'react-navigation-drawer';
 import HeaderButton from '../Components/HeaderButton'
 
 import { WebView } from 'react-native-webview';
+import blogUrl from '../dbConfig/blogUrl'
+
 
 
 
@@ -17,7 +19,7 @@ const HittaHitScreen = () => {
             <Text>FiltersScreen Martins projekt</Text>
         </View>
         */
-            <WebView source={{ uri: 'https://tullinge.digitalindahl.com/hitta-hit' }} />
+            <WebView source={{ uri: `${blogUrl}/hitta-hit` }} />
 
     )
 }
