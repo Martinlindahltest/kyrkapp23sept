@@ -1,7 +1,7 @@
 import React from 'react'
 import { View, Text, StyleSheet, Image, TouchableOpacity, ImageBackground } from 'react-native'
 
-
+//innan expo publish
 
 
 const BildMedLank = (props) => {
