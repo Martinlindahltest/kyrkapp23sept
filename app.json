@@ -23,7 +23,15 @@
       "**/*"
     ],
     "ios": {
+      "bundleIdentifier": "com.digitalindahl.kyrkappen",
+      "buildNumber": 1,
       "supportsTablet": true
+    },
+    "android": {
+      "package": "com.digitalindahl.kyrkappen",
+      "versionCode": "1.0.0",
+      "permissions": []
     }
+
   }
 }
