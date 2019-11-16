@@ -19,7 +19,7 @@ const HittaHitScreen = () => {
             <Text>FiltersScreen Martins projekt</Text>
         </View>
         */
-            <WebView source={{ uri: `${blogUrl}/hitta-hit` }} />
+            <WebView useWebKit={true} source={{ uri: `${blogUrl}/hitta-hit` }} />
 
     )
 }

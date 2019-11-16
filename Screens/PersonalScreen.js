@@ -18,7 +18,7 @@ const PersonalScreen = () => {
             <Text>FiltersScreen Martins projekt</Text>
         </View>
         */
-       <WebView source={{ uri: `${blogUrl}/personal-3` }} />
+       <WebView useWebKit={true} source={{ uri: `${blogUrl}/personal-3` }} />
     )
 }
 
