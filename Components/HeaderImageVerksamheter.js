@@ -6,7 +6,7 @@ export default function HeaderImageVerksamheter(props) {
     const styles = StyleSheet.create({
         img: {width: '100%', height: 165, resizeMode: 'cover'},
         rubriktext: {
-          fontSize: 30,
+          fontSize: 25,
           color: 'white',
           //backgroundColor:'blue',
           padding: 10,
