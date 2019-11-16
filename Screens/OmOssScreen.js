@@ -17,7 +17,7 @@ const styles = StyleSheet.create({
     textAlign: 'center'
   },
   partTwo: {
-    height:'60%'
+    height:'40%'
   },
   radEtt: {
     fontFamily: 'avenir-roman',
