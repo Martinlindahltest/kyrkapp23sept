@@ -12,6 +12,8 @@ import * as WebBrowser from 'expo-web-browser';
 import audioGuideUrl from '../dbConfig/audioGuideUrl'
 import blogUrl from '../dbConfig/blogUrl'
 
+import ModalExample from '../Components/ModalExample'
+import FetchSvenskaKyrkan from '../Components/FetchSvenskaKyrkan'
 
 const styles = StyleSheet.create({
     
@@ -40,6 +42,7 @@ const styles = StyleSheet.create({
   
       return (
         <ScrollView>
+          <FetchSvenskaKyrkan />
 
                         <TouchableOpacity onPress={this.startaNyBlogAsync}>
                           <ImageBackground source={require('../assets/forstasida/0AnslagstavlaToppVit.jpg')} style={{width: '100%', height: 220}}>
@@ -89,4 +92,3 @@ AnslagstavlaScreen.navigationOptions = navData => {
       )
     };
   };
-

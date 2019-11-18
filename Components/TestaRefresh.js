@@ -1,7 +1,7 @@
 import { ScrollView, RefreshControl } from 'react-native';
 import { Component } from 'react'
 
-
+//pull to refreshg gör denna
 
 class TestaRefresh extends Component {
   constructor(props) {
@@ -9,6 +9,10 @@ class TestaRefresh extends Component {
     this.state = {
       refreshing: false,
     };
+  }
+
+  fetchData() {
+      console.log('nu körs fetchData i TestaDataRefresh')
   }
 
   _onRefresh = () => {
