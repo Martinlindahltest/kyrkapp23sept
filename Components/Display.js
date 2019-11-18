@@ -40,7 +40,7 @@ const styles = kalenderVerksamhetStyles
     <View >
         <Text style={styles.datumRubrik}>{Dag} {props.objektetsDag} / {props.objektetsMånad} {Månad}</Text>
         <View style={styles.box}>
-            <View style={styles.klockslagContainer}>
+            <Vir och verksamheterew style={styles.klockslagContainer}>
                 <Text style={styles.klockslag}>{starttid}</Text>
             </View>
             <View style={styles.rubrikOchPlats}>

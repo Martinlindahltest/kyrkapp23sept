@@ -71,6 +71,7 @@ import { StyleSheet } from 'react-native'
         pilContainer:{
             flex: 0.3,
             padding:15,
+           justifyContent: 'center'
         },
         klockslag:{
             padding:15,

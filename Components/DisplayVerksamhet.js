@@ -31,6 +31,8 @@ export default function DisplayVerksamhet(props) {
         pilContainer:{
             flex: 0.3,
             padding:15,
+            justifyContent: 'center'
+
         },
         klockslag:{
             padding:15,
