@@ -57,11 +57,11 @@ const styles = StyleSheet.create({
           </TouchableOpacity>
 
           <TouchableOpacity onPress={() => navigate('HittaHit')}>
-          <BildMedText imgUrl={require('../assets/forstasida/3HittaHit.png')} textfarg={'black'} rubrik={'Hitta hit'} underrubrik={'Här hittar du adresser och kartor till våra kyrkor och lokaler'} />
+          <BildMedText imgUrl={require('../assets/forstasida/3HittaHit.png')} textfarg={'black'} rubrik={'Hitta hit'} underrubrik={'Här hittar du adresser och kartor till våra kyrkor och lokaler.'} />
           </TouchableOpacity>
 
           <TouchableOpacity onPress={() => navigate('Verksamheter')}>
-          <BildMedText imgUrl={require('../assets/forstasida/4Verksamheter.png')} textfarg={'white'} rubrik={'Verksamheter'} underrubrik={'Här hittar du info om alla våra verksamheter'} />
+          <BildMedText imgUrl={require('../assets/forstasida/4Verksamheter.png')} textfarg={'white'} rubrik={'Verksamheter'} underrubrik={'Här hittar du info om alla våra verksamheter.'} />
           </TouchableOpacity>
         </ScrollView>
       )
