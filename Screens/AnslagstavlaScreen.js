@@ -42,7 +42,6 @@ const styles = StyleSheet.create({
   
       return (
         <ScrollView>
-          <FetchSvenskaKyrkan />
 
                         <TouchableOpacity onPress={this.startaNyBlogAsync}>
                           <ImageBackground source={require('../assets/forstasida/0AnslagstavlaToppVit.jpg')} style={{width: '100%', height: 220}}>

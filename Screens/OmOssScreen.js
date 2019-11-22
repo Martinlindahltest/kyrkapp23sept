@@ -4,7 +4,6 @@ import { HeaderButtons, Item } from 'react-navigation-header-buttons';
 import { DrawerActions } from 'react-navigation-drawer';
 import { Icon } from 'react-native-elements'
 import { Linking } from 'expo';
-import TestaRefresh from '../Components/TestaRefresh'
 
 
 
