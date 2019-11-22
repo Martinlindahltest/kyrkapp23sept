@@ -42,7 +42,8 @@ const {
     Pr_st,
     Musiker,
     Personal,
-    Internnotering
+    Internnotering,
+    Lokal
 } = props.data
 
 const styles = kalenderVerksamhetStyles
@@ -59,7 +60,7 @@ const styles = kalenderVerksamhetStyles
             </View>
             <View style={styles.rubrikOchPlats}>
                 <Text style={styles.rubrik}>{Aktivitet}</Text>
-                <Text style={styles.text}>{Internnotering}</Text>
+                <Text style={styles.text}>{Lokal}</Text>
 
 
              </View>
