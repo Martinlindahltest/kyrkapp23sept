@@ -145,6 +145,12 @@ const styles = StyleSheet.create({
     resizeMode: 'contain'
 
   },
+  logoImg: {
+    height: 70,
+    width: '60%',
+    resizeMode: 'contain'
+
+  },
   texten: {
     fontFamily: 'avenir-roman',
     fontSize: 22,
@@ -172,7 +178,7 @@ const customDrawerContentComponent = (props) => (
     <DrawerNavigatorItems activeLabelStyle={styles.aktivText} labelStyle={styles.texten} {...props} />
 
     <View style={styles.runtBild}>
-      <Image style={styles.drawerimage} source={require('../assets/Tullinge.png')} /> 
+      <Image style={styles.logoImg} source={require('../assets/Tullinge.png')} /> 
     </View>
 
   </SafeAreaView>
