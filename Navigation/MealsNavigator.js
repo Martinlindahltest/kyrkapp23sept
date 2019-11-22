@@ -171,6 +171,10 @@ const customDrawerContentComponent = (props) => (
 
     <DrawerNavigatorItems activeLabelStyle={styles.aktivText} labelStyle={styles.texten} {...props} />
 
+    <View style={styles.runtBild}>
+      <Image style={styles.drawerimage} source={require('../assets/Tullinge.png')} /> 
+    </View>
+
   </SafeAreaView>
 )
 
