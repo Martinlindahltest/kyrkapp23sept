@@ -62,7 +62,7 @@ class FetchApp extends Component {
 
         if(this.state.tullingeJson.length > 0){
             jsxArray = arrayMedDatabasobjekt.map(obj => {
-                if(obj.Datum > dagensDatum){
+                if(obj.Datum >= dagensDatum){
                     let splitDatum = obj.Datum.split("T")[0]
                     let splitDatum2 = splitDatum.split('-')
                     console.log('splitDatum2', splitDatum2)
