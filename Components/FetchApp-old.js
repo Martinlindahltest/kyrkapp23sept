@@ -10,7 +10,7 @@ class FetchApp extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            tullingeJson: [],
+
         }
 
 
@@ -55,28 +55,47 @@ class FetchApp extends Component {
     
 
     render() {
+console.log('state i fA', this.state)
+        let datum =new Date().toISOString()	 
 
-        let arrayMedDatabasobjekt = this.state.tullingeJson
-        let dagensDatum =new Date().toISOString()
-        let jsxArray	 
+        let datumSplitArray = datum.split("-")
 
-        if(this.state.tullingeJson.length > 0){
-            jsxArray = arrayMedDatabasobjekt.map(obj => {
-                if(obj.Datum > dagensDatum){
-                    let splitDatum = obj.Datum.split("T")[0]
-                    let splitDatum2 = splitDatum.split('-')
-                    console.log('splitDatum2', splitDatum2)
+        //let res2 = res[2][0] + res[2][1]
+        //const dagensÅr = datumSplitArray[0]
+        const dagensMånad = datumSplitArray[1]
+        const dagensDatum = Number(datumSplitArray[2][0] + datumSplitArray[2][1])
 
-               // console.log('obj', obj)
-               return <Display key={obj.uuid} data={obj} navRef={this.props.navigateReferens} objektetsMånad={splitDatum2[1]} objektetsDag={splitDatum2[2]}   />
-            }
+
+//console.log('dagensMånad', dagensMånad)
+
+        //let tullingeJson = []
+        let jsxArray = []
+
+
+        if(this.state.tullingeJson){
+            tullingeJson = this.state.tullingeJson
+
+ 
+            
+
+            jsxArray = tullingeJson.map( obj => {
+
+                let arrayMånadDagÅr = obj.Datum.split("/")
+                let objektetsMånad = Number(arrayMånadDagÅr[0])
+                let objektetsDag = arrayMånadDagÅr[1]
+
+                //console.log('objektetsMånad', objektetsMånad)
+
+                if(objektetsMånad > dagensMånad){
+                    return <Display key={obj._id} data={obj} navRef={this.props.navigateReferens} objektetsMånad={objektetsMånad} objektetsDag={objektetsDag}   />
+                }
+                if(objektetsMånad == dagensMånad && objektetsDag >= dagensDatum){
+                    return <Display key={obj._id} data={obj} navRef={this.props.navigateReferens} objektetsMånad={objektetsMånad} objektetsDag={objektetsDag}   />
+                }
+
 
             })
-
         }
-
-
-
 
      //   console.log('dburl i FA', this.dbURL)
 

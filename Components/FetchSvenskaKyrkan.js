@@ -40,7 +40,7 @@ export default class FetchSvenskaKyrkan extends Component {
       return new Date(a.StartTime) - new Date(b.StartTime);
     });
 
-    console.log('newArray', newArray)
+//    console.log('newArray', newArray)
 
 
    displayArray = newArray.map(obj => {
