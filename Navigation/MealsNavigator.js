@@ -145,6 +145,12 @@ const styles = StyleSheet.create({
     resizeMode: 'contain'
 
   },
+  logoDown: {
+    height: 100,
+    width: '50%',
+    resizeMode: 'contain'
+
+  },
   texten: {
     fontFamily: 'avenir-roman',
     fontSize: 22,
@@ -171,7 +177,7 @@ const customDrawerContentComponent = (props) => (
 
     <DrawerNavigatorItems activeLabelStyle={styles.aktivText} labelStyle={styles.texten} {...props} />
 
-    <View style={styles.runtBild}>
+    <View style={styles.logoDown}>
       <Image style={styles.drawerimage} source={require('../assets/Tullinge.png')} /> 
     </View>
 

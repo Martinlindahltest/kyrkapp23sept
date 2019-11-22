@@ -7,6 +7,7 @@ import HeaderImageUtanText from '../Components/HeaderImageUtanText'
 const KalenderDetaljScreen = (props) => {
 
     //console.log('props.navigation.state.params.propsData i kalenderdetalj', props.navigation.state.params.propsData)
+    /** 
     let {
         _id,
         Verksamhetstyp,
@@ -21,6 +22,25 @@ const KalenderDetaljScreen = (props) => {
         Personal,
         InternNotering
     } = props.navigation.state.params.propsData
+
+    */
+
+   let {
+    uuid,
+    Verksamhetstyp,
+    Datum,
+    Dag,
+    Aktivitet,
+    StartSlut,
+    starttid,
+    Pr_st,
+    Musiker,
+    Personal,
+    Internnotering,
+    Lokal,
+    Vaktm_stare
+} = props.navigation.state.params.propsData
+
 
     const styles = StyleSheet.create({
         rubrik:{
@@ -62,26 +82,26 @@ const KalenderDetaljScreen = (props) => {
 
 
     let prastPlaceholder =<View></View>
-    if(Präst.length > 0){
-        prastPlaceholder = <Text style={styles.text}>Präst: {Präst}  </Text>
+    if(Pr_st){
+        prastPlaceholder = <Text style={styles.text}>Präst: {Pr_st}  </Text>
 
     }
 
     let musikerPlaceholder =<View></View>
-    if(Musiker.length > 0){
+    if(Musiker){
         musikerPlaceholder = <Text style={styles.text}>Musiker: {Musiker}  </Text>
     }
 
     
     let vaktmastarePlaceholder =<View></View>
-    if(Vaktmästare.length > 0){
-        vaktmastarePlaceholder = <Text style={styles.text}>Vaktmästare: {Vaktmästare}  </Text>
+    if(Vaktm_stare){
+        vaktmastarePlaceholder = <Text style={styles.text}>Vaktmästare: {Vaktm_stare}  </Text>
 
     }
 
     
     let personalPlaceholder =<View></View>
-    if(Personal.length > 0){
+    if(Personal){
         personalPlaceholder = <Text style={styles.text}>Personal: {Personal}  </Text>
 
     }
@@ -99,14 +119,14 @@ const KalenderDetaljScreen = (props) => {
     <View style={styles.ViewRuntText}>
         <Text style={styles.rubrik}>{Aktivitet}</Text>
         <Text style={styles.text}>Plats: {Lokal}  </Text>
-        <Text style={styles.text}>Tid: {startSlut}  </Text>
+        <Text style={styles.text}>Tid: {StartSlut}  </Text>
         {prastPlaceholder}
         {musikerPlaceholder}
         {vaktmastarePlaceholder}
         {personalPlaceholder}
         <Text></Text>
 
-        <Text style={styles.text}>{InternNotering}</Text>
+        <Text style={styles.text}>{Internnotering}</Text>
     </View>
 
 
