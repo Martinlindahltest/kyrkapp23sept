@@ -146,9 +146,9 @@ const styles = StyleSheet.create({
 
   },
   logoImg: {
-    height: 70,
+    height: 50,
     width: '60%',
-    resizeMode: 'contain'
+    resizeMode: 'contain',
 
   },
   texten: {
@@ -160,7 +160,8 @@ const styles = StyleSheet.create({
   },
   runtBild: {
     justifyContent: 'center',
-    alignItems: 'center',
+    //alignItems: 'center',
+    marginLeft:5
 
   }
   
