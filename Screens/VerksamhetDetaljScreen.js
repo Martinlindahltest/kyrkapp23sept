@@ -74,6 +74,7 @@ if(typ == 'barn') {
                 {headerImage}
 
             <View style={styles.ViewRuntText}>
+                <Text style={styles.rubrik}>{rubrik}</Text>
                 <Text style={styles.text}>{beskrivning}  </Text>
                 {knapp1}
                 {knapp2}

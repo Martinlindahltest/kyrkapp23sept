@@ -162,8 +162,12 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     //alignItems: 'center',
     marginLeft:20
-
-  }
+  },
+  runtHeaderBild: {
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  
   
   
 });
@@ -172,7 +176,7 @@ const styles = StyleSheet.create({
 const customDrawerContentComponent = (props) => (
 
   <SafeAreaView>
-    <View style={styles.runtBild}>
+    <View style={styles.runtHeaderBild}>
       <Image style={styles.drawerimage} source={require('../assets/MenySplash.png')} /> 
     </View>
 
