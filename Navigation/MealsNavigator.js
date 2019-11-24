@@ -161,7 +161,7 @@ const styles = StyleSheet.create({
   runtBild: {
     justifyContent: 'center',
     //alignItems: 'center',
-    marginLeft:20
+    marginLeft:15
   },
   runtHeaderBild: {
     justifyContent: 'center',
