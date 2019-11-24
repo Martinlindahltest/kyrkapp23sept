@@ -57,15 +57,22 @@ class FetchApp extends Component {
     render() {
 
         let arrayMedDatabasobjekt = this.state.tullingeJson
-        let dagensDatum =new Date().toISOString()
+        //let dagensDatum =new Date().toISOString()
+        //dagensDatum är nu gårdagens datum
+        var d = new Date();
+        d.setDate(d.getDate() - 1);
+        let dagensDatum = d.toISOString()
+
+
         let jsxArray	 
 
         if(this.state.tullingeJson.length > 0){
             jsxArray = arrayMedDatabasobjekt.map(obj => {
-                if(obj.Datum >= dagensDatum){
+                if(obj.Datum >= dagensDatum || obj.Datum == dagensDatum){
+                    console.log('objDatum: ', obj.Datum, 'dagensDatum', dagensDatum)
                     let splitDatum = obj.Datum.split("T")[0]
                     let splitDatum2 = splitDatum.split('-')
-                    console.log('splitDatum2', splitDatum2)
+                    //console.log('splitDatum2', splitDatum2)
 
                // console.log('obj', obj)
                return <Display key={obj.uuid} data={obj} navRef={this.props.navigateReferens} objektetsMånad={splitDatum2[1]} objektetsDag={splitDatum2[2]}   />
