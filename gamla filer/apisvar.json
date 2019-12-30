@@ -1,0 +1,81 @@
+{
+    "@odata.context": "http://api.svenskakyrkan.se/calendarsearch/v4/$metadata#SearchByParent",
+    "value": [
+      {
+        "iId": 112650230,
+        "Id": "0057029c-c36b-42ed-9422-3f1018b4e268-9",
+        "OrgId": 7681,
+        "TypeId": 2,
+        "Parent": 0,
+        "Active": true,
+        "RemoveExpired": true,
+        "StartTime": "2020-07-19T18:00:00+02:00",
+        "EventTime": "18:00",
+        "StopTime": "2020-07-19T18:00:00+02:00",
+        "RegDate": "2019-12-02T16:12:00+01:00",
+        "PubDate": "2019-12-09T17:00:00+01:00",
+        "Updated": "2019-12-09T17:00:00+01:00",
+        "ExpireDate": "2020-07-20T19:30:00+02:00",
+        "Feast": {
+          "FeastName": "Sjätte söndagen efter trefaldighet",
+          "FeastStart": "2020-07-19T00:00:00+02:00"
+        },
+        "AllDayEvent": false,
+        "Title": "Sommarmässa",
+        "Intro": "",
+        "Place": {
+          "Name": "Ängskyrkan",
+          "Id": "2e271872-90c4-44ea-aedb-bdadb865d0b2",
+          "OldId": 5694,
+          "OrgId": 7681,
+          "ImageUrl": "https://www.svenskakyrkan.se/bilder/Ängskyrkan web(1).jpg"
+        },
+        "PlaceDescription": "Ängskyrkan",
+        "Description": null,
+        "ContactName": " ",
+        "ContactEmail": " ",
+        "ContactPhone": " ",
+        "URL": null,
+        "ShowContactData": true,
+        "SupplierId": 9,
+        "SubjectAreas": [
+          {
+            "Id": 100008538,
+            "Name": "100008538",
+            "Description": null
+          },
+          {
+            "Id": 100008539,
+            "Name": "100008539",
+            "Description": null
+          },
+          {
+            "Id": 100016702,
+            "Name": "100016702",
+            "Description": null
+          }
+        ],
+        "CommonSubjectAreas": [
+          {
+            "Id": 0,
+            "Name": "0",
+            "Description": null
+          }
+        ],
+        "RegionId": 0,
+        "Deleted": false,
+        "SpridningsTyp": {
+          "Id": 6,
+          "Name": "Extern"
+        },
+        "EnhetNamn": "Botkyrka församling",
+        "CalendarSubGroups": [
+          {
+            "Id": 101,
+            "Name": "Gudstjänst & mässa",
+            "ShortName": null
+          }
+        ]
+      }
+    ]
+  }

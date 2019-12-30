@@ -44,9 +44,17 @@ class FetchApp extends Component {
     
        }
 
+       let arrayMedDatabasobjekt = tullingeJson.value.map(obj => {
+        return {
+            Aktivitet: obj.Title,
+            Datum: obj.StartTime
+        }
 
+    })
+
+        console.log(arrayMedDatabasobjekt)
           this.setState({
-            tullingeJson: tullingeJson,
+            tullingeJson: arrayMedDatabasobjekt,
             isLoading: false
           })
         });
@@ -57,7 +65,7 @@ class FetchApp extends Component {
     
 
     render() {
-
+/*
         let arrayMedDatabasobjekt = []
 
 
@@ -84,7 +92,7 @@ class FetchApp extends Component {
         })
 
         */
-
+/*
        arrayMedDatabasobjekt = this.state.tullingeJson.value.map(obj => {
         return {
             Aktivitet: "Adventsgudstjänst",
@@ -106,19 +114,18 @@ class FetchApp extends Component {
           
 
     }
-
+*/
             //let dagensDatum =new Date().toISOString() 
         //dagensDatum är nu gårdagens datum
         var d = new Date();
         d.setDate(d.getDate() - 1);
         let dagensDatum = d.toISOString()
 
-    console.log(arrayMedDatabasobjekt)
 
         let jsxArray	 
 
-        if(this.state.tullingeJson.length > 0){
-            jsxArray = arrayMedDatabasobjekt.map(obj => {
+        if(this.state.isLoading == false){
+            jsxArray = this.state.tullingeJson.map(obj => {
                 if(obj.Datum >= dagensDatum || obj.Datum == dagensDatum){
                     let splitDatum = obj.Datum.split("T")[0]
                     let splitDatum2 = splitDatum.split('-')
