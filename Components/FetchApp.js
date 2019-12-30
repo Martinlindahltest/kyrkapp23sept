@@ -74,60 +74,8 @@ class FetchApp extends Component {
 
 
 
-    
-
     render() {
-/*
-        let arrayMedDatabasobjekt = []
 
-
-        if(this.state.isLoading == false){
-
-            /*
-        arrayMedDatabasobjekt = this.state.tullingeJson.map(obj => {
-            return {
-                Aktivitet: "Adventsgudstjänst",
-                Dag: "Söndag",
-                Datum: obj.Datum,
-                Internnotering: "Fackeltåg från Tullinge gård.",
-                Lokal: "Tullinge kyrka",
-                Musiker: null,
-                Personal: null,
-                Pr_st: "Eva Ajaxén & Peter Johansson",
-                StartSlut: "16.00-17.00",
-                Vaktm_stare: null,
-                Verksamhetstyp: "Gtj",
-                starttid: "16.00",
-                uuid: "5cbded96-bb66-4fd3-9679-0b8e284ea9e0"
-            }
-
-        })
-
-        */
-/*
-       arrayMedDatabasobjekt = this.state.tullingeJson.value.map(obj => {
-        return {
-            Aktivitet: "Adventsgudstjänst",
-            Dag: "Söndag",
-            Datum: obj.StartTime,
-            Internnotering: "Fackeltåg från Tullinge gård.",
-            Lokal: "Tullinge kyrka",
-            Musiker: null,
-            Personal: null,
-            Pr_st: "Eva Ajaxén & Peter Johansson",
-            StartSlut: "16.00-17.00",
-            Vaktm_stare: null,
-            Verksamhetstyp: "Gtj",
-            starttid: "16.00",
-            uuid: "5cbded96-bb66-4fd3-9679-0b8e284ea9e0"
-        }
-
-    })
-          
-
-    }
-*/
-            //let dagensDatum =new Date().toISOString() 
         //dagensDatum är nu gårdagens datum
         var d = new Date();
         d.setDate(d.getDate() - 1);
@@ -148,13 +96,6 @@ class FetchApp extends Component {
             })
 
         }
-        
-    
-
-
-
-
-     //   console.log('dburl i FA', this.dbURL)
 
         return (
             <View>
