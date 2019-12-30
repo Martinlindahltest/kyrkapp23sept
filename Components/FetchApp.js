@@ -47,7 +47,19 @@ class FetchApp extends Component {
        let arrayMedDatabasobjekt = tullingeJson.value.map(obj => {
         return {
             Aktivitet: obj.Title,
-            Datum: obj.StartTime
+            Datum: obj.StartTime,
+            Dag: obj.StartTime,
+            Internnotering: obj.Description,
+            Lokal: obj.Place.Name,
+            Musiker: null,
+            Personal: null,
+            Pr_st: null,
+            StartSlut: obj.StartTime,
+            Vaktm_stare: null,
+            Verksamhetstyp: "Gtj",
+            starttid: obj.StartTime,
+            uuid: obj.Id,
+
         }
 
     })
