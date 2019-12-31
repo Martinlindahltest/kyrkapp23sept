@@ -44,12 +44,17 @@ class FetchApp extends Component {
     
        }
 
+           //Sorterar i datumordning
+           let arrayMedDatabasobjekt = tullingeJson.value.sort(function(a, b) {
+        return (a.StartTime < b.StartTime) ? -1 : ((a.StartTime > b.StartTime) ? 1 : 0);
+    });
 
-       let arrayMedDatabasobjekt = tullingeJson.value.map(obj => {
+       //Skapar data som liknar den gamla
+        arrayMedDatabasobjekt = arrayMedDatabasobjekt.map(obj => {
         return {
             Aktivitet: obj.Title,
             Datum: obj.StartTime,
-            Dag: obj.StartTime,
+            Dag: "Veckodag obj.StartTime",
             Internnotering: obj.Description,
             Lokal: obj.Place.Name,
             Musiker: null,
@@ -58,7 +63,7 @@ class FetchApp extends Component {
             StartSlut: obj.StartTime,
             Vaktm_stare: null,
             Verksamhetstyp: "Gtj",
-            starttid: obj.StartTime,
+            starttid: obj.StartTime.slice(11, 16),
             uuid: obj.Id,
 
         }
@@ -66,9 +71,6 @@ class FetchApp extends Component {
 
     })
 
-    arrayMedDatabasobjekt = arrayMedDatabasobjekt.sort(function(a, b) {
-        return (a.Datum < b.Datum) ? -1 : ((a.Datum > b.Datum) ? 1 : 0);
-    });
 
 
         console.log(arrayMedDatabasobjekt)
