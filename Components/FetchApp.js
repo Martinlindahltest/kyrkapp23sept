@@ -62,10 +62,11 @@ class FetchApp extends Component {
 
        //Skapar data som liknar den gamla
         arrayMedDatabasobjekt = arrayMedDatabasobjekt.map(obj => {
+            console.log(new Date(obj.StartTime).getDay())
         return {
             Aktivitet: obj.Title,
             Datum: obj.StartTime,
-            Dag: Date(obj.StartTime),
+            Dag: new Date(obj.StartTime).getDay(),
             Internnotering: strReplace(obj.Description),
             Lokal: obj.Place.Name,
             Musiker: null,
@@ -84,7 +85,7 @@ class FetchApp extends Component {
 
 
 
-        console.log(arrayMedDatabasobjekt)
+       // console.log(arrayMedDatabasobjekt)
           this.setState({
             tullingeJson: arrayMedDatabasobjekt,
             isLoading: false
