@@ -67,7 +67,7 @@ class FetchApp extends Component {
             Pr_st: null,
             StartSlut: obj.StartTime,
             Vaktm_stare: null,
-            Verksamhetstyp: "Gtj",
+            Verksamhetstyp: obj.CalendarSubGroups,
             starttid: obj.StartTime.slice(11, 16),
             uuid: obj.Id,
 
@@ -76,8 +76,10 @@ class FetchApp extends Component {
 
     })
 
+    console.log('arrayMedDatabasobjekt', arrayMedDatabasobjekt)
+
     if(this.props.KategoriFilter === 'Gtj'){
-        arrayMedDatabasobjekt = arrayMedDatabasobjekt.filter(obj => obj.Verksamhetstyp === 'Gtj');
+        arrayMedDatabasobjekt = arrayMedDatabasobjekt.filter(obj => obj.Verksamhetstyp === 'Gudstjänst & mässa');
    }
    if(this.props.KategoriFilter === 'Barn'){
     arrayMedDatabasobjekt = arrayMedDatabasobjekt.filter(obj => obj.Verksamhetstyp === 'Barn');
