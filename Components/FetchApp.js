@@ -49,13 +49,24 @@ class FetchApp extends Component {
         return (a.StartTime < b.StartTime) ? -1 : ((a.StartTime > b.StartTime) ? 1 : 0);
     });
 
+    const regex = /<[^>]*>/g
+
+    
+    function strReplace(text) {
+        let tvattadText = null
+        if (text != null){
+            tvattadText = text.replace(regex, " ")
+        }
+        return tvattadText
+    }
+
        //Skapar data som liknar den gamla
         arrayMedDatabasobjekt = arrayMedDatabasobjekt.map(obj => {
         return {
             Aktivitet: obj.Title,
             Datum: obj.StartTime,
             Dag: "Veckodag obj.StartTime",
-            Internnotering: obj.Description,
+            Internnotering: strReplace(obj.Description),
             Lokal: obj.Place.Name,
             Musiker: null,
             Personal: null,
