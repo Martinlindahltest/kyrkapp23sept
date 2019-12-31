@@ -30,19 +30,7 @@ class FetchApp extends Component {
           return response.json();
         })
         .then(tullingeJson => {
-            if(this.props.KategoriFilter === 'Gtj'){
-                 tullingeJson = tullingeJson.filter(obj => obj.Verksamhetstyp === 'Gtj');
-            }
-            if(this.props.KategoriFilter === 'Barn'){
-                tullingeJson = tullingeJson.filter(obj => obj.Verksamhetstyp === 'Barn');
-           }
-           if(this.props.KategoriFilter === 'Vuxen'){
-            tullingeJson = tullingeJson.filter(obj => obj.Verksamhetstyp === 'Vuxen');
-           }
-            if(this.props.KategoriFilter === 'Musik'){
-                tullingeJson = tullingeJson.filter(obj => obj.Verksamhetstyp === 'Musik');
-    
-       }
+
 
            //Sorterar i datumordning
            let arrayMedDatabasobjekt = tullingeJson.value.sort(function(a, b) {
@@ -87,6 +75,20 @@ class FetchApp extends Component {
 
 
     })
+
+    if(this.props.KategoriFilter === 'Gtj'){
+        arrayMedDatabasobjekt = arrayMedDatabasobjekt.filter(obj => obj.Verksamhetstyp === 'Gtj');
+   }
+   if(this.props.KategoriFilter === 'Barn'){
+    arrayMedDatabasobjekt = arrayMedDatabasobjekt.filter(obj => obj.Verksamhetstyp === 'Barn');
+  }
+  if(this.props.KategoriFilter === 'Vuxen'){
+    arrayMedDatabasobjekt = arrayMedDatabasobjekt.filter(obj => obj.Verksamhetstyp === 'Vuxen');
+  }
+   if(this.props.KategoriFilter === 'Musik'){
+    arrayMedDatabasobjekt = arrayMedDatabasobjekt.filter(obj => obj.Verksamhetstyp === 'Musik');
+
+}
 
 
 
