@@ -44,6 +44,7 @@ class FetchApp extends Component {
     
        }
 
+
        let arrayMedDatabasobjekt = tullingeJson.value.map(obj => {
         return {
             Aktivitet: obj.Title,
@@ -62,7 +63,13 @@ class FetchApp extends Component {
 
         }
 
+
     })
+
+    arrayMedDatabasobjekt = arrayMedDatabasobjekt.sort(function(a, b) {
+        return (a.Datum < b.Datum) ? -1 : ((a.Datum > b.Datum) ? 1 : 0);
+    });
+
 
         console.log(arrayMedDatabasobjekt)
           this.setState({
