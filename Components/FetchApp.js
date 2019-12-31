@@ -65,7 +65,7 @@ class FetchApp extends Component {
         return {
             Aktivitet: obj.Title,
             Datum: obj.StartTime,
-            Dag: "Veckodag obj.StartTime",
+            Dag: Date(obj.StartTime),
             Internnotering: strReplace(obj.Description),
             Lokal: obj.Place.Name,
             Musiker: null,
