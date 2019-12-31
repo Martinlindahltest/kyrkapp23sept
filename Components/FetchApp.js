@@ -60,13 +60,18 @@ class FetchApp extends Component {
         return tvattadText
     }
 
+    function siffratilldag(siffra) {
+        let dagnamn = ['sön', 'mån', 'tis', 'ons', 'tor', 'fre', 'lör']
+        return dagnamn[siffra]
+    }
+
        //Skapar data som liknar den gamla
         arrayMedDatabasobjekt = arrayMedDatabasobjekt.map(obj => {
-            console.log(new Date(obj.StartTime).getDay())
-        return {
+
+            return {
             Aktivitet: obj.Title,
             Datum: obj.StartTime,
-            Dag: new Date(obj.StartTime).getDay(),
+            Dag: siffratilldag(new Date(obj.StartTime).getDay()),
             Internnotering: strReplace(obj.Description),
             Lokal: obj.Place.Name,
             Musiker: null,
