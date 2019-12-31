@@ -119,7 +119,7 @@ const KalenderDetaljScreen = (props) => {
     <View style={styles.ViewRuntText}>
         <Text style={styles.rubrik}>{Aktivitet}</Text>
         <Text style={styles.text}>Plats: {Lokal}  </Text>
-        <Text style={styles.text}>Tid: {StartSlut}  </Text>
+        <Text style={styles.text}>Tid: {starttid}  </Text>
         {prastPlaceholder}
         {musikerPlaceholder}
         {vaktmastarePlaceholder}
