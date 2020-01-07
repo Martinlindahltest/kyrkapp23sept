@@ -13,9 +13,6 @@ class FetchApp extends Component {
             tullingeJson: [],
             isLoading: true
         }
-
-
-
     }
 
     componentDidMount() {
