@@ -79,10 +79,26 @@ class FetchApp extends Component {
 
                 })
 
+                let GtjArray = []
+
+                arrayMedDatabasobjekt.forEach(pushTillGtj)
+
+                function pushTillGtj(input) {
+                    //console.log('input', input.Verksamhetstyp)
+                    if (input.Verksamhetstyp[0] === 101) {
+                        GtjArray.push(input)
+                    }
+                    if (input.Verksamhetstyp[1] === 101) {
+                        GtjArray.push(input)
+                    }
+                }
+
+                console.log('gtjarray', GtjArray.length)
+
                 //console.log('arrayMedDatabasobjekt', arrayMedDatabasobjekt)
 
                 if (this.props.KategoriFilter === 'Gtj') {
-                    arrayMedDatabasobjekt = arrayMedDatabasobjekt.filter(obj => obj.Verksamhetstyp === 'Gudstjänst & mässa');
+                    arrayMedDatabasobjekt = GtjArray
                 }
                 if (this.props.KategoriFilter === 'Barn') {
                     arrayMedDatabasobjekt = arrayMedDatabasobjekt.filter(obj => obj.Verksamhetstyp === 'Barn');
