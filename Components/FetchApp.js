@@ -40,7 +40,8 @@ class FetchApp extends Component {
                 function strReplace(text) {
                     let tvattadText = null
                     if (text != null) {
-                        tvattadText = text.replace(regex, " ")
+                        //tvattadText = text.replace("<BR />", "Linebreak")
+                        tvattadText = text.replace(regex, "\n")
                     }
                     return tvattadText
                 }
