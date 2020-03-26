@@ -129,13 +129,22 @@ class FetchApp extends Component {
 
                 function pushTillBarn(input) {
                     //console.log('input', input.Verksamhetstyp)
-                    if (input.Verksamhetstyp[0] || input.Verksamhetstyp[1] === 104) {
+                    if (input.Verksamhetstyp[0] === 102) {
                         VuxenArray.push(input)
                     }
-                    if (input.Verksamhetstyp[0] || input.Verksamhetstyp[1] === 110) {
+                    if (input.Verksamhetstyp[0] === 110) {
                         VuxenArray.push(input)
                     }
-                    if (input.Verksamhetstyp[0] || input.Verksamhetstyp[1] === 111) {
+                    if (input.Verksamhetstyp[0] === 111) {
+                        VuxenArray.push(input)
+                    }
+                    if (input.Verksamhetstyp[1] === 102) {
+                        VuxenArray.push(input)
+                    }
+                    if (input.Verksamhetstyp[1] === 110) {
+                        VuxenArray.push(input)
+                    }
+                    if (input.Verksamhetstyp[1] === 111) {
                         VuxenArray.push(input)
                     }
                 }
