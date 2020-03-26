@@ -35,13 +35,16 @@ class FetchApp extends Component {
                 });
 
                 const regex = /<[^>]*>/g
+                const lineBreakRegex = /<BR \/>/g
 
 
                 function strReplace(text) {
                     let tvattadText = null
                     if (text != null) {
-                        //tvattadText = text.replace("<BR />", "Linebreak")
-                        tvattadText = text.replace(regex, "\n")
+                        tvattadText = text.replace(lineBreakRegex, "\n")
+                        tvattadText = tvattadText.replace(regex, " ")
+                        // tvattadText = tvattadText.replace('LineBreakÖnskas', "\n")
+
                     }
                     return tvattadText
                 }
