@@ -56,7 +56,7 @@ class FetchApp extends Component {
                         return objIArray.Id
                     })
 
-                    console.log(obj.Title, 'kod:', verksamhetskoder)
+                    //console.log(obj.Title, 'kod:', verksamhetskoder)
 
                     return {
                         Aktivitet: obj.Title,
@@ -79,9 +79,33 @@ class FetchApp extends Component {
 
                 })
 
+                // Gudstjänst & mässa (Gtj) 101
+                // Musik & kör (Musik) 105
+
+                // Barnverksamhet (Barn) 104
+
+                // Drop-in (Vuxen) 111
+                // Konst & Kultur (Vuxen)
+                // Kropp & själ (Vuxen) 
+                // Mötas & umgås (Vuxen) 102
+                // Skapande & kreativitet (Vuxen)
+                // Studier & samtal (Vuxen)
+                // Stöd & omsorg (Vuxen)
+                // Ungdomsverksamhet (Vuxen) 110
+
+
                 let GtjArray = []
+                let MusikArray = []
+                let BarnArray = []
+                let VuxenArray = []
+
 
                 arrayMedDatabasobjekt.forEach(pushTillGtj)
+                arrayMedDatabasobjekt.forEach(pushTillMusik)
+                arrayMedDatabasobjekt.forEach(pushTillBarn)
+                arrayMedDatabasobjekt.forEach(pushTillVuxen)
+
+
 
                 function pushTillGtj(input) {
                     //console.log('input', input.Verksamhetstyp)
@@ -93,7 +117,43 @@ class FetchApp extends Component {
                     }
                 }
 
-                console.log('gtjarray', GtjArray.length)
+                function pushTillMusik(input) {
+                    //console.log('input', input.Verksamhetstyp)
+                    if (input.Verksamhetstyp[0] === 105) {
+                        MusikArray.push(input)
+                    }
+                    if (input.Verksamhetstyp[1] === 105) {
+                        MusikArray.push(input)
+                    }
+                }
+
+                function pushTillBarn(input) {
+                    //console.log('input', input.Verksamhetstyp)
+                    if (input.Verksamhetstyp[0] || input.Verksamhetstyp[1] === 104) {
+                        VuxenArray.push(input)
+                    }
+                    if (input.Verksamhetstyp[0] || input.Verksamhetstyp[1] === 110) {
+                        VuxenArray.push(input)
+                    }
+                    if (input.Verksamhetstyp[0] || input.Verksamhetstyp[1] === 111) {
+                        VuxenArray.push(input)
+                    }
+                }
+
+                function pushTillVuxen(input) {
+                    //console.log('input', input.Verksamhetstyp)
+                    if (input.Verksamhetstyp[0] === 104) {
+                        BarnArray.push(input)
+                    }
+                    if (input.Verksamhetstyp[1] === 104) {
+                        BarnArray.push(input)
+                    }
+                }
+
+
+
+
+                //console.log('gtjarray', GtjArray.length)
 
                 //console.log('arrayMedDatabasobjekt', arrayMedDatabasobjekt)
 
@@ -101,13 +161,16 @@ class FetchApp extends Component {
                     arrayMedDatabasobjekt = GtjArray
                 }
                 if (this.props.KategoriFilter === 'Barn') {
-                    arrayMedDatabasobjekt = arrayMedDatabasobjekt.filter(obj => obj.Verksamhetstyp === 'Barn');
+                    arrayMedDatabasobjekt = BarnArray
                 }
                 if (this.props.KategoriFilter === 'Vuxen') {
-                    arrayMedDatabasobjekt = arrayMedDatabasobjekt.filter(obj => obj.Verksamhetstyp === 'Vuxen');
+                    let nyArrayUtanDupl = [...new Set(VuxenArray)];
+
+                    arrayMedDatabasobjekt = nyArrayUtanDupl
+                    console.log('lenght', nyArrayUtanDupl.length)
                 }
                 if (this.props.KategoriFilter === 'Musik') {
-                    arrayMedDatabasobjekt = arrayMedDatabasobjekt.filter(obj => obj.Verksamhetstyp === 'Musik');
+                    arrayMedDatabasobjekt = MusikArray
 
                 }
 
