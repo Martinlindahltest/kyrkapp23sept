@@ -176,6 +176,7 @@ const styles = StyleSheet.create({
 const customDrawerContentComponent = (props) => (
 
   <SafeAreaView>
+
     <View style={styles.runtHeaderBild}>
       <Image style={styles.drawerimage} source={require('../assets/MenySplash.png')} /> 
     </View>
