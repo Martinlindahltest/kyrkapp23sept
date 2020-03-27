@@ -42,7 +42,7 @@ class FetchApp extends Component {
                     let tvattadText = null
                     if (text != null) {
                         tvattadText = text.replace(lineBreakRegex, "\n")
-                        tvattadText = tvattadText.replace(regex, " ")
+                        tvattadText = tvattadText.replace(regex, "")
                         // tvattadText = tvattadText.replace('LineBreakÖnskas', "\n")
 
                     }
