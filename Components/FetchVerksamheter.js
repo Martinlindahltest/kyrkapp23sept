@@ -55,7 +55,7 @@ export default class FetchVerksamheter extends Component {
         const styles = StyleSheet.create({
             datumRubrik: {
               fontWeight: "bold",
-              backgroundColor: '#808080',
+              backgroundColor: '#b8b2b2',
               padding: 10,
               fontFamily: 'avenir-roman',
               fontSize:17

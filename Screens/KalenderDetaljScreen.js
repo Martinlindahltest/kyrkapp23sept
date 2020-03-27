@@ -1,6 +1,7 @@
 import React from 'react'
 import { Text, ScrollView, ImageBackground, View, StyleSheet } from 'react-native'
 import HeaderImageUtanText from '../Components/HeaderImageUtanText'
+import Spacer from '../Components/Spacer'
 
 
 
@@ -127,6 +128,7 @@ const KalenderDetaljScreen = (props) => {
         <Text></Text>
 
         <Text style={styles.text}>{Internnotering}</Text>
+        <Spacer hojd={100} />
     </View>
 
 

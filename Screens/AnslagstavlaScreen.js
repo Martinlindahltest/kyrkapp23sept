@@ -53,7 +53,7 @@ const styles = StyleSheet.create({
             </TouchableOpacity>
 
           <TouchableOpacity onPress={this.startaHandelserAsync}>
-            <BildMedText imgUrl={require('../assets/forstasida/2Blogg.png')} textfarg={'white'} rubrik={'Blogg'} underrubrik={'Här lägger vi regelbundet upp veckans bibeltexter samt video & bild från mässor konserter m.m.'} />
+            <BildMedText imgUrl={require('../assets/forstasida/2Blogg.png')} textfarg={'white'} rubrik={'Blogg'} underrubrik={'Här lägger vi regelbundet upp veckans bibeltexter samt video & bild från mässor, konserter m.m.'} />
           </TouchableOpacity>
 
           <TouchableOpacity onPress={() => navigate('HittaHit')}>

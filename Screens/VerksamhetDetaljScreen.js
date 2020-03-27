@@ -33,7 +33,8 @@ const VerksamhetDetaljScreen = (props) => {
 
         },
         ViewRuntText:{
-            padding:30
+            padding:30,
+            paddingTop: 0
         }        
       });
 
