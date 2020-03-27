@@ -3,7 +3,6 @@
     "name": "Tullinge kyrka",
     "slug": "tullinge-kyrka",
     "privacy": "public",
-    "sdkVersion": "34.0.0",
     "platforms": [
       "ios",
       "android"
@@ -32,6 +31,5 @@
       "versionCode": 2,
       "permissions": []
     }
-
   }
 }
