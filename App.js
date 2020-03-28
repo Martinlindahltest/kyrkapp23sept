@@ -30,7 +30,7 @@ export default function App() {
 
   return (
     <>
-<StatusBar barStyle="default" />
+<StatusBar barStyle="dark-content" />
     <MealsNavigator />
     </>
   );
