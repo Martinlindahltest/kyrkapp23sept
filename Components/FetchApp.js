@@ -109,6 +109,16 @@ class FetchApp extends Component {
                 arrayMedDatabasobjekt.forEach(pushTillBarn)
                 arrayMedDatabasobjekt.forEach(pushTillVuxen)
 
+                //console.log('vuxenarray före', VuxenArray.length)
+
+                let filterVuxenArray = VuxenArray.filter(obj => obj.Verksamhetstyp[0] !== 104)
+                filterVuxenArray = filterVuxenArray.filter(obj => obj.Verksamhetstyp[1] !== 104)
+
+
+                VuxenArray = filterVuxenArray
+
+                //console.log('vuxenarray efter', VuxenArray.length)
+
 
 
                 function pushTillGtj(input) {
@@ -131,7 +141,7 @@ class FetchApp extends Component {
                     }
                 }
 
-                function pushTillBarn(input) {
+                function pushTillVuxen(input) {
                     //console.log('input', input.Verksamhetstyp)
                     if (input.Verksamhetstyp[0] === 102) {
                         VuxenArray.push(input)
@@ -153,7 +163,7 @@ class FetchApp extends Component {
                     }
                 }
 
-                function pushTillVuxen(input) {
+                function pushTillBarn(input) {
                     //console.log('input', input.Verksamhetstyp)
                     if (input.Verksamhetstyp[0] === 104) {
                         BarnArray.push(input)
@@ -180,7 +190,7 @@ class FetchApp extends Component {
                     let nyArrayUtanDupl = [...new Set(VuxenArray)];
 
                     arrayMedDatabasobjekt = nyArrayUtanDupl
-                    console.log('lenght', nyArrayUtanDupl.length)
+ //                   console.log('lenght', nyArrayUtanDupl.length)
                 }
                 if (this.props.KategoriFilter === 'Musik') {
                     arrayMedDatabasobjekt = MusikArray
