@@ -50,7 +50,7 @@ class FetchApp extends Component {
                 }
 
                 function siffratilldag(siffra) {
-                    let dagnamn = ['sön', 'mån', 'tis', 'ons', 'tor', 'fre', 'lör']
+                    let dagnamn = ['söndag', 'måndag', 'tisdag', 'onsdag', 'torsdag', 'fredag', 'lördag']
                     return dagnamn[siffra]
                 }
 

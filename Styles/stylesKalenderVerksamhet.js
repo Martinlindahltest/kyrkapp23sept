@@ -50,11 +50,11 @@ import { StyleSheet } from 'react-native'
 
       const kalenderVerksamhetStyles = StyleSheet.create({
         datumRubrik: {
-            fontWeight: "bold",
+            //fontWeight: "bold",
             backgroundColor: '#b8b2b2',
             padding: 10,
             fontFamily: 'avenir-roman',
-            fontSize:20,
+            fontSize:17,
             //fontWeight: '900'
 
 
